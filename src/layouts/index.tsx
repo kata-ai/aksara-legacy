@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { graphql, StaticQuery } from 'gatsby';
 import { WindowLocation } from '@reach/router';
 
+import MainNavigation from 'components/MainNavigation';
 import Navigation from 'components/Navigation';
 import LayoutRoot from 'components/LayoutRoot';
 import LayoutMain from 'components/LayoutMain';
@@ -70,6 +71,13 @@ class IndexLayout extends React.Component<WrapperProps, WrapperState> {
                     content={`${siteMetadata.siteUrl}${location ? location.pathname : '/'}`}
                   />
                 </Helmet>
+                <MainNavigation
+                  title={siteMetadata.sidebarTitle || siteMetadata.title}
+                  navigation={data.navigationMenus.edges}
+                  open={drawerIsOpen}
+                  onCloseNavMenu={this.closeDrawer}
+                  toggleDrawer={this.toggleDrawer}
+                />
                 <Navigation
                   title={siteMetadata.sidebarTitle || siteMetadata.title}
                   navigation={data.navigationMenus.edges}

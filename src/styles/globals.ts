@@ -2,10 +2,48 @@ import { createGlobalStyle } from 'utils/styled';
 import { breakpoints } from './variables';
 
 import theme from './theme';
+import fontFiles from '../assets/fonts/fonts';
 
 // tslint:disable-next-line:no-unused-expression
 const GlobalStyles = createGlobalStyle`
   /* Set up a decent box model on the root element */
+
+  @font-face {
+    font-family: 'MuseoSansRounded-300';
+    src: url('${fontFiles.MuseoSansRounded300eot}'); /* IE9 Compat Modes */
+    src: url('${fontFiles.MuseoSansRounded300eot}') format('embedded-opentype'), /* IE6-IE8 */
+         url('${fontFiles.MuseoSansRounded300woff}') format('woff'), /* Pretty Modern Browsers */
+         url('${fontFiles.MuseoSansRounded300ttf}')  format('truetype'), /* Safari, Android, iOS */
+         url('${fontFiles.MuseoSansRounded300svg}') format('svg'); /* Legacy iOS */
+  }
+
+  @font-face {
+    font-family: 'MuseoSansRounded-500';
+    src: url('${fontFiles.MuseoSansRounded500eot}'); /* IE9 Compat Modes */
+    src: url('${fontFiles.MuseoSansRounded500eot}') format('embedded-opentype'), /* IE6-IE8 */
+         url('${fontFiles.MuseoSansRounded500woff}') format('woff'), /* Pretty Modern Browsers */
+         url('${fontFiles.MuseoSansRounded500ttf}')  format('truetype'), /* Safari, Android, iOS */
+         url('${fontFiles.MuseoSansRounded500svg}') format('svg'); /* Legacy iOS */
+  }
+
+  @font-face {
+    font-family: 'MuseoSansRounded-700';
+    src: url('${fontFiles.MuseoSansRounded700eot}'); /* IE9 Compat Modes */
+    src: url('${fontFiles.MuseoSansRounded700eot}') format('embedded-opentype'), /* IE6-IE8 */
+         url('${fontFiles.MuseoSansRounded700woff}') format('woff'), /* Pretty Modern Browsers */
+         url('${fontFiles.MuseoSansRounded700ttf}')  format('truetype'), /* Safari, Android, iOS */
+         url('${fontFiles.MuseoSansRounded700svg}') format('svg'); /* Legacy iOS */
+  }
+
+  @font-face {
+    font-family: 'MuseoSansRounded-900';
+    src: url('${fontFiles.MuseoSansRounded900eot}'); /* IE9 Compat Modes */
+    src: url('${fontFiles.MuseoSansRounded900eot}') format('embedded-opentype'), /* IE6-IE8 */
+         url('${fontFiles.MuseoSansRounded900woff}') format('woff'), /* Pretty Modern Browsers */
+         url('${fontFiles.MuseoSansRounded900ttf}')  format('truetype'), /* Safari, Android, iOS */
+         url('${fontFiles.MuseoSansRounded900svg}') format('svg'); /* Legacy iOS */
+  }
+
   html {
     box-sizing: border-box;
   }
@@ -35,7 +73,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: ${theme.fonts.sansSerif};
+    font-family: 'MuseoSansRounded-300' !important;
     color: ${theme.colors.gray.copy};
     background-color: ${theme.colors.white};
     -webkit-text-size-adjust: 100%;

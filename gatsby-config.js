@@ -2,19 +2,18 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Grundgesetz',
-    sidebarTitle: 'Grundgesetz',
-    description: 'Zero-configuration documentation builder, powered by Gatsby.',
-    siteUrl: 'https://grundgesetz-skeleton.netlify.com',
-    keywords: 'gatsbyjs, gatsby, documentation, sample project',
+    title: 'Aksara',
+    sidebarTitle: 'Aksara',
+    description: 'Aksara Design System Language',
+    siteUrl: 'https://aksara.kata.ai',
+    keywords: 'dls, design, design system, design system language',
     author: {
       name: 'Resi Respati',
       url: 'https://resir014.xyz',
       email: 'resi@kata.ai'
     }
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
@@ -24,8 +23,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'

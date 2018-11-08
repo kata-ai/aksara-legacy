@@ -23,3 +23,13 @@ declare module '*.json' {
   const name: any;
   export = name;
 }
+
+// images
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.svg';
+
+// fonts
+declare module '*.ttf';
+declare module '*.woff';
+declare module '*.eot';
