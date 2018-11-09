@@ -38,7 +38,7 @@ interface DataProps {
   };
 }
 
-class IndexLayout extends React.Component<WrapperProps, WrapperState> {
+class HomeLayout extends React.Component<WrapperProps, WrapperState> {
   constructor(props: WrapperProps) {
     super(props);
 
@@ -78,13 +78,6 @@ class IndexLayout extends React.Component<WrapperProps, WrapperState> {
                   onCloseNavMenu={this.closeDrawer}
                   toggleDrawer={this.toggleDrawer}
                 />
-                <Navigation
-                  title={siteMetadata.sidebarTitle || siteMetadata.title}
-                  navigation={data.navigationMenus.edges}
-                  open={drawerIsOpen}
-                  onCloseNavMenu={this.closeDrawer}
-                  toggleDrawer={this.toggleDrawer}
-                />
                 <Overlay visible={drawerIsOpen} onClick={this.closeDrawer} />{' '}
                 <MobileHeader>
                   <NavButton onClick={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
@@ -107,10 +100,10 @@ class IndexLayout extends React.Component<WrapperProps, WrapperState> {
   };
 }
 
-export default IndexLayout;
+export default HomeLayout;
 
 const query = graphql`
-  query IndexLayoutQuery {
+  query HomeLayoutQuery {
     site {
       siteMetadata {
         title
