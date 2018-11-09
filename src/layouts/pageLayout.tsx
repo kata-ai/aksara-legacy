@@ -72,8 +72,6 @@ class PageLayout extends React.Component<WrapperProps, WrapperState> {
                   />
                 </Helmet>
                 <MainNavigation
-                  title={siteMetadata.sidebarTitle || siteMetadata.title}
-                  navigation={data.navigationMenus.edges}
                   open={drawerIsOpen}
                   onCloseNavMenu={this.closeDrawer}
                   toggleDrawer={this.toggleDrawer}

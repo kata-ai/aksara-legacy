@@ -50,7 +50,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = () => {
 export default PageTemplate;
 
 export const query = graphql`
-  query HomeTemplateQuery($slug: String!) {
+  query HomeTemplateQuery {
     site {
       siteMetadata {
         title
