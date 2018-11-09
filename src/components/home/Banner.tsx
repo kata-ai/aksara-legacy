@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../Container';
 import styled from 'utils/styled';
-import { Row, Col } from 'react-flexbox-grid';
 import { breakpoints } from 'styles/variables';
 
 import LogoImage from '../../assets/images/aksara-logo-banner.svg';
@@ -43,11 +42,25 @@ const Description = styled('p')`
   margin-bottom: 32px;
 `;
 
+const BannerRow = styled('div')`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: ${breakpoints.md}px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+const BannerCol = styled('div')`
+  flex: 0 1 calc(50% - 16px);
+`;
+
 const Banner: React.SFC = () => (
   <Container large>
     <Wrapper>
-      <Row>
-        <Col xs={12} md={6}>
+      <BannerRow>
+        <BannerCol>
           <LogoWrapper>
             <img src={LogoImage} />
           </LogoWrapper>
@@ -56,23 +69,23 @@ const Banner: React.SFC = () => (
               <Intro>Aksara /ak·sa·ra/ noun</Intro>
             </Description>
             <Description>
-              is a system of visual symbol, usually stamped on paper or other media (stone, wood, leaf, and fabric),
-              to express thoughts and ideas.
+              is a system of visual symbol, usually stamped on paper or other media (stone, wood,
+              leaf, and fabric), to express thoughts and ideas.
             </Description>
             <Description>
-              <Intro>Aksara</Intro> is Kata Design Language System.
-              It contains foundations, voice and tone guidelines, component standards,
-              and other guidelines that systematically improve quality, timeliness, and consistency to our product.
+              <Intro>Aksara</Intro> is Kata Design Language System. It contains foundations, voice
+              and tone guidelines, component standards, and other guidelines that systematically
+              improve quality, timeliness, and consistency to our product.
             </Description>
           </InnerWrapper>
           <Button primary text="Learn More" to="/getting-started/deploying/" />
-        </Col>
-        <Col xs={12} md={6} xl>
+        </BannerCol>
+        <BannerCol>
           <BanerWrapper>
             <img src={BannerImage} />
           </BanerWrapper>
-        </Col>
-      </Row>
+        </BannerCol>
+      </BannerRow>
     </Wrapper>
   </Container>
 );
