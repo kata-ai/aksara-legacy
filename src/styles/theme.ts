@@ -9,6 +9,9 @@ export const brandColors = {
   cobalt: '#2053af',
   darkcobalt: '#19428c',
 
+  cobalt01: '#5587e0',
+  cobalt03: '#102a59',
+
   iceblue: '#f8fcff',
   icebluetwo: '#f4faff',
   icebluethree: '#d8ebff',
@@ -36,6 +39,8 @@ const theme: Theme = {
     brand: brandColors.katablue,
     accent: brandColors.katablue,
     accentDark: brandColors.cobalt,
+    cobalt01: brandColors.cobalt01,
+    cobalt03: brandColors.cobalt03,
     drawer: {
       background: brandColors.icebluetwo,
       border: brandColors.icebluethree

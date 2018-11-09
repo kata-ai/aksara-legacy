@@ -22,14 +22,14 @@ class Button extends React.Component<Props, State> {
   }
 
   render() {
-    const { primary, link, text } = this.props;
+    const { primary, link, text, to } = this.props;
     if (primary) {
       return (
-        <Primary to="/">{text}</Primary>
+        <Primary to={to}>{text}</Primary>
       );
     } else if (link) {
       return (
-        <Primary to="/">{text}</Primary>
+        <Primary to={to}>{text}</Primary>
       );
     }
   }
@@ -42,10 +42,19 @@ const Primary = styled(Link)`
   font-size: ${props => props.theme.dimensions.fontSize.medium}px;
   background-color: ${props => props.theme.colors.accentDark};
   color: ${props => props.theme.colors.white};
-  &:hover,
-  &:focus {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  &:hover, &:focus {
     outline: none;
     text-decoration: none;
+  }
+  &:hover {
+    background-color: ${props => props.theme.colors.cobalt01};
+  }
+  &:focus {
+    background-color: ${props => props.theme.colors.cobalt03};
   }
 `;
 

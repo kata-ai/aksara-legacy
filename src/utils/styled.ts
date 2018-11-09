@@ -7,6 +7,8 @@ export type Theme = {
     brand: string;
     accent: string;
     accentDark: string;
+    cobalt01: string;
+    cobalt03: string;
     drawer: {
       background: string;
       border: string;

@@ -15,6 +15,14 @@ const Wrapper = styled('div')`
   }
 `;
 
+const LogoWrapper = styled('div')`
+  text-align: left;
+`;
+
+const BanerWrapper = styled('div')`
+  text-align: right;
+`;
+
 const InnerWrapper = styled('div')`
   margin-top: 16px;
   margin-bottom: 32px;
@@ -40,7 +48,9 @@ const Banner: React.SFC = () => (
     <Wrapper>
       <Row>
         <Col xs={12} md={6}>
-          <img src={LogoImage} />
+          <LogoWrapper>
+            <img src={LogoImage} />
+          </LogoWrapper>
           <InnerWrapper>
             <Description>
               <Intro>Aksara /ak·sa·ra/ noun</Intro>
@@ -55,10 +65,12 @@ const Banner: React.SFC = () => (
               and other guidelines that systematically improve quality, timeliness, and consistency to our product.
             </Description>
           </InnerWrapper>
-          <Button primary text="Learn More" to="/" />
+          <Button primary text="Learn More" to="/getting-started/deploying/" />
         </Col>
-        <Col xs={12} md={6}>
-          <img src={BannerImage} />
+        <Col xs={12} md={6} xl>
+          <BanerWrapper>
+            <img src={BannerImage} />
+          </BanerWrapper>
         </Col>
       </Row>
     </Wrapper>

@@ -111,9 +111,9 @@ class MainNavigation extends React.Component<HeaderProps> {
           </LogoWrapper>
           <MenuWrapper>
             <MenuList>
-              <li><Menu to="/kata">Go to kata.ai</Menu></li>
-              <li><Menu to="/wicara">Wicara</Menu></li>
-              <li><Menu to="/version-updates">What’s New</Menu></li>
+              <li><Menu to="#">Go to kata.ai</Menu></li>
+              <li><Menu to="#">Wicara</Menu></li>
+              <li><Menu to="#">What’s New</Menu></li>
             </MenuList>
           </MenuWrapper>
         </WrapperInner>
