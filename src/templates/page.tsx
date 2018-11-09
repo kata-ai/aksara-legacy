@@ -15,6 +15,8 @@ import Pagination from 'components/Pagination';
 import Footer from 'components/Footer';
 import FooterWrapper from 'components/FooterWrapper';
 
+import PageLayout from '../layouts/pageLayout';
+
 interface PageTemplateProps extends RouteComponentProps {
   data: {
     site: {
@@ -45,30 +47,32 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
   const nextPage = getPageById(sectionList.edges, next);
 
   return (
-    <Page docsPage>
-      <Helmet>
-        <title>
-          {markdownRemark.frontmatter.title} &middot; {site.siteMetadata.title}
-        </title>
-        <meta name="description" content={markdownRemark.excerpt} />
-        <meta property="og:title" content={markdownRemark.frontmatter.title} />
-        <meta property="og:description" content={markdownRemark.excerpt} />
-      </Helmet>
-      <DocsWrapper>
-        <Container>
-          <DocsHeader>
-            <h1>{markdownRemark.frontmatter.title}</h1>
-          </DocsHeader>
-          <MarkdownContent html={markdownRemark.html} />
-        </Container>
-      </DocsWrapper>
-      <FooterWrapper>
-        <Container>
-          {(prevPage || nextPage) && <Pagination prevPage={prevPage} nextPage={nextPage} />}
-          <Footer />
-        </Container>
-      </FooterWrapper>
-    </Page>
+    <PageLayout>
+      <Page docsPage>
+        <Helmet>
+          <title>
+            {markdownRemark.frontmatter.title} &middot; {site.siteMetadata.title}
+          </title>
+          <meta name="description" content={markdownRemark.excerpt} />
+          <meta property="og:title" content={markdownRemark.frontmatter.title} />
+          <meta property="og:description" content={markdownRemark.excerpt} />
+        </Helmet>
+        <DocsWrapper>
+          <Container>
+            <DocsHeader>
+              <h1>{markdownRemark.frontmatter.title}</h1>
+            </DocsHeader>
+            <MarkdownContent html={markdownRemark.html} />
+          </Container>
+        </DocsWrapper>
+        <FooterWrapper>
+          <Container>
+            {(prevPage || nextPage) && <Pagination prevPage={prevPage} nextPage={nextPage} />}
+            <Footer />
+          </Container>
+        </FooterWrapper>
+      </Page>
+    </PageLayout>
   );
 };
 

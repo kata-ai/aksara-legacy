@@ -6,11 +6,12 @@ import { RouteComponentProps } from '@reach/router';
 import Page from 'components/Page';
 import Container from 'components/Container';
 import { MenuNode } from 'interfaces/nodes';
-import MarkdownContent from 'components/MarkdownContent';
 import DocsWrapper from 'components/DocsWrapper';
-import DocsHeader from 'components/DocsHeader';
 import FooterWrapper from 'components/FooterWrapper';
 import Footer from 'components/Footer';
+
+import HomeLayout from '../layouts/homeLayout';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 interface PageTemplateProps extends RouteComponentProps {
   data: {
@@ -42,28 +43,32 @@ interface PageTemplateProps extends RouteComponentProps {
   };
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
-  const { markdownRemark } = data;
-
+const PageTemplate: React.SFC<PageTemplateProps> = () => {
   return (
-    <Page docsPage>
-      <Helmet>
-        <meta property="og:title" content="Home" />
-      </Helmet>
-      <DocsWrapper>
-        <Container>
-          <DocsHeader>
-            <h1>Welcome to Grundgesetz!</h1>
-          </DocsHeader>
-          <MarkdownContent html={markdownRemark.html} />
-        </Container>
-      </DocsWrapper>
-      <FooterWrapper>
-        <Container>
-          <Footer />
-        </Container>
-      </FooterWrapper>
-    </Page>
+    <HomeLayout>
+      <Page docsPage>
+        <Helmet>
+          <meta property="og:title" content="Home" />
+        </Helmet>
+        <DocsWrapper>
+          <Container medium>
+            <Row>
+              <Col xs={6} md={6}>
+                Hello, world!
+              </Col>
+              <Col xs={6} md={6}>
+                Hello, world!
+              </Col>
+            </Row>
+          </Container>
+        </DocsWrapper>
+        <FooterWrapper>
+          <Container>
+            <Footer />
+          </Container>
+        </FooterWrapper>
+      </Page>
+    </HomeLayout>
   );
 };
 

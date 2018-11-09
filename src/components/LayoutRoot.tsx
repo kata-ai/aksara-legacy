@@ -6,6 +6,7 @@ const StyledLayoutRoot = styled('div')`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 70px;
 
   @media (min-width: ${props => props.theme.breakpoints.md}px) {
     flex-direction: row;

@@ -6,7 +6,7 @@ import { MenuNode } from 'interfaces/nodes';
 import MobileHeader from './MobileHeader';
 import NavButton from './NavButton';
 
-import Logo from 'assets/images/kata-design.svg';
+import Logo from 'assets/images/aksara-logo.svg';
 
 interface ToggleableProps {
   isOpen?: boolean;
