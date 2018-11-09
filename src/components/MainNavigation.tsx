@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
-import { MenuNode } from 'interfaces/nodes';
 import MobileHeader from './MobileHeader';
 import NavButton from './NavButton';
 
@@ -85,8 +84,6 @@ const LogoLink = styled(Link)`
 `;
 
 interface HeaderProps {
-  title: string;
-  navigation?: Array<{ node: MenuNode }>;
   open?: boolean;
   onOpenNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
   onCloseNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -99,7 +96,7 @@ class MainNavigation extends React.Component<HeaderProps> {
   }
 
   render() {
-    const { title, toggleDrawer, navigation, open, onCloseNavMenu } = this.props;
+    const { toggleDrawer, open, onCloseNavMenu } = this.props;
 
     return (
       <Wrapper isOpen={open}>
