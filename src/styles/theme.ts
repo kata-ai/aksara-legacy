@@ -90,6 +90,8 @@ const theme: Theme = {
   // Dimensions
   dimensions: {
     fontSize: {
+      small: 12,
+      medium: 14,
       regular: 16,
       large: 18
     },

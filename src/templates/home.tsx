@@ -5,13 +5,12 @@ import { RouteComponentProps } from '@reach/router';
 
 import Page from 'components/Page';
 import Container from 'components/Container';
-import { MenuNode } from 'interfaces/nodes';
 import DocsWrapper from 'components/DocsWrapper';
 import FooterWrapper from 'components/FooterWrapper';
 import Footer from 'components/Footer';
 
 import HomeLayout from '../layouts/homeLayout';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import Banner from '../components/home/Banner';
 
 interface PageTemplateProps extends RouteComponentProps {
   data: {
@@ -25,21 +24,6 @@ interface PageTemplateProps extends RouteComponentProps {
         };
       };
     };
-    sectionList: {
-      edges: Array<{
-        node: MenuNode;
-      }>;
-    };
-    markdownRemark: {
-      html: string;
-      excerpt: string;
-      frontmatter: {
-        id: string;
-        title: string;
-        prev?: string;
-        next?: string;
-      };
-    };
   };
 }
 
@@ -51,16 +35,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = () => {
           <meta property="og:title" content="Home" />
         </Helmet>
         <DocsWrapper>
-          <Container medium>
-            <Row>
-              <Col xs={6} md={6}>
-                Hello, world!
-              </Col>
-              <Col xs={6} md={6}>
-                Hello, world!
-              </Col>
-            </Row>
-          </Container>
+          <Banner />
         </DocsWrapper>
         <FooterWrapper>
           <Container>
@@ -87,16 +62,6 @@ export const query = graphql`
           url
           email
         }
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      frontmatter {
-        id
-        title
-        prev
-        next
       }
     }
   }

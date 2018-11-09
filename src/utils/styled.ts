@@ -51,6 +51,8 @@ export type Theme = {
   };
   dimensions: {
     fontSize: {
+      small: number;
+      medium: number;
       regular: number;
       large: number;
     };
