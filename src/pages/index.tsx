@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
-import { Row, Col } from 'react-flexbox-grid';
+import { breakpoints } from 'styles/variables';
 
 import styled from 'utils/styled';
 import Page from 'components/Page';
@@ -44,13 +44,13 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <Container extralarge>
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row>
-              <Col xs={12} md={4} lg={4}>
+              <Col>
                 <Card />
               </Col>
-              <Col xs={12} md={4} lg={4}>
+              <Col>
                 <Card />
               </Col>
-              <Col xs={12} md={4} lg={4}>
+              <Col>
                 <Card />
               </Col>
             </Row>
@@ -85,6 +85,20 @@ const TitleSectionFor = styled('h1')`
   font-family: 'MuseoSansRounded-500';
   text-align: center;
   font-size: 32px;
+`;
+
+const Row = styled('div')`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: ${breakpoints.md}px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+const Col = styled('div')`
+  flex: 0 1 calc(33.3% - 15px);
 `;
 
 export default IndexPage;

@@ -12,7 +12,7 @@ interface ToggleableProps {
   isOpen?: boolean;
 }
 
-const Wrapper = styled<ToggleableProps, 'header'>('header')`
+const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
   display: flex;
   flex-direction: column;
   position: relative;

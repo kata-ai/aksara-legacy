@@ -15,8 +15,6 @@ import { SiteMetadata } from 'interfaces/gatsby';
 import 'modern-normalize';
 import 'prism-themes/themes/prism-atom-dark.css';
 
-import NavButton from 'components/NavButton';
-import MobileHeader from 'components/MobileHeader';
 import Overlay from 'components/Overlay';
 
 interface WrapperProps {
@@ -84,9 +82,6 @@ class PageLayout extends React.Component<WrapperProps, WrapperState> {
                   toggleDrawer={this.toggleDrawer}
                 />
                 <Overlay visible={drawerIsOpen} onClick={this.closeDrawer} />{' '}
-                <MobileHeader>
-                  <NavButton onClick={this.toggleDrawer} drawerIsOpen={drawerIsOpen} />
-                </MobileHeader>
                 <LayoutMain>{children}</LayoutMain>
               </LayoutRoot>
             );

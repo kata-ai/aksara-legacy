@@ -1,93 +1,14 @@
-import { Theme } from 'utils/styled';
+import { colors, fonts, breakpoints } from './variables';
 
-export const brandColors = {
-  katablue: '#006fe6',
-  lightkatablue: '#7fbcff',
-  softkatablue: '#d8ebff',
-
-  kata03: '#003e80',
-  semicobalt: '#2662cf',
-  cobalt: '#2053af',
-  darkcobalt: '#19428c',
-
-  cobalt01: '#5587e0',
-  cobalt03: '#102a59',
-  softblue: '#00cce9',
-
-  iceblue: '#f8fcff',
-  icebluetwo: '#f4faff',
-  icebluethree: '#d8ebff',
-
-  black: '#000',
-  grey80: '#24282d',
-  grey70: '#484c4f',
-  grey60: '#676b6d',
-  grey50: '#949a9d',
-  grey40: '#c2c7c8',
-  grey30: '#e2e6e8',
-  grey20: '#edf1f2',
-  grey10: '#f6f7f8',
-  white: '#fff',
-
-  blue: '#2a90ff',
-  green: '#00c853',
-  red: '#e53935',
-  yellow: '#ffc400'
-};
-
-const theme: Theme = {
+const theme = {
   // Site colors
-  colors: {
-    brand: brandColors.katablue,
-    accent: brandColors.katablue,
-    accentDark: brandColors.cobalt,
-    cobalt01: brandColors.cobalt01,
-    cobalt03: brandColors.cobalt03,
-    softblue: brandColors.softblue,
-    kata03: brandColors.kata03,
-    drawer: {
-      background: brandColors.icebluetwo,
-      border: brandColors.icebluethree
-    },
-    black: brandColors.black,
-    border: brandColors.grey30,
-    ui: {
-      bright: brandColors.grey20,
-      light: brandColors.grey10,
-      whisper: brandColors.grey10
-    },
-    footer: {
-      background: brandColors.icebluetwo,
-      border: brandColors.icebluethree
-    },
-    code: brandColors.grey20,
-    gray: {
-      dark: brandColors.grey80,
-      copy: brandColors.grey70,
-      calm: brandColors.grey50
-    },
-    ink: brandColors.black,
-    white: brandColors.white,
-    error: brandColors.red
-  },
+  colors,
 
   // Font stack
-  fonts: {
-    sansSerif:
-      // tslint:disable-next-line:max-line-length
-      '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif',
-    serif: 'Georgia, Times New Roman, Times, serif',
-    monospace: 'Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace, monospace'
-  },
+  fonts,
 
   // Media breakpoints (Important: use `min-width`!)
-  breakpoints: {
-    xs: 0,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200
-  },
+  breakpoints,
 
   // Container widths
   containerWidth: {
