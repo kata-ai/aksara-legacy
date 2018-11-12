@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
+import { Row, Col } from 'react-flexbox-grid';
 
 import styled from 'utils/styled';
 import Page from 'components/Page';
@@ -12,6 +13,7 @@ import Footer from 'components/Footer';
 
 import HomeLayout from 'layouts/homeLayout';
 import Banner from 'components/home/Banner';
+import Card from 'components/custom/card';
 
 interface PageTemplateProps extends RouteComponentProps {
   data: {
@@ -40,9 +42,18 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
         </DocsWrapper>
         <SectionFor>
           <Container extralarge>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Ea dolores officiis aut labore omnis cupiditate tempore nemo consequatur,
-            earum debitis blanditiis aperiam non beatae impedit aliquid, possimus ab pariatur a.
+            <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
+            <Row>
+              <Col xs={12} md={4} lg={4}>
+                <Card />
+              </Col>
+              <Col xs={12} md={4} lg={4}>
+                <Card />
+              </Col>
+              <Col xs={12} md={4} lg={4}>
+                <Card />
+              </Col>
+            </Row>
           </Container>
         </SectionFor>
         <FooterWrapper>
@@ -68,6 +79,12 @@ const SectionFor = styled('div')`
       ${props => props.theme.colors.softblue},
       ${props => props.theme.colors.softblue}
   );
+`;
+
+const TitleSectionFor = styled('h1')`
+  font-family: 'MuseoSansRounded-500';
+  text-align: center;
+  font-size: 32px;
 `;
 
 export default IndexPage;
