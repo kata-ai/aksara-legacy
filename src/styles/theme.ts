@@ -5,12 +5,14 @@ export const brandColors = {
   lightkatablue: '#7fbcff',
   softkatablue: '#d8ebff',
 
+  kata03: '#003e80',
   semicobalt: '#2662cf',
   cobalt: '#2053af',
   darkcobalt: '#19428c',
 
   cobalt01: '#5587e0',
   cobalt03: '#102a59',
+  softblue: '#00cce9',
 
   iceblue: '#f8fcff',
   icebluetwo: '#f4faff',
@@ -41,6 +43,8 @@ const theme: Theme = {
     accentDark: brandColors.cobalt,
     cobalt01: brandColors.cobalt01,
     cobalt03: brandColors.cobalt03,
+    softblue: brandColors.softblue,
+    kata03: brandColors.kata03,
     drawer: {
       background: brandColors.icebluetwo,
       border: brandColors.icebluethree

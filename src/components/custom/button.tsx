@@ -36,7 +36,7 @@ class Button extends React.Component<Props, State> {
 }
 
 const Primary = styled(Link)`
-  padding: 15px 16px 15px 16px;
+  padding: 18px 35px 18px 35px;
   border-radius: 4px;
   font-family: 'MuseoSansRounded-700';
   font-size: ${props => props.theme.dimensions.fontSize.medium}px;

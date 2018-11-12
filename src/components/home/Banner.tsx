@@ -1,12 +1,12 @@
 import React from 'react';
-import Container from '../Container';
+import Container from 'components/Container';
 import styled from 'utils/styled';
 import { Row, Col } from 'react-flexbox-grid';
 import { breakpoints } from 'styles/variables';
 
-import LogoImage from '../../assets/images/aksara-logo-banner.svg';
-import BannerImage from '../../assets/images/main.svg';
-import Button from '../custom/button';
+import LogoImage from 'assets/images/aksara-logo-banner.svg';
+import BannerImage from 'assets/images/main.svg';
+import Button from 'components/custom/button';
 
 const Wrapper = styled('div')`
   margin-top: 136px;
@@ -40,7 +40,8 @@ const Description = styled('p')`
   font-family: 'MuseoSansRounded-300';
   line-height: 20px;
   font-size: ${props => `${props.theme.dimensions.fontSize.medium}px`};
-  margin-bottom: 32px;
+  margin: 0px;
+  padding-bottom: 32px;
 `;
 
 const Banner: React.SFC = () => (

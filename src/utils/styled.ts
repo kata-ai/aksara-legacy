@@ -9,6 +9,8 @@ export type Theme = {
     accentDark: string;
     cobalt01: string;
     cobalt03: string;
+    softblue: string;
+    kata03: string;
     drawer: {
       background: string;
       border: string;
