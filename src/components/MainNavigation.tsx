@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
-import MobileHeader from './MobileHeader';
 import NavButton from './NavButton';
 
 import Logo from 'assets/images/aksara-logo.svg';
@@ -12,11 +11,18 @@ interface ToggleableProps {
 }
 
 const Wrapper = styled<ToggleableProps, 'header'>('header')`
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0 ${props => props.theme.dimensions.containerPadding}rem;
   transition: all 0.3s ease;
-  background-color: ${props => props.theme.colors.drawer.background};
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: ${props => props.theme.colors.white};
+  border-bottom: 1px solid ${props => props.theme.colors.border};
   top: 0;
   width: 100%;
   z-index: 99999;
@@ -24,23 +30,10 @@ const Wrapper = styled<ToggleableProps, 'header'>('header')`
 
   @media (min-width: ${props => props.theme.breakpoints.lg}px) {
     flex: 0 0 ${props => props.theme.widths.drawer.lg}px;
-    box-shadow: none;
-    border-bottom: none;
-    border-right: 1px solid ${props => props.theme.colors.drawer.border};
-  }
-`;
-
-const WrapperInner = styled('div')`
-  display: flex;
-  background: ${props => props.theme.colors.white};
-  border-bottom: 1px solid ${props => props.theme.colors.border};
-  @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
-    margin-top: ${props => props.theme.heights.header}px;
   }
 `;
 
 const MenuWrapper = styled('div')`
-  padding: 1rem ${props => props.theme.dimensions.containerPadding}rem;
   width: 70%;
 `;
 
@@ -61,13 +54,14 @@ const Menu = styled(Link)`
   line-height: 1.33;
   letter-spacing: 0.3px;
   color: ${props => props.theme.colors.gray.copy};
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 `;
 
 const LogoWrapper = styled('div')`
-  padding: 1rem ${props => props.theme.dimensions.containerPadding}rem;
   width: 30%;
   color: ${props => props.theme.colors.gray.copy};
 
@@ -77,14 +71,22 @@ const LogoWrapper = styled('div')`
 `;
 
 const LogoLink = styled(Link)`
+  display: inline-block;
   cursor: pointer;
-  &:hover, &:focus {
+
+  img {
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 `;
 
 interface HeaderProps {
   open?: boolean;
+  disableNav?: boolean;
   onOpenNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
   onCloseNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
   toggleDrawer?: () => void;
@@ -96,27 +98,31 @@ class MainNavigation extends React.Component<HeaderProps> {
   }
 
   render() {
-    const { toggleDrawer, open, onCloseNavMenu } = this.props;
+    const { toggleDrawer, open, disableNav, onCloseNavMenu } = this.props;
 
     return (
       <Wrapper isOpen={open}>
-        <MobileHeader absolute transparent>
-          <NavButton onClick={toggleDrawer} drawerIsOpen={open} />
-        </MobileHeader>
-        <WrapperInner>
-          <LogoWrapper>
-            <LogoLink to="/" onClick={onCloseNavMenu}>
-              <img src={Logo} />
-            </LogoLink>
-          </LogoWrapper>
-          <MenuWrapper>
-            <MenuList>
-              <li><Menu to="#">Go to kata.ai</Menu></li>
-              <li><Menu to="#">Wicara</Menu></li>
-              <li><Menu to="#">What’s New</Menu></li>
-            </MenuList>
-          </MenuWrapper>
-        </WrapperInner>
+        <LogoWrapper>
+          <LogoLink to="/" onClick={onCloseNavMenu}>
+            <img src={Logo} />
+          </LogoLink>
+        </LogoWrapper>
+        {/* TODO: move this to navigation */}
+        {!disableNav && <NavButton onClick={toggleDrawer} drawerIsOpen={open} />}
+        {/* TODO: conditionally render mobile menu w/ `react-media-match` */}
+        <MenuWrapper>
+          <MenuList>
+            <li>
+              <Menu to="#">Go to kata.ai</Menu>
+            </li>
+            <li>
+              <Menu to="#">Wicara</Menu>
+            </li>
+            <li>
+              <Menu to="#">What’s New</Menu>
+            </li>
+          </MenuList>
+        </MenuWrapper>
       </Wrapper>
     );
   }
