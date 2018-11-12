@@ -45,13 +45,22 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row>
               <Col>
-                <Card />
+                <Card>
+                  These principles help us to make tough design decisions and
+                  refine many iterations into the best solution for creating Aksara.
+                </Card>
               </Col>
               <Col>
-                <Card />
+                <Card>
+                  We build neat design guidelines with the best practice using for
+                  each component based on continuous research and exploration.
+                </Card>
               </Col>
               <Col>
-                <Card />
+                <Card>
+                  The communication we use to influence how people think and feel about
+                  our product while using it.
+                </Card>
               </Col>
             </Row>
           </Container>
@@ -70,7 +79,6 @@ const SectionFor = styled('div')`
   margin-top: 112px;
   padding: 120px 0px 120px 0px;
   min-height: 550px;
-  color: ${props => props.theme.colors.white};
   background-image: linear-gradient(
       67deg, ${props => props.theme.colors.kata03},
       ${props => props.theme.colors.accentDark} 32%,
@@ -85,6 +93,8 @@ const TitleSectionFor = styled('h1')`
   font-family: 'MuseoSansRounded-500';
   text-align: center;
   font-size: 32px;
+  color: ${props => props.theme.colors.white};
+  margin-bottom: 40px;
 `;
 
 const Row = styled('div')`
