@@ -1,24 +1,68 @@
 /* tslint:disable:max-line-length */
 
-export const colors = {
-  brand: '#663399',
-  lilac: '#9d7cbf',
-  accent: '#ffb238',
-  success: '#37b635',
-  warning: '#ec1818',
-  ui: {
-    bright: '#e0d6eb',
-    light: '#f5f3f7',
-    whisper: '#fbfafc'
-  },
-  code: '#fcf6f0',
-  gray: {
-    dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
-    copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
-    calm: 'rgba(0, 0, 0, 0.54)'
-  },
+export const brandColors = {
+  katablue: '#006fe6',
+  lightkatablue: '#7fbcff',
+  softkatablue: '#d8ebff',
+
+  semicobalt: '#2662cf',
+  cobalt: '#2053af',
+  darkcobalt: '#19428c',
+
+  cobalt01: '#5587e0',
+  cobalt03: '#102a59',
+
+  iceblue: '#f8fcff',
+  icebluetwo: '#f4faff',
+  icebluethree: '#d8ebff',
+
+  black: '#000',
+  grey80: '#24282d',
+  grey70: '#484c4f',
+  grey60: '#676b6d',
+  grey50: '#949a9d',
+  grey40: '#c2c7c8',
+  grey30: '#e2e6e8',
+  grey20: '#edf1f2',
+  grey10: '#f6f7f8',
   white: '#fff',
-  black: '#000'
+
+  blue: '#2a90ff',
+  green: '#00c853',
+  red: '#e53935',
+  yellow: '#ffc400'
+};
+
+export const colors = {
+  brand: brandColors.katablue,
+  accent: brandColors.katablue,
+  accentDark: brandColors.cobalt,
+  cobalt01: brandColors.cobalt01,
+  cobalt03: brandColors.cobalt03,
+  drawer: {
+    background: brandColors.icebluetwo,
+    border: brandColors.icebluethree
+  },
+  black: brandColors.black,
+  border: brandColors.grey30,
+  ui: {
+    bright: brandColors.grey20,
+    light: brandColors.grey10,
+    whisper: brandColors.grey10
+  },
+  footer: {
+    background: brandColors.icebluetwo,
+    border: brandColors.icebluethree
+  },
+  code: brandColors.grey20,
+  gray: {
+    dark: brandColors.grey80,
+    copy: brandColors.grey70,
+    calm: brandColors.grey50
+  },
+  ink: brandColors.black,
+  white: brandColors.white,
+  error: brandColors.red
 };
 
 export const fonts = {
