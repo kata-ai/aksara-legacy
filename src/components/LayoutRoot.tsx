@@ -1,6 +1,8 @@
 import React from 'react';
+import { Normalize } from 'styled-normalize';
+
+import GlobalStyles from 'styles/globals';
 import styled from 'utils/styled';
-import GlobalStyle from 'styles/globals';
 
 const StyledLayoutRoot = styled('div')`
   display: flex;
@@ -19,7 +21,8 @@ interface LayoutRootProps {
 
 const LayoutRoot: React.SFC<LayoutRootProps> = ({ children, className }) => (
   <StyledLayoutRoot className={className}>
-    <GlobalStyle />
+    <Normalize />
+    <GlobalStyles />
     {children}
   </StyledLayoutRoot>
 );

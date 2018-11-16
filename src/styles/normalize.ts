@@ -1,8 +1,8 @@
 // tslint:disable
 
-import { css } from 'styled-components';
+import { css, createGlobalStyle } from 'utils/styled';
 
-export default css`
+const normalize = css`
 /*! modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /* Document
@@ -287,3 +287,7 @@ summary {
 	display: list-item;
 }
 `;
+
+export const Normalize = createGlobalStyle`${normalize}`
+
+export default normalize

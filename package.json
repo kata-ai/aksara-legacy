@@ -53,6 +53,7 @@
     "react-helmet": "^5.2.0",
     "rehype-react": "^3.0.3",
     "styled-components": "^4.0.3",
+    "styled-normalize": "^8.0.4",
     "typescript": "^3.1.6"
   },
   "devDependencies": {
