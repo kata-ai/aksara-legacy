@@ -7,7 +7,6 @@ import { breakpoints } from 'styles/variables';
 import styled from 'utils/styled';
 import Page from 'components/Page';
 import Container from 'components/Container';
-import DocsWrapper from 'components/DocsWrapper';
 import FooterWrapper from 'components/FooterWrapper';
 import Footer from 'components/Footer';
 
@@ -38,9 +37,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
         <Helmet>
           <meta property="og:title" content="Home" />
         </Helmet>
-        <DocsWrapper>
-          <Banner />
-        </DocsWrapper>
+        <Banner />
         <SectionFor>
           <img
             style={{ position: 'absolute', top: '-56px', left: '55px', zIndex: 1 }}
@@ -96,9 +93,8 @@ const SectionContainer = styled(Container)`
   z-index: 5;
 `;
 
-const SectionFor = styled('div')`
+const SectionFor = styled('section')`
   position: relative;
-  margin-top: 112px;
   padding: 120px 55px;
   min-height: 550px;
   background-image: linear-gradient(

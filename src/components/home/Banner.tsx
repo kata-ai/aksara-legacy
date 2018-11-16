@@ -7,10 +7,14 @@ import LogoImage from 'assets/images/aksara-logo-banner.svg';
 import BannerImage from 'assets/images/main.svg';
 import Button from 'components/custom/button';
 
-const Wrapper = styled('div')`
-  margin-top: 136px;
-  @media (max-width: ${breakpoints.md - 1}px) {
-    margin-top: 56px;
+const SectionHero = styled('section')`
+  display: block;
+  flex: 1 1 auto;
+  position: relative;
+  padding: 56px ${props => props.theme.dimensions.containerPadding}rem;
+
+  @media (min-width: ${breakpoints.md}px) {
+    padding: 136px ${props => props.theme.dimensions.containerPadding}rem;
   }
 `;
 
@@ -58,8 +62,8 @@ const BannerCol = styled('div')`
 `;
 
 const Banner: React.SFC = () => (
-  <Container large>
-    <Wrapper>
+  <SectionHero>
+    <Container large>
       <BannerRow>
         <BannerCol>
           <LogoWrapper>
@@ -87,8 +91,8 @@ const Banner: React.SFC = () => (
           </BanerWrapper>
         </BannerCol>
       </BannerRow>
-    </Wrapper>
-  </Container>
+    </Container>
+  </SectionHero>
 );
 
 export default Banner;
