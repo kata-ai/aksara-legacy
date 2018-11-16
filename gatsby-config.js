@@ -13,17 +13,19 @@ module.exports = {
       email: 'resi@kata.ai'
     }
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/docs`
+        path: `${__dirname}/content`
       }
     },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'
