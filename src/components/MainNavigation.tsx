@@ -49,7 +49,7 @@ const MenuList = styled('ul')`
 
 const Menu = styled(Link)`
   cursor: pointer;
-  font-family: MuseoSansRounded-700;
+  font-weight: 700;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.3px;

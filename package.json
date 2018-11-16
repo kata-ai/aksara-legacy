@@ -22,6 +22,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@kata-kit/fonts": "^0.5.2",
     "babel-plugin-styled-components": "^1.8.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.40",

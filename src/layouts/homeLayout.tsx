@@ -12,6 +12,8 @@ import { MenuNode } from 'interfaces/nodes';
 import { SiteMetadata } from 'interfaces/gatsby';
 
 import 'modern-normalize';
+import '@kata-kit/fonts/museo-sans-rounded.css';
+import '@kata-kit/fonts/kata-icons.css';
 import 'prism-themes/themes/prism-atom-dark.css';
 
 import Overlay from 'components/Overlay';

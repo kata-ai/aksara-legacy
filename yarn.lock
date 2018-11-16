@@ -737,6 +737,11 @@
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
 
+"@kata-kit/fonts@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@kata-kit/fonts/-/fonts-0.5.2.tgz#151e694d22fbc8a74ad90f86cf3c7ec9718db21c"
+  integrity sha512-9GRUbtiQjjrKMqmYusv/IqgrIomFY2Jo6ZgKra/01hbrsiw/Y9IC48OLS2tUHWTOzS8JnxArY2BbPb5Ds+HYWw==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

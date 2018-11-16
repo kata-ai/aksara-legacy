@@ -29,14 +29,14 @@ const InnerWrapper = styled('div')`
 
 const Intro = styled('span')`
   color: ${props => props.theme.colors.gray.copy};
-  font-family: 'MuseoSansRounded-700';
+  font-weight: 700;
   line-height: 20px;
   font-size: ${props => `${props.theme.dimensions.fontSize.medium}px`};
 `;
 
 const Description = styled('p')`
   color: ${props => props.theme.colors.gray.copy};
-  font-family: 'MuseoSansRounded-300';
+  font-weight: 300;
   line-height: 20px;
   font-size: ${props => `${props.theme.dimensions.fontSize.medium}px`};
   margin: 0px;
