@@ -71,7 +71,7 @@ const TitleInner = styled('div')`
 const HomepageLink = styled(Link)`
   color: ${props => props.theme.colors.black};
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
 
   &:hover,
   &:focus {

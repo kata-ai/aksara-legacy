@@ -14,6 +14,7 @@ const MarkdownContent: React.SFC<MarkdownContentProps> = ({ className, html }) =
 export default styled(MarkdownContent)`
   font-size: ${props => props.theme.dimensions.fontSize.regular}px;
   line-height: ${props => props.theme.dimensions.lineHeight.regular};
+  font-weight: 300;
 
   @media (min-width: ${breakpoints.lg}px) {
     font-size: ${props => props.theme.dimensions.fontSize.large}px;
@@ -28,7 +29,7 @@ export default styled(MarkdownContent)`
     margin-top: 1.414rem;
     margin-bottom: 0.5rem;
     color: ${props => props.theme.colors.ink};
-    font-weight: 600;
+    font-weight: 500;
     line-height: ${props => props.theme.dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
   }
@@ -152,9 +153,10 @@ export default styled(MarkdownContent)`
   .footnotes {
     margin-top: 2rem;
     font-size: 85%;
+
     li[id^='fn-'] {
       p {
-        // Remark for some reason puts the footnote reflink *after* the 'p' tag.
+        /* Remark for some reason puts the footnote reflink *after* the 'p' tag. */
         display: inline;
       }
     }
