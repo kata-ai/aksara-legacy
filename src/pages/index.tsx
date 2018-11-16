@@ -30,6 +30,7 @@ interface PageTemplateProps extends RouteComponentProps {
   };
 }
 
+// TODO: convert the hardcoded styles in geometrics to styled-components
 const IndexPage: React.SFC<PageTemplateProps> = () => {
   return (
     <Layout>
@@ -41,7 +42,15 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <Banner />
         </DocsWrapper>
         <SectionFor>
-          <Container extralarge>
+          <img
+            style={{ position: 'absolute', top: '-56px', left: '55px', zIndex: 1 }}
+            src={require('assets/images/geometric-1.svg')}
+          />
+          <img
+            style={{ position: 'absolute', top: '-72px', right: '24px', zIndex: 1 }}
+            src={require('assets/images/geometric-2.svg')}
+          />
+          <SectionContainer extralarge>
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row>
               <Col>
@@ -63,7 +72,15 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
             </Row>
-          </Container>
+          </SectionContainer>
+          <img
+            style={{ position: 'absolute', bottom: '-64px', left: '24px', zIndex: 1 }}
+            src={require('assets/images/geometric-3.svg')}
+          />
+          <img
+            style={{ position: 'absolute', bottom: '-48px', right: '55px', zIndex: 1 }}
+            src={require('assets/images/geometric-4.svg')}
+          />
         </SectionFor>
         <FooterWrapper>
           <Container>
@@ -75,16 +92,21 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
   );
 };
 
+const SectionContainer = styled(Container)`
+  z-index: 5;
+`;
+
 const SectionFor = styled('div')`
+  position: relative;
   margin-top: 112px;
-  padding: 120px 0px 120px 0px;
+  padding: 120px 55px;
   min-height: 550px;
   background-image: linear-gradient(
     67deg,
     ${props => props.theme.colors.kata03},
     ${props => props.theme.colors.accentDark} 32%,
     ${props => props.theme.colors.brand} 60%,
-    ${props => props.theme.colors.softblue},
+    ${props => props.theme.colors.softblue} 99%,
     ${props => props.theme.colors.softblue},
     ${props => props.theme.colors.softblue}
   );

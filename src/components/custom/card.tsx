@@ -32,6 +32,7 @@ class Card extends React.Component<Props, State> {
 
 const HomepageCard = css`
   height: 232px;
+  z-index: 1;
 `;
 
 const Wrapper = styled<Props, 'div'>('div')`
