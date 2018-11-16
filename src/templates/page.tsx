@@ -15,7 +15,7 @@ import Pagination from 'components/Pagination';
 import Footer from 'components/Footer';
 import FooterWrapper from 'components/FooterWrapper';
 
-import PageLayout from '../layouts/pageLayout';
+import Layout from 'layouts';
 
 interface PageTemplateProps extends RouteComponentProps {
   data: {
@@ -47,7 +47,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
   const nextPage = getPageById(sectionList.edges, next);
 
   return (
-    <PageLayout>
+    <Layout isDocsLayout>
       <Page docsPage>
         <Helmet>
           <title>
@@ -72,7 +72,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
           </Container>
         </FooterWrapper>
       </Page>
-    </PageLayout>
+    </Layout>
   );
 };
 

@@ -4,6 +4,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import { WindowLocation } from '@reach/router';
 
 import MainNavigation from 'components/MainNavigation';
+import Navigation from 'components/Navigation';
 import LayoutRoot from 'components/LayoutRoot';
 import LayoutMain from 'components/LayoutMain';
 import theme from 'styles/theme';
@@ -11,7 +12,6 @@ import { ThemeProvider } from 'utils/styled';
 import { MenuNode } from 'interfaces/nodes';
 import { SiteMetadata } from 'interfaces/gatsby';
 
-import 'modern-normalize';
 import '@kata-kit/fonts/museo-sans-rounded.css';
 import '@kata-kit/fonts/kata-icons.css';
 import 'prism-themes/themes/prism-atom-dark.css';
@@ -20,6 +20,7 @@ import Overlay from 'components/Overlay';
 
 interface WrapperProps {
   location?: WindowLocation;
+  isDocsLayout?: boolean;
 }
 
 interface WrapperState {
@@ -37,7 +38,7 @@ interface DataProps {
   };
 }
 
-class HomeLayout extends React.Component<WrapperProps, WrapperState> {
+class Layout extends React.Component<WrapperProps, WrapperState> {
   constructor(props: WrapperProps) {
     super(props);
 
@@ -47,7 +48,7 @@ class HomeLayout extends React.Component<WrapperProps, WrapperState> {
   }
 
   render() {
-    const { children, location } = this.props;
+    const { children, location, isDocsLayout } = this.props;
     const { drawerIsOpen } = this.state;
 
     return (
@@ -76,6 +77,15 @@ class HomeLayout extends React.Component<WrapperProps, WrapperState> {
                   onCloseNavMenu={this.closeDrawer}
                   toggleDrawer={this.toggleDrawer}
                 />
+                {isDocsLayout && (
+                  <Navigation
+                    title={siteMetadata.sidebarTitle || siteMetadata.title}
+                    navigation={data.navigationMenus.edges}
+                    open={drawerIsOpen}
+                    onCloseNavMenu={this.closeDrawer}
+                    toggleDrawer={this.toggleDrawer}
+                  />
+                )}
                 <Overlay visible={drawerIsOpen} onClick={this.closeDrawer} />{' '}
                 <LayoutMain>{children}</LayoutMain>
               </LayoutRoot>
@@ -95,10 +105,10 @@ class HomeLayout extends React.Component<WrapperProps, WrapperState> {
   };
 }
 
-export default HomeLayout;
+export default Layout;
 
 const query = graphql`
-  query HomeLayoutQuery {
+  query IndexLayoutQuery {
     site {
       siteMetadata {
         title

@@ -2,13 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import { RouteComponentProps } from '@reach/router';
 
 import Page from 'components/Page';
 import NotFoundWrapper from 'components/NotFoundWrapper';
 import styled from 'utils/styled';
 import { SiteMetadata } from 'interfaces/gatsby';
-import { RouteComponentProps } from '@reach/router';
-import PageLayout from 'layouts/pageLayout';
+import Layout from 'layouts';
 
 interface Props extends RouteComponentProps {
   data: {
@@ -19,7 +19,7 @@ interface Props extends RouteComponentProps {
 }
 
 const NotFoundPage: React.SFC<Props> = ({ data }) => (
-  <PageLayout>
+  <Layout>
     <Page>
       <Helmet>
         <title>404: Page not found. &middot; {data.site.siteMetadata.title}</title>
@@ -34,7 +34,7 @@ const NotFoundPage: React.SFC<Props> = ({ data }) => (
         </Inner>
       </NotFoundWrapper>
     </Page>
-  </PageLayout>
+  </Layout>
 );
 
 export default NotFoundPage;

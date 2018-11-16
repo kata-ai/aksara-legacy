@@ -11,7 +11,7 @@ import DocsWrapper from 'components/DocsWrapper';
 import FooterWrapper from 'components/FooterWrapper';
 import Footer from 'components/Footer';
 
-import HomeLayout from 'layouts/homeLayout';
+import Layout from 'layouts';
 import Banner from 'components/home/Banner';
 import Card from 'components/custom/card';
 
@@ -32,8 +32,8 @@ interface PageTemplateProps extends RouteComponentProps {
 
 const IndexPage: React.SFC<PageTemplateProps> = () => {
   return (
-    <HomeLayout>
-      <Page docsPage>
+    <Layout>
+      <Page>
         <Helmet>
           <meta property="og:title" content="Home" />
         </Helmet>
@@ -46,20 +46,20 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
             <Row>
               <Col>
                 <Card>
-                  These principles help us to make tough design decisions and
-                  refine many iterations into the best solution for creating Aksara.
+                  These principles help us to make tough design decisions and refine many iterations
+                  into the best solution for creating Aksara.
                 </Card>
               </Col>
               <Col>
                 <Card>
-                  We build neat design guidelines with the best practice using for
-                  each component based on continuous research and exploration.
+                  We build neat design guidelines with the best practice using for each component
+                  based on continuous research and exploration.
                 </Card>
               </Col>
               <Col>
                 <Card>
-                  The communication we use to influence how people think and feel about
-                  our product while using it.
+                  The communication we use to influence how people think and feel about our product
+                  while using it.
                 </Card>
               </Col>
             </Row>
@@ -71,7 +71,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           </Container>
         </FooterWrapper>
       </Page>
-    </HomeLayout>
+    </Layout>
   );
 };
 
@@ -80,17 +80,18 @@ const SectionFor = styled('div')`
   padding: 120px 0px 120px 0px;
   min-height: 550px;
   background-image: linear-gradient(
-      67deg, ${props => props.theme.colors.kata03},
-      ${props => props.theme.colors.accentDark} 32%,
-      ${props => props.theme.colors.brand} 60%,
-      ${props => props.theme.colors.softblue},
-      ${props => props.theme.colors.softblue},
-      ${props => props.theme.colors.softblue}
+    67deg,
+    ${props => props.theme.colors.kata03},
+    ${props => props.theme.colors.accentDark} 32%,
+    ${props => props.theme.colors.brand} 60%,
+    ${props => props.theme.colors.softblue},
+    ${props => props.theme.colors.softblue},
+    ${props => props.theme.colors.softblue}
   );
 `;
 
 const TitleSectionFor = styled('h1')`
-  font-family: 'MuseoSansRounded-500';
+  font-weight: 500;
   text-align: center;
   font-size: 32px;
   color: ${props => props.theme.colors.white};
