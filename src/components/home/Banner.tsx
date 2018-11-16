@@ -11,7 +11,7 @@ const SectionHero = styled('section')`
   display: block;
   flex: 1 1 auto;
   position: relative;
-  padding: 56px ${props => props.theme.dimensions.containerPadding}rem;
+  padding: 80px ${props => props.theme.dimensions.containerPadding}rem 88px;
 
   @media (min-width: ${breakpoints.md}px) {
     padding: 136px ${props => props.theme.dimensions.containerPadding}rem;
@@ -52,7 +52,7 @@ const BannerRow = styled('div')`
   flex-direction: column;
 
   @media (min-width: ${breakpoints.md}px) {
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
 `;
@@ -65,6 +65,11 @@ const Banner: React.SFC = () => (
   <SectionHero>
     <Container large>
       <BannerRow>
+        <BannerCol>
+          <BanerWrapper>
+            <img src={BannerImage} />
+          </BanerWrapper>
+        </BannerCol>
         <BannerCol>
           <LogoWrapper>
             <img src={LogoImage} />
@@ -84,11 +89,6 @@ const Banner: React.SFC = () => (
             </Description>
           </InnerWrapper>
           <Button primary text="Learn More" to="/getting-started/deploying/" />
-        </BannerCol>
-        <BannerCol>
-          <BanerWrapper>
-            <img src={BannerImage} />
-          </BanerWrapper>
         </BannerCol>
       </BannerRow>
     </Container>

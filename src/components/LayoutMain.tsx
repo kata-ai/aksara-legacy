@@ -5,10 +5,6 @@ const StyledLayoutMain = styled('div')`
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-
-  @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
-    margin-top: ${props => props.theme.heights.header}px;
-  }
 `;
 
 interface LayoutMainProps {
