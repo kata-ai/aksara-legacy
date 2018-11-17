@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
 
 import Page from 'components/Page';
-import Container from 'components/Container';
+import Container from 'components/layout/Container';
 import getPageById from 'utils/getPageById';
 import { MenuNode } from 'interfaces/nodes';
 import { SiteMetadata } from 'interfaces/gatsby';

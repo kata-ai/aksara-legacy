@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'utils/styled';
-import Container from './Container';
+import Container from './layout/Container';
 import { breakpoints } from 'styles/variables';
 
 const Wrapper = styled('footer')`

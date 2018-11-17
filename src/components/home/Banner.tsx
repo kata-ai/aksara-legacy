@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from 'components/Container';
+import Container from 'components/layout/Container';
 import styled from 'utils/styled';
 import { breakpoints } from 'styles/variables';
 

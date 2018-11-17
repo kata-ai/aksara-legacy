@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
-import Container from './Container';
+import Container from './layout/Container';
 import { MenuNode } from 'interfaces/nodes';
 import DocumentationNavMenus from './DocumentationNavMenus';
 import MobileHeader from './MobileHeader';

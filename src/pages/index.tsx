@@ -6,7 +6,7 @@ import { breakpoints } from 'styles/variables';
 
 import styled from 'utils/styled';
 import Page from 'components/Page';
-import Container from 'components/Container';
+import Container from 'components/layout/Container';
 import FooterWrapper from 'components/FooterWrapper';
 import Footer from 'components/Footer';
 
