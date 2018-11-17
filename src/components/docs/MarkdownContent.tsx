@@ -8,16 +8,18 @@ interface MarkdownContentProps {
 }
 
 const MarkdownContent: React.SFC<MarkdownContentProps> = ({ className, html }) => (
-  <section className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  <Section className={className} dangerouslySetInnerHTML={{ __html: html }} />
 );
 
-export default styled(MarkdownContent)`
-  font-size: ${props => props.theme.dimensions.fontSize.regular}px;
-  line-height: ${props => props.theme.dimensions.lineHeight.regular};
+export default MarkdownContent;
+
+const Section = styled('section')`
+  font-size: ${props => props.theme.dimensions.fontSize.medium}px;
+  line-height: ${props => props.theme.dimensions.lineHeight.medium};
   font-weight: 300;
 
   @media (min-width: ${breakpoints.lg}px) {
-    font-size: ${props => props.theme.dimensions.fontSize.large}px;
+    font-size: ${props => props.theme.dimensions.fontSize.regular}px;
   }
 
   h1,

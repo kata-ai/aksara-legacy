@@ -25,7 +25,7 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
     left: 0px;
     bottom: 0px;
     right: 0px;
-    width: ${props => props.theme.widths.drawer.lg}px;
+    width: ${props => props.theme.widths.drawer.sm}px;
     height: 100vh;
     padding-bottom: 5rem;
     overflow-y: auto;

@@ -44,8 +44,8 @@ export const colors = {
   cobalt01: brandColors.cobalt01,
   cobalt03: brandColors.cobalt03,
   drawer: {
-    background: brandColors.icebluetwo,
-    border: brandColors.icebluethree
+    background: brandColors.white,
+    border: brandColors.grey30
   },
   black: brandColors.black,
   border: brandColors.grey30,
@@ -96,15 +96,15 @@ export const widths = {
     xl: 1170
   },
   drawer: {
-    sm: 200,
-    lg: 300
+    sm: 280,
+    lg: 256
   }
 };
 
 export const dimensions = {
   fontSize: {
-    regular: 16,
-    large: 18
+    regular: 14,
+    large: 16
   },
   headingSizes: {
     h1: 2.441,
@@ -113,8 +113,8 @@ export const dimensions = {
     h4: 1.25
   },
   lineHeight: {
-    regular: 1.45,
-    heading: 1.2
+    regular: '20px',
+    heading: '24px'
   },
   containerPadding: 1.5
 };

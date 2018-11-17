@@ -43,8 +43,11 @@ const theme = {
       h4: 1.25
     },
     lineHeight: {
-      regular: 1.45,
-      heading: 1.2
+      small: '16px',
+      medium: '20px',
+      regular: '24px',
+      large: '22px',
+      heading: '32px'
     },
     containerPadding: {
       mobile: '24px',

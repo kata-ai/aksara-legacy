@@ -6,9 +6,10 @@ interface SlideoutDrawerButtonProps {
 }
 
 const Wrapper = styled<SlideoutDrawerButtonProps, 'div'>('div')`
+  display: none;
   position: absolute;
   top: 80px;
-  left: ${props => (props.drawerIsOpen ? '300px' : 0)};
+  left: ${props => (props.drawerIsOpen ? `${props.theme.widths.drawer.sm}px` : 0)};
   width: 40px;
   height: 40px;
   background-color: ${props => props.theme.colors.white};
@@ -18,6 +19,10 @@ const Wrapper = styled<SlideoutDrawerButtonProps, 'div'>('div')`
   z-index: ${props => props.theme.zIndex.drawer - 1};
   transition: all 0.3s ease;
   cursor: pointer;
+
+  @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
+    display: block;
+  }
 `;
 
 const Inner = styled('div')`

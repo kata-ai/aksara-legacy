@@ -21,11 +21,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: ${props => props.theme.dimensions.fontSize.regular}px;
-    line-height: ${props => props.theme.dimensions.lineHeight.regular};
+    font-size: ${props => props.theme.dimensions.fontSize.medium}px;
+    line-height: ${props => props.theme.dimensions.lineHeight.medium};
 
     @media (min-width: ${breakpoints.lg}px) {
-      font-size: ${props => props.theme.dimensions.fontSize.large}px;
+      font-size: ${props => props.theme.dimensions.fontSize.regular}px;
+      line-height: ${props => props.theme.dimensions.lineHeight.regular};
     }
   }
 
