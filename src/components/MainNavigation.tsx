@@ -25,11 +25,12 @@ const Wrapper = styled<ToggleableProps, 'header'>('header')`
   border-bottom: 1px solid ${props => props.theme.colors.border};
   top: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: ${props => props.theme.zIndex.overlay - 5};
   height: ${props => props.theme.heights.header}px;
 
   @media (min-width: ${props => props.theme.breakpoints.lg}px) {
     flex: 0 0 ${props => props.theme.widths.drawer.lg}px;
+    z-index: ${props => props.theme.zIndex.topbar};
   }
 `;
 

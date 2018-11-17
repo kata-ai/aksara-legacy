@@ -67,7 +67,8 @@ const theme = {
     header: 90,
     overlay: 95,
     floatingButton: 100,
-    drawer: 105
+    drawer: 105,
+    topbar: 110
   }
 };
 

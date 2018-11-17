@@ -5,8 +5,6 @@ import styled from 'utils/styled';
 import Container from './layout/Container';
 import { MenuNode } from 'interfaces/nodes';
 import DocumentationNavMenus from './DocumentationNavMenus';
-import MobileHeader from './MobileHeader';
-import NavButton from './NavButton';
 
 interface ToggleableProps {
   isOpen?: boolean;
@@ -17,8 +15,8 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease;
-  background-color: ${props => props.theme.colors.drawer.background};
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: ${props => props.theme.colors.white};
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   z-index: ${props => props.theme.zIndex.drawer};
 
   @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
@@ -99,13 +97,10 @@ class Header extends React.Component<HeaderProps> {
   }
 
   render() {
-    const { title, toggleDrawer, navigation, open, onCloseNavMenu } = this.props;
+    const { title, navigation, open, onCloseNavMenu } = this.props;
 
     return (
       <Wrapper isOpen={open}>
-        <MobileHeader absolute transparent>
-          <NavButton onClick={toggleDrawer} drawerIsOpen={open} />
-        </MobileHeader>
         <WrapperInner>
           <TitleInner>
             <Container>

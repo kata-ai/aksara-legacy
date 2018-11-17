@@ -17,6 +17,8 @@ import '@kata-kit/fonts/kata-icons.css';
 import 'prism-themes/themes/prism-atom-dark.css';
 
 import Overlay from 'components/Overlay';
+import NavButton from 'components/NavButton';
+import SlideoutDrawerButton from 'components/navigation/SlideoutDrawerButton';
 
 interface WrapperProps {
   location?: WindowLocation;
@@ -78,15 +80,24 @@ class Layout extends React.Component<WrapperProps, WrapperState> {
                   toggleDrawer={this.toggleDrawer}
                 />
                 {isDocsLayout && (
-                  <Navigation
-                    title={siteMetadata.sidebarTitle || siteMetadata.title}
-                    navigation={data.navigationMenus.edges}
-                    open={drawerIsOpen}
-                    onCloseNavMenu={this.closeDrawer}
-                    toggleDrawer={this.toggleDrawer}
-                  />
+                  <React.Fragment>
+                    <Navigation
+                      title={siteMetadata.sidebarTitle || siteMetadata.title}
+                      navigation={data.navigationMenus.edges}
+                      open={drawerIsOpen}
+                      onCloseNavMenu={this.closeDrawer}
+                      toggleDrawer={this.toggleDrawer}
+                    />
+                    <Overlay visible={drawerIsOpen} onClick={this.closeDrawer} />{' '}
+                    <SlideoutDrawerButton drawerIsOpen={drawerIsOpen}>
+                      <NavButton
+                        onClick={this.toggleDrawer}
+                        drawerIsOpen={drawerIsOpen}
+                        size={14}
+                      />
+                    </SlideoutDrawerButton>
+                  </React.Fragment>
                 )}
-                <Overlay visible={drawerIsOpen} onClick={this.closeDrawer} />{' '}
                 <LayoutMain>{children}</LayoutMain>
               </LayoutRoot>
             );

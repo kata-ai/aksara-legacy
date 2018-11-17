@@ -41,14 +41,15 @@ const Inner = styled<ToggleableProps, 'div'>('div')`
 interface NavButtonProps {
   className?: string;
   drawerIsOpen?: boolean;
+  size?: number;
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const NavButton: React.SFC<NavButtonProps> = ({ className, drawerIsOpen, onClick }) => (
+const NavButton: React.SFC<NavButtonProps> = ({ className, drawerIsOpen, size, onClick }) => (
   <Wrapper className={className} onClick={onClick} drawerIsOpen={drawerIsOpen}>
     <Inner drawerIsOpen={drawerIsOpen}>
       {drawerIsOpen ? (
-        <svg width="24px" height="24px" viewBox="0 0 24 24">
+        <svg width={size || 24} height={size || 24} viewBox="0 0 24 24">
           <g fill="none" fillRule="evenodd">
             <rect
               transform="translate(11.748851, 11.748851) rotate(-315.000000) translate(-11.748851, -11.748851) "
@@ -71,7 +72,12 @@ const NavButton: React.SFC<NavButtonProps> = ({ className, drawerIsOpen, onClick
           </g>
         </svg>
       ) : (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={size || 24}
+          height={size || 24}
+          viewBox="0 0 24 24"
+        >
           <g fill="none" fillRule="evenodd">
             <rect width="24" height="3" rx="1.5" />
             <rect width="24" height="3" y="10.5" rx="1.5" />
