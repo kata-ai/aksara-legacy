@@ -13,6 +13,7 @@ import Footer from 'components/Footer';
 import Layout from 'layouts';
 import Banner from 'components/home/Banner';
 import Card from 'components/custom/card';
+import GeometricShapes from 'components/home/GeometricShapes';
 
 interface PageTemplateProps extends RouteComponentProps {
   data: {
@@ -39,14 +40,8 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
         </Helmet>
         <Banner />
         <SectionFor>
-          <img
-            style={{ position: 'absolute', top: '-56px', left: '55px', zIndex: 1 }}
-            src={require('assets/images/geometric-1.svg')}
-          />
-          <img
-            style={{ position: 'absolute', top: '-72px', right: '24px', zIndex: 1 }}
-            src={require('assets/images/geometric-2.svg')}
-          />
+          <GeometricShapes topLeft src={require('assets/images/geometric-1.svg')} />
+          <GeometricShapes topRight src={require('assets/images/geometric-2.svg')} />
           <SectionContainer extralarge>
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row>
@@ -70,14 +65,8 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
               </Col>
             </Row>
           </SectionContainer>
-          <img
-            style={{ position: 'absolute', bottom: '-64px', left: '24px', zIndex: 1 }}
-            src={require('assets/images/geometric-3.svg')}
-          />
-          <img
-            style={{ position: 'absolute', bottom: '-48px', right: '55px', zIndex: 1 }}
-            src={require('assets/images/geometric-4.svg')}
-          />
+          <GeometricShapes bottomLeft src={require('assets/images/geometric-3.svg')} />
+          <GeometricShapes bottomRight src={require('assets/images/geometric-4.svg')} />
         </SectionFor>
         <FooterWrapper>
           <Container>
@@ -90,6 +79,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
 };
 
 const SectionContainer = styled(Container)`
+  position: relative;
   z-index: 5;
 `;
 
@@ -132,14 +122,20 @@ const Row = styled('div')`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: ${breakpoints.md}px) {
+  @media (min-width: ${breakpoints.lg}px) {
     flex-direction: row;
     justify-content: space-between;
   }
 `;
 
 const Col = styled('div')`
-  flex: 0 1 calc(33.3% - 15px);
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: ${breakpoints.lg}px) {
+    flex: 0 1 calc(33.3% - 15px);
+  }
 `;
 
 export default IndexPage;
