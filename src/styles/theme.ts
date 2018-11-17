@@ -1,4 +1,4 @@
-import { colors, fonts, breakpoints } from './variables';
+import { colors, fonts, breakpoints, widths } from './variables';
 
 const theme = {
   // Site colors
@@ -54,12 +54,7 @@ const theme = {
   },
 
   // Widths
-  widths: {
-    drawer: {
-      sm: 200,
-      lg: 300
-    }
-  },
+  widths,
 
   // Heights
   heights: {

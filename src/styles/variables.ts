@@ -89,9 +89,16 @@ export const breakpoints = {
 };
 
 export const widths = {
-  md: 720,
-  lg: 970,
-  xl: 1170
+  containers: {
+    sm: 312,
+    md: 702,
+    lg: 970,
+    xl: 1170
+  },
+  drawer: {
+    sm: 200,
+    lg: 300
+  }
 };
 
 export const dimensions = {
@@ -113,5 +120,5 @@ export const dimensions = {
 };
 
 export const heights = {
-  header: 60
+  header: '64px'
 };

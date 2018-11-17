@@ -13,9 +13,9 @@ const Container = styled<ContainerProps, 'div'>('div')`
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  ${props => props.medium ? `max-width: ${widths.md}px` : ``};
-  ${props => props.large ? `max-width: ${widths.lg}px` : ``};
-  ${props => props.extralarge ? `max-width: ${widths.xl}px` : ``};
+  ${props => (props.medium ? `max-width: ${widths.containers.md}px` : ``)};
+  ${props => (props.large ? `max-width: ${widths.containers.lg}px` : ``)};
+  ${props => (props.extralarge ? `max-width: ${widths.containers.xl}px` : ``)};
 `;
 
 export default Container;
