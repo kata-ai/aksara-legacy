@@ -6,7 +6,7 @@ import { breakpoints } from 'styles/variables';
 import Container from './Container';
 
 const Wrapper = styled('aside')`
-  padding: 2rem ${props => props.theme.dimensions.containerPadding}rem;
+  padding: 2rem ${props => props.theme.dimensions.containerPadding.mobile};
   background-color: ${props => props.theme.colors.ui.light};
   border: 1px solid ${props => props.theme.colors.ui.bright};
   border-radius: 4px;

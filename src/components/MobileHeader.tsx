@@ -14,7 +14,7 @@ const Wrapper = styled<MobileHeaderProps, 'div'>('div')`
   left: 0;
   width: 100%;
   height: ${props => props.theme.heights.header}px;
-  padding: 0 ${props => props.theme.dimensions.containerPadding}rem;
+  padding: 0 ${props => props.theme.dimensions.containerPadding.mobile};
   background-color: ${props => (props.transparent ? 'transparent' : props.theme.colors.ui.light)};
   z-index: ${props => props.theme.zIndex.header};
 

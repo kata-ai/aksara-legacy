@@ -95,7 +95,7 @@ const SectionContainer = styled(Container)`
 
 const SectionFor = styled('section')`
   position: relative;
-  padding: 120px 55px;
+  padding: 80px ${props => props.theme.dimensions.containerPadding.mobile};
   min-height: 550px;
   background-image: linear-gradient(
     67deg,
@@ -106,6 +106,18 @@ const SectionFor = styled('section')`
     ${props => props.theme.colors.softblue},
     ${props => props.theme.colors.softblue}
   );
+
+  @media (min-width: ${props => props.theme.breakpoints.md}px) {
+    padding: 80 ${props => props.theme.dimensions.containerPadding.tablet};
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.md}px) {
+    padding: 80 ${props => props.theme.dimensions.containerPadding.tablet};
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xl}px) {
+    padding: 80 ${props => props.theme.dimensions.containerPadding.desktop};
+  }
 `;
 
 const TitleSectionFor = styled('h1')`

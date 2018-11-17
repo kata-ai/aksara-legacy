@@ -19,7 +19,7 @@ const Wrapper = styled<ToggleableProps, 'header'>('header')`
   left: 0;
   width: 100%;
   height: 64px;
-  padding: 0 ${props => props.theme.dimensions.containerPadding}rem;
+  padding: 0 ${props => props.theme.dimensions.containerPadding.mobile};
   transition: all 0.3s ease;
   background-color: ${props => props.theme.colors.white};
   border-bottom: 1px solid ${props => props.theme.colors.border};

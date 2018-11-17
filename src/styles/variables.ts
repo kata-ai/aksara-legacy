@@ -78,10 +78,14 @@ export const fonts = {
 
 export const breakpoints = {
   xs: 0,
-  sm: 576,
+  // Mobile
+  sm: 360,
+  // Tablet
   md: 768,
-  lg: 992,
-  xl: 1200
+  // Tablet (Landscape)
+  lg: 1024,
+  // Desktop
+  xl: 1280
 };
 
 export const widths = {

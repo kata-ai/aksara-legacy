@@ -11,10 +11,10 @@ const SectionHero = styled('section')`
   display: block;
   flex: 1 1 auto;
   position: relative;
-  padding: 80px ${props => props.theme.dimensions.containerPadding}rem 88px;
+  padding: 80px ${props => props.theme.dimensions.containerPadding.mobile} 88px;
 
-  @media (min-width: ${breakpoints.md}px) {
-    padding: 136px ${props => props.theme.dimensions.containerPadding}rem;
+  @media (min-width: ${breakpoints.lg}px) {
+    padding: 136px ${props => props.theme.dimensions.containerPadding.tablet};
   }
 `;
 
@@ -51,7 +51,7 @@ const BannerRow = styled('div')`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: ${breakpoints.md}px) {
+  @media (min-width: ${breakpoints.lg}px) {
     flex-direction: row-reverse;
     justify-content: space-between;
   }

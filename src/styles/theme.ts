@@ -17,6 +17,17 @@ const theme = {
     xl: 1140
   },
 
+  // Used in stuff like `react-media-match`
+  mediaQueries: {
+    mobile: `(max-width: ${breakpoints.md - 1}px)`,
+    tablet: {
+      base: `(min-width: ${breakpoints.md}px) and (max-width: ${breakpoints.xl - 1}px)`,
+      portrait: `(min-width: ${breakpoints.md}px) and (max-width: ${breakpoints.lg - 1}px)`,
+      landscape: `(min-width: ${breakpoints.lg}px) and (max-width: ${breakpoints.xl - 1}px)`
+    },
+    desktop: `(min-width: ${breakpoints.xl}px)`
+  },
+
   // Dimensions
   dimensions: {
     fontSize: {
@@ -35,7 +46,11 @@ const theme = {
       regular: 1.45,
       heading: 1.2
     },
-    containerPadding: 1.5
+    containerPadding: {
+      mobile: '24px',
+      tablet: '32px',
+      desktop: '55px'
+    }
   },
 
   // Widths

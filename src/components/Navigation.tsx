@@ -60,7 +60,7 @@ const WrapperInner = styled('div')`
 `;
 
 const TitleInner = styled('div')`
-  padding: 1rem ${props => props.theme.dimensions.containerPadding}rem;
+  padding: 1rem ${props => props.theme.dimensions.containerPadding.mobile};
   color: ${props => props.theme.colors.gray.copy};
 
   @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {

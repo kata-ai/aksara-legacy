@@ -4,8 +4,8 @@ import Container from './Container';
 import { breakpoints } from 'styles/variables';
 
 const Wrapper = styled('footer')`
-  margin-top: ${props => props.theme.dimensions.containerPadding * 2}rem;
-  padding: ${props => props.theme.dimensions.containerPadding}rem 0;
+  margin-top: ${props => props.theme.dimensions.containerPadding.desktop};
+  padding: ${props => props.theme.dimensions.containerPadding.mobile} 0;
   border-top: 1px solid ${props => props.theme.colors.border};
 
   p {
@@ -29,7 +29,8 @@ const Footer: React.SFC = () => (
             rel="noopener noreferrer"
           >
             Grundgesetz
-          </a>.
+          </a>
+          .
         </small>
       </p>
     </Container>
