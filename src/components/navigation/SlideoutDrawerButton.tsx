@@ -17,6 +17,7 @@ const Wrapper = styled<SlideoutDrawerButtonProps, 'div'>('div')`
   border-bottom-right-radius: 6px;
   z-index: ${props => props.theme.zIndex.drawer - 1};
   transition: all 0.3s ease;
+  cursor: pointer;
 `;
 
 const Inner = styled('div')`

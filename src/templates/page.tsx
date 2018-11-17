@@ -3,17 +3,17 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
 
-import Page from 'components/Page';
+import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
 import getPageById from 'utils/getPageById';
 import { MenuNode } from 'interfaces/nodes';
 import { SiteMetadata } from 'interfaces/gatsby';
-import MarkdownContent from 'components/MarkdownContent';
-import DocsWrapper from 'components/DocsWrapper';
-import DocsHeader from 'components/DocsHeader';
-import Pagination from 'components/Pagination';
-import Footer from 'components/Footer';
-import FooterWrapper from 'components/FooterWrapper';
+import MarkdownContent from 'components/docs/MarkdownContent';
+import DocsWrapper from 'components/docs/DocsWrapper';
+import DocsHeader from 'components/docs/DocsHeader';
+import Pagination from 'components/docs/Pagination';
+import Footer from 'components/layout/Footer';
+import FooterWrapper from 'components/layout/FooterWrapper';
 
 import Layout from 'layouts';
 

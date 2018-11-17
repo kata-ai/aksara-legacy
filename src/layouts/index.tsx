@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet';
 import { graphql, StaticQuery } from 'gatsby';
 import { WindowLocation } from '@reach/router';
 
-import MainNavigation from 'components/MainNavigation';
-import Navigation from 'components/Navigation';
-import LayoutRoot from 'components/LayoutRoot';
-import LayoutMain from 'components/LayoutMain';
+import Header from 'components/layout/Header';
+import Navigation from 'components/navigation/Navigation';
+import LayoutRoot from 'components/layout/LayoutRoot';
+import LayoutMain from 'components/layout/LayoutMain';
 import theme from 'styles/theme';
 import { ThemeProvider } from 'utils/styled';
 import { MenuNode } from 'interfaces/nodes';
@@ -16,8 +16,8 @@ import '@kata-kit/fonts/museo-sans-rounded.css';
 import '@kata-kit/fonts/kata-icons.css';
 import 'prism-themes/themes/prism-atom-dark.css';
 
-import Overlay from 'components/Overlay';
-import NavButton from 'components/NavButton';
+import Overlay from 'components/layout/Overlay';
+import NavButton from 'components/navigation/NavButton';
 import SlideoutDrawerButton from 'components/navigation/SlideoutDrawerButton';
 
 interface WrapperProps {
@@ -73,7 +73,7 @@ class Layout extends React.Component<WrapperProps, WrapperState> {
                     content={`${siteMetadata.siteUrl}${location ? location.pathname : '/'}`}
                   />
                 </Helmet>
-                <MainNavigation
+                <Header
                   open={drawerIsOpen}
                   disableNav
                   onCloseNavMenu={this.closeDrawer}

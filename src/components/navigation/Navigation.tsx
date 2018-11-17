@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
-import Container from './layout/Container';
+import Container from '../layout/Container';
 import { MenuNode } from 'interfaces/nodes';
 import DocumentationNavMenus from './DocumentationNavMenus';
 
@@ -91,7 +91,7 @@ interface HeaderProps {
   toggleDrawer?: () => void;
 }
 
-class Header extends React.Component<HeaderProps> {
+class Navigation extends React.Component<HeaderProps> {
   constructor(props: HeaderProps) {
     super(props);
   }
@@ -118,4 +118,4 @@ class Header extends React.Component<HeaderProps> {
   }
 }
 
-export default Header;
+export default Navigation;

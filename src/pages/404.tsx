@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
 
-import Page from 'components/Page';
+import Page from 'components/docs/Page';
 import NotFoundWrapper from 'components/NotFoundWrapper';
 import styled from 'utils/styled';
 import { SiteMetadata } from 'interfaces/gatsby';

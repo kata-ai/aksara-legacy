@@ -5,10 +5,10 @@ import { RouteComponentProps } from '@reach/router';
 import { breakpoints } from 'styles/variables';
 
 import styled from 'utils/styled';
-import Page from 'components/Page';
+import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
-import FooterWrapper from 'components/FooterWrapper';
-import Footer from 'components/Footer';
+import FooterWrapper from 'components/layout/FooterWrapper';
+import Footer from 'components/layout/Footer';
 
 import Layout from 'layouts';
 import Banner from 'components/home/Banner';

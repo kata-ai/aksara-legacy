@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
-import NavButton from './NavButton';
+import NavButton from '../navigation/NavButton';
 
 import Logo from 'assets/images/aksara-logo.svg';
 
@@ -93,7 +93,7 @@ interface HeaderProps {
   toggleDrawer?: () => void;
 }
 
-class MainNavigation extends React.Component<HeaderProps> {
+class Header extends React.Component<HeaderProps> {
   constructor(props: HeaderProps) {
     super(props);
   }
@@ -129,4 +129,4 @@ class MainNavigation extends React.Component<HeaderProps> {
   }
 }
 
-export default MainNavigation;
+export default Header;
