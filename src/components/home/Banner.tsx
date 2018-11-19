@@ -12,6 +12,7 @@ const SectionHero = styled('section')`
   flex: 1 1 auto;
   position: relative;
   padding: 80px ${props => props.theme.dimensions.containerPadding.mobile} 88px;
+  z-index: ${props => props.theme.zIndex.content + 5};
 
   @media (min-width: ${breakpoints.lg}px) {
     padding: 160px ${props => props.theme.dimensions.containerPadding.tablet} 162px;

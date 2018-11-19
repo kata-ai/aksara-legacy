@@ -67,7 +67,7 @@ const BottomRight = (props: ThemedStyledProps<GeometricShapesProps, Theme>) => c
 const GeometricShapes = styled<GeometricShapesProps, 'img'>('img')`
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   user-select: none;
 
   ${props => props.topLeft && TopLeft(props)}

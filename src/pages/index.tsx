@@ -113,9 +113,15 @@ const SectionFor = styled('section')`
 const TitleSectionFor = styled('h1')`
   font-weight: 500;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 30px;
   color: ${props => props.theme.colors.white};
   margin-bottom: 40px;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 `;
 
 const Row = styled('div')`
