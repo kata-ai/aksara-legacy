@@ -4,17 +4,15 @@ const DocsWrapper = styled('article')`
   display: block;
   flex: 1 1 auto;
   position: relative;
-  padding: ${props => props.theme.dimensions.containerPadding.mobile};
+  padding: 48px ${props => props.theme.dimensions.containerPadding.mobile} 80px;
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
-    padding: ${props => props.theme.dimensions.containerPadding.tablet};
+    padding: 48px ${props => props.theme.dimensions.containerPadding.tablet} 80px;
   }
 
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
-    padding: ${props => props.theme.dimensions.containerPadding.desktop};
+    padding: 48px ${props => props.theme.dimensions.containerPadding.desktop} 80px;
   }
-
-  padding-bottom: 3rem;
 `;
 
 export default DocsWrapper;

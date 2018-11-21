@@ -58,7 +58,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
           <meta property="og:description" content={markdownRemark.excerpt} />
         </Helmet>
         <DocsWrapper>
-          <Container>
+          <Container medium>
             <DocsHeader>
               <h1>{markdownRemark.frontmatter.title}</h1>
             </DocsHeader>
@@ -66,7 +66,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
           </Container>
         </DocsWrapper>
         <FooterWrapper>
-          <Container>
+          <Container medium>
             {(prevPage || nextPage) && <Pagination prevPage={prevPage} nextPage={nextPage} />}
             <Footer />
           </Container>

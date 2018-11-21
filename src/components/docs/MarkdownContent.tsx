@@ -18,10 +18,6 @@ const Section = styled('section')`
   line-height: ${props => props.theme.dimensions.lineHeight.medium};
   font-weight: 300;
 
-  @media (min-width: ${breakpoints.lg}px) {
-    font-size: ${props => props.theme.dimensions.fontSize.regular}px;
-  }
-
   h1,
   h2,
   h3,

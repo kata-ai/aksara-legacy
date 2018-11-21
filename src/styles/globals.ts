@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'utils/styled';
-import { breakpoints } from './variables';
 
 // tslint:disable-next-line:no-unused-expression
 const GlobalStyles = createGlobalStyle`
@@ -23,11 +22,6 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: ${props => props.theme.dimensions.fontSize.medium}px;
     line-height: ${props => props.theme.dimensions.lineHeight.medium};
-
-    @media (min-width: ${breakpoints.lg}px) {
-      font-size: ${props => props.theme.dimensions.fontSize.regular}px;
-      line-height: ${props => props.theme.dimensions.lineHeight.regular};
-    }
   }
 
   body {
