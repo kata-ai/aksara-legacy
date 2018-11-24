@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
-import { breakpoints } from 'styles/variables';
 
 import styled from 'utils/styled';
 import Page from 'components/docs/Page';
@@ -11,6 +10,8 @@ import FooterWrapper from 'components/layout/FooterWrapper';
 import Footer from 'components/layout/Footer';
 
 import Layout from 'layouts';
+import Row from 'components/layout/Row';
+import Col from 'components/layout/Col';
 import Banner from 'components/home/Banner';
 import Card from 'components/custom/card';
 import GeometricShapes from 'components/home/GeometricShapes';
@@ -68,6 +69,26 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <GeometricShapes bottomLeft src={require('assets/images/geometric-3.svg')} />
           <GeometricShapes bottomRight src={require('assets/images/geometric-4.svg')} />
         </SectionFor>
+        <SectionUpdates>
+          <SectionContainer extralarge>
+            <Row centered>
+              <Col>
+                <Card isHomepage grey>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi
+                  ratione nisi sapiente. Voluptatibus accusamus est ut dignissimos nemo rerum
+                  pariatur quisquam! Minima cumque atque molestiae laborum laudantium amet!
+                </Card>
+              </Col>
+              <Col>
+                <Card isHomepage grey>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi
+                  ratione nisi sapiente. Voluptatibus accusamus est ut dignissimos nemo rerum
+                  pariatur quisquam! Minima cumque atque molestiae laborum laudantium amet!
+                </Card>
+              </Col>
+            </Row>
+          </SectionContainer>
+        </SectionUpdates>
         <FooterWrapper>
           <Container>
             <Footer />
@@ -101,10 +122,6 @@ const SectionFor = styled('section')`
     padding: 80 ${props => props.theme.dimensions.containerPadding.tablet};
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.md}px) {
-    padding: 80 ${props => props.theme.dimensions.containerPadding.tablet};
-  }
-
   @media (min-width: ${props => props.theme.breakpoints.xl}px) {
     padding: 80 ${props => props.theme.dimensions.containerPadding.desktop};
   }
@@ -124,23 +141,18 @@ const TitleSectionFor = styled('h1')`
   }
 `;
 
-const Row = styled('div')`
-  display: flex;
-  flex-direction: column;
+const SectionUpdates = styled('section')`
+  position: relative;
+  padding: 80px ${props => props.theme.dimensions.containerPadding.mobile} 0;
 
-  @media (min-width: ${breakpoints.lg}px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`;
-
-const Col = styled('div')`
-  &:not(:last-child) {
-    margin-bottom: 24px;
+  @media (min-width: ${props => props.theme.breakpoints.md}px) {
+    padding-left: ${props => props.theme.dimensions.containerPadding.tablet};
+    padding-right: ${props => props.theme.dimensions.containerPadding.tablet};
   }
 
-  @media (min-width: ${breakpoints.lg}px) {
-    flex: 0 1 calc(33.3% - 15px);
+  @media (min-width: ${props => props.theme.breakpoints.xl}px) {
+    padding-left: ${props => props.theme.dimensions.containerPadding.desktop};
+    padding-right: ${props => props.theme.dimensions.containerPadding.desktop};
   }
 `;
 

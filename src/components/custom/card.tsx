@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'utils/styled';
+import { brandColors } from 'styles/variables';
 
 interface Props {
   image?: string;
@@ -18,10 +19,10 @@ class Card extends React.Component<Props, State> {
   }
 
   render() {
-    const { isHomepage } = this.props;
+    const { isHomepage, grey } = this.props;
 
     return (
-      <Wrapper isHomepage={isHomepage}>
+      <Wrapper isHomepage={isHomepage} grey={grey}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, delectus! Ea officia
         perspiciatis dolorem nesciunt eius eveniet nisi expedita deleniti, nemo blanditiis ad hic ab
         autem incidunt ipsa aliquam cupiditate?
@@ -36,15 +37,15 @@ const HomepageCard = css`
 `;
 
 const Wrapper = styled<Props, 'div'>('div')`
-  background-color: #ffffff;
+  padding: 30px 40px 40px 40px;
   border-radius: 8px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
-  padding: 30px 40px 40px 40px;
+  background-color: ${props => (props.grey ? brandColors.grey10 : brandColors.white)};
+  box-shadow: ${props => (props.grey ? 'none' : '0 1px 2px 0 rgba(0, 0, 0, 0.25)')};
 
-  ${props => props.isHomepage && HomepageCard};
+  ${props => props.isHomepage && HomepageCard}
 `;
 
 export default Card;
