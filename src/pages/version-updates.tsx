@@ -10,11 +10,12 @@ import Layout from 'layouts';
 import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
 import Row from 'components/layout/Row';
-import { breakpoints } from 'styles/variables';
+import Col from 'components/layout/Col';
 import DocsHeader from 'components/docs/DocsHeader';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import MarkdownContent from 'components/docs/MarkdownContent';
 import { GatsbyNode } from 'interfaces/nodes';
+import { breakpoints } from 'styles/variables';
 
 interface Props extends RouteComponentProps {
   data: {
@@ -41,7 +42,17 @@ const VersionUpdatesPage: React.SFC<Props> = ({ data }) => (
               <DocsHeader>
                 <h1>What's new?</h1>
               </DocsHeader>
-              <p>The latest news, updates, and changes to the Aksara Design Language System.</p>
+              <LeadText>
+                The latest news, updates, and changes to the Aksara Design Language System.
+              </LeadText>
+              <p>
+                <strong>Legend:</strong>
+              </p>
+              <Row>
+                <Col>1</Col>
+                <Col>2</Col>
+                <Col>3</Col>
+              </Row>
               {data.latestPosts.edges.map(({ node }) => (
                 <Fragment>
                   <h2 key={node.id}>{node.frontmatter.title}</h2>
@@ -55,6 +66,12 @@ const VersionUpdatesPage: React.SFC<Props> = ({ data }) => (
     </Page>
   </Layout>
 );
+
+const LeadText = styled('p')`
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+`;
 
 const LeftColumn = styled('div')`
   display: none;
