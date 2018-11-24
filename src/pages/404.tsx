@@ -63,6 +63,7 @@ const Inner = styled('div')`
 
 const Title = styled('h1')`
   font-size: 5rem;
+  line-height: 1.15;
   margin: 0;
 `;
 
@@ -70,4 +71,5 @@ const Body = styled('p')`
   margin-top: 0.5rem;
   margin-bottom: 0;
   font-size: 1.25rem;
+  line-height: 1.2;
 `;

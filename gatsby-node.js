@@ -2,6 +2,9 @@
 
 const path = require('path');
 
+// Regex to parse date and title from the filename
+const BLOG_POST_SLUG_REGEX = /version-updates\/([\d]{4})-([\d]{2})-([\d]{2})-(.+)$/;
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -12,10 +15,33 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   switch (node.internal.type) {
     case 'MarkdownRemark': {
-      const { permalink, layout } = node.frontmatter;
+      const { permalink, layout, date } = node.frontmatter;
       const { relativePath } = getNode(node.parent);
 
       let slug = permalink;
+
+      if (!slug && relativePath.includes('version-updates')) {
+        // Generate final path + graphql fields for blog posts
+        const match = BLOG_POST_SLUG_REGEX.exec(relativePath);
+        if (match) {
+          const year = match[1];
+          const month = match[2];
+          const day = match[3];
+
+          const pubDate = date
+            ? new Date(date)
+            : new Date(Number.parseInt(year), Number.parseInt(month) - 1, Number.parseInt(day));
+
+          console.log(year, month, day, date);
+
+          // Blog posts are sorted by date and display the date in their header.
+          createNodeField({
+            node,
+            name: 'date',
+            value: pubDate.toJSON()
+          });
+        }
+      }
 
       if (!slug) {
         if (relativePath === 'index.md') {

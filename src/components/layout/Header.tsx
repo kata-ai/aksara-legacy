@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
 import styled from 'utils/styled';
 import NavButton from '../navigation/NavButton';
@@ -120,7 +120,7 @@ class Header extends React.Component<HeaderProps> {
               <Menu to="#">Wicara</Menu>
             </li>
             <li>
-              <Menu to="#">What’s New</Menu>
+              <Menu to="/version-updates">What’s New</Menu>
             </li>
           </MenuList>
         </MenuWrapper>
