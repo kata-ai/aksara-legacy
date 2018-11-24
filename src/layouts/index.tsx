@@ -9,7 +9,7 @@ import LayoutRoot from 'components/layout/LayoutRoot';
 import LayoutMain from 'components/layout/LayoutMain';
 import theme from 'styles/theme';
 import { ThemeProvider } from 'utils/styled';
-import { MenuNode } from 'interfaces/nodes';
+import { MenuNode, GatsbyNode } from 'interfaces/nodes';
 import { SiteMetadata } from 'interfaces/gatsby';
 
 import '@kata-kit/fonts/museo-sans-rounded.css';
@@ -34,9 +34,7 @@ interface DataProps {
     siteMetadata: SiteMetadata;
   };
   navigationMenus: {
-    edges: Array<{
-      node: MenuNode;
-    }>;
+    edges: GatsbyNode<MenuNode>[];
   };
 }
 

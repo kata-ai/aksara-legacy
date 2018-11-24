@@ -1,6 +1,6 @@
-import { MenuNode, MenuItem } from 'interfaces/nodes';
+import { MenuNode, MenuItem, GatsbyNode } from 'interfaces/nodes';
 
-const getPageById = (sectionList: Array<{ node: MenuNode }>, templateFile?: string) => {
+const getPageById = (sectionList: GatsbyNode<MenuNode>[], templateFile?: string) => {
   if (!templateFile) {
     return undefined;
   }

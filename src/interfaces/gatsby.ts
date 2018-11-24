@@ -27,7 +27,3 @@ export interface UpdatePost {
   };
   html: string;
 }
-
-export interface GatsbyNode<T> {
-  node: T;
-}

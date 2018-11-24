@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
 import Container from '../layout/Container';
-import { MenuNode } from 'interfaces/nodes';
+import { MenuNode, GatsbyNode } from 'interfaces/nodes';
 import DocumentationNavMenus from './DocumentationNavMenus';
 
 interface ToggleableProps {
@@ -84,7 +84,7 @@ const DocumentationNav = styled('nav')`
 
 interface HeaderProps {
   title: string;
-  navigation?: Array<{ node: MenuNode }>;
+  navigation?: GatsbyNode<MenuNode>[];
   open?: boolean;
   onOpenNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
   onCloseNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;

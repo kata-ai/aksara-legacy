@@ -25,7 +25,9 @@ class Button extends React.Component<Props, State> {
     const { primary, link, text, to } = this.props;
     if (primary) {
       return <Primary to={to}>{text}</Primary>;
-    } else if (link) {
+    }
+
+    if (link) {
       return <Primary to={to}>{text}</Primary>;
     }
   }

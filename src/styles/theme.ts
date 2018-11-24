@@ -10,6 +10,14 @@ const theme = {
   // Media breakpoints (Important: use `min-width`!)
   breakpoints,
 
+  // Widths
+  widths,
+
+  // Heights
+  heights: {
+    header: 64
+  },
+
   // Container widths
   containerWidth: {
     md: 720,
@@ -54,14 +62,6 @@ const theme = {
       tablet: '32px',
       desktop: '55px'
     }
-  },
-
-  // Widths
-  widths,
-
-  // Heights
-  heights: {
-    header: 64
   },
 
   // z-index

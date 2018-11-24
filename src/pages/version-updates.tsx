@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
 import styled from 'utils/styled';
 
-import { SiteMetadata, GatsbyNode, UpdatePost } from 'interfaces/gatsby';
+import { SiteMetadata, UpdatePost } from 'interfaces/gatsby';
 import Layout from 'layouts';
 
 import Page from 'components/docs/Page';
@@ -14,6 +14,7 @@ import { breakpoints } from 'styles/variables';
 import DocsHeader from 'components/docs/DocsHeader';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import MarkdownContent from 'components/docs/MarkdownContent';
+import { GatsbyNode } from 'interfaces/nodes';
 
 interface Props extends RouteComponentProps {
   data: {

@@ -1,3 +1,7 @@
+export interface GatsbyNode<T> {
+  node: T;
+}
+
 export interface MenuItem {
   id: string;
   slug: string;
