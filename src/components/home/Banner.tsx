@@ -5,7 +5,7 @@ import { breakpoints } from 'styles/variables';
 
 import LogoImage from 'assets/images/aksara-logo-banner.svg';
 import BannerImage from 'assets/images/main.svg';
-import Button from 'components/custom/button';
+import Button from 'components/ui/Button';
 
 const SectionHero = styled('section')`
   display: block;

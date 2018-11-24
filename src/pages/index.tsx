@@ -13,7 +13,7 @@ import Layout from 'layouts';
 import Row from 'components/layout/Row';
 import Col from 'components/layout/Col';
 import Banner from 'components/home/Banner';
-import Card from 'components/custom/card';
+import Card from 'components/ui/Card';
 import GeometricShapes from 'components/home/GeometricShapes';
 
 interface PageTemplateProps extends RouteComponentProps {
