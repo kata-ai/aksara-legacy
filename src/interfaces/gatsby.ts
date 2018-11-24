@@ -12,3 +12,22 @@ export interface SiteMetadata {
   keywords: string;
   author: SiteAuthor;
 }
+
+export interface UpdatePost {
+  id: string;
+  fields: {
+    slug: string;
+    layout: string;
+    date: string;
+  };
+  frontmatter: {
+    title: string;
+    category: string;
+    version: string;
+  };
+  html: string;
+}
+
+export interface GatsbyNode<T> {
+  node: T;
+}
