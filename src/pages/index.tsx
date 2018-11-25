@@ -45,7 +45,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <GeometricShapes topRight src={require('assets/images/geometric-2.svg')} />
           <SectionContainer extralarge>
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
-            <Row>
+            <Row breakAt="lg">
               <Col lg={4}>
                 <Card isHomepage>
                   These principles help us to make tough design decisions and refine many iterations
@@ -71,7 +71,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
         </SectionFor>
         <SectionUpdates>
           <SectionContainer extralarge>
-            <Row centered>
+            <Row breakAt="lg" centered>
               <Col lg={4}>
                 <Card isHomepage grey>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi

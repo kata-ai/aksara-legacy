@@ -10,7 +10,7 @@ import Layout from 'layouts';
 import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
 import Row from 'components/layout/Row';
-import Col from 'components/layout/Col';
+import Wrapper from 'components/layout/Col';
 import DocsHeader from 'components/docs/DocsHeader';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import MarkdownContent from 'components/docs/MarkdownContent';
@@ -36,7 +36,7 @@ const VersionUpdatesPage: React.SFC<Props> = ({ data }) => (
       </Helmet>
       <DocsWrapper>
         <Container large>
-          <Row>
+          <Row breakAt="lg">
             <LeftColumn>UpdatesList</LeftColumn>
             <RightColumn>
               <DocsHeader>
@@ -48,10 +48,10 @@ const VersionUpdatesPage: React.SFC<Props> = ({ data }) => (
               <p>
                 <strong>Legend:</strong>
               </p>
-              <Row>
-                <Col>1</Col>
-                <Col>2</Col>
-                <Col>3</Col>
+              <Row breakAt="md">
+                <Wrapper>1</Wrapper>
+                <Wrapper>2</Wrapper>
+                <Wrapper>3</Wrapper>
               </Row>
               {data.latestPosts.edges.map(({ node }) => (
                 <Fragment>

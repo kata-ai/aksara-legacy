@@ -13,7 +13,7 @@ const Row = styled<RowProps, 'div'>('div')`
   margin-left: -15px;
   margin-right: -15px;
 
-  @media (min-width: ${props => (props.breakAt ? breakpoints[props.breakAt] : breakpoints.lg)}px) {
+  @media (min-width: ${props => (props.breakAt ? breakpoints[props.breakAt] : breakpoints.md)}px) {
     flex-direction: row;
     ${props => props.centered && `justify-content: center;`}
     ${props => props.spaceBetween && `justify-content: space-between;`}

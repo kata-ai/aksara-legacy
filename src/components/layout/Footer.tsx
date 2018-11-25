@@ -22,7 +22,7 @@ const Wrapper = styled('footer')`
 const Footer: React.SFC = () => (
   <Container extralarge>
     <Wrapper>
-      <Row>
+      <Row breakAt="sm">
         <Col>
           <p>
             <small>
