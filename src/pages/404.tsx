@@ -9,6 +9,7 @@ import NotFoundWrapper from 'components/NotFoundWrapper';
 import styled from 'utils/styled';
 import { SiteMetadata } from 'interfaces/gatsby';
 import Layout from 'layouts';
+import { fontSizes, lineHeights, colors } from 'styles/variables';
 
 interface Props extends RouteComponentProps {
   data: {
@@ -62,14 +63,17 @@ const Inner = styled('div')`
 `;
 
 const Title = styled('h1')`
-  font-size: 5rem;
-  line-height: 1.15;
+  font-size: 60px;
+  line-height: 1;
   margin: 0;
+  font-weight: 500;
+  color: ${colors.neutral06};
 `;
 
 const Body = styled('p')`
   margin-top: 0.5rem;
   margin-bottom: 0;
-  font-size: 1.25rem;
-  line-height: 1.2;
+  font-size: ${fontSizes.mega};
+  line-height: ${lineHeights.mega};
+  color: ${colors.neutral06};
 `;
