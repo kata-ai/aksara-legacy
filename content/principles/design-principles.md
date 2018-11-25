@@ -4,9 +4,9 @@ title: Design Principles
 ---
 
 <md-row breakAt="md">
-<md-col gatsbyImageWrap>
+<md-col>
 
-![banner](../assets/images/principles-1.png)
+![principles-1](../assets/images/principles-1.png)
 
 </md-col>
 <md-col>
@@ -21,7 +21,7 @@ One of our missions is to simplify chatbot development process. That’s why we 
 <md-row breakAt="md">
 <md-col>
 
-![banner](../assets/images/principles-2.png)
+![principles-2](../assets/images/principles-2.png)
 
 </md-col>
 <md-col>
@@ -36,7 +36,7 @@ Our design must prioritize performance and purpose over looks and appearance. We
 <md-row breakAt="md">
 <md-col>
 
-![banner](../assets/images/principles-3.png)
+![principles-3](../assets/images/principles-3.png)
 
 </md-col>
 <md-col>
@@ -51,7 +51,7 @@ Don't take this as a license to break the rules whenever you'd like. This simply
 <md-row breakAt="md">
 <md-col>
 
-![banner](../assets/images/principles-4.png)
+![principles-4](../assets/images/principles-4.png)
 
 </md-col>
 <md-col>
@@ -66,7 +66,7 @@ We adopt the mindset that everything is a work in progress. We encourage ourselv
 <md-row breakAt="md">
 <md-col>
 
-![banner](../assets/images/principles-5.png)
+![principles-5](../assets/images/principles-5.png)
 
 </md-col>
 <md-col>
