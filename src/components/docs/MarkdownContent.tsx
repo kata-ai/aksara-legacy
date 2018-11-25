@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'utils/styled';
-import { breakpoints } from 'styles/variables';
+import { breakpoints, fontSizes, lineHeights, colors } from 'styles/variables';
 
 interface MarkdownContentProps {
   className?: string;
@@ -14,8 +14,8 @@ const MarkdownContent: React.SFC<MarkdownContentProps> = ({ className, html }) =
 export default MarkdownContent;
 
 const Section = styled('section')`
-  font-size: ${props => props.theme.dimensions.fontSize.medium}px;
-  line-height: ${props => props.theme.dimensions.lineHeight.medium};
+  font-size: ${fontSizes.hecto};
+  line-height: ${lineHeights.hecto};
   font-weight: 300;
 
   h1,
@@ -26,29 +26,36 @@ const Section = styled('section')`
   h6 {
     margin-top: 1.414rem;
     margin-bottom: 0.5rem;
-    color: ${props => props.theme.colors.ink};
+    color: ${colors.neutral09};
     font-weight: 500;
-    line-height: ${props => props.theme.dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
   }
 
   h1 {
     margin-top: 0;
-    font-size: ${props => props.theme.dimensions.headingSizes.h1}rem;
+    font-size: ${fontSizes.peta};
+    line-height: ${lineHeights.peta};
   }
 
   h2 {
-    font-size: ${props => props.theme.dimensions.headingSizes.h2}rem;
+    font-size: ${fontSizes.tera};
+    line-height: ${lineHeights.tera};
   }
 
   h3 {
-    font-size: ${props => props.theme.dimensions.headingSizes.h3}rem;
+    font-size: ${fontSizes.giga};
+    line-height: ${lineHeights.giga};
   }
 
-  h4,
+  h4 {
+    font-size: ${fontSizes.mega};
+    line-height: ${lineHeights.mega};
+  }
+
   h5,
   h6 {
-    font-size: ${props => props.theme.dimensions.headingSizes.h4}rem;
+    font-size: ${fontSizes.kilo};
+    line-height: ${lineHeights.kilo};
   }
 
   p {
@@ -56,8 +63,13 @@ const Section = styled('section')`
     margin-bottom: 1rem;
   }
 
+  .text-primary {
+    font-size: ${fontSizes.tera};
+    line-height: ${lineHeights.tera};
+  }
+
   strong {
-    color: ${props => props.theme.colors.ink}};
+    color: ${colors.neutral09};
   }
 
   ul,
@@ -88,14 +100,14 @@ const Section = styled('section')`
     position: relative;
     margin: 1.5rem 0;
     border: 0;
-    border-top: 1px solid ${props => props.theme.colors.ui.light};
+    border-top: 1px solid ${colors.neutral02};
   }
 
   blockquote {
     margin: 0.8rem 0;
     padding: 0.5rem 1rem;
-    border-left: 0.25rem solid ${props => props.theme.colors.ui.light};
-    color: ${props => props.theme.colors.gray.calm};
+    border-left: 0.25rem solid ${colors.neutral02};
+    color: ${colors.neutral06};
 
     p {
       &:last-child {
@@ -164,7 +176,7 @@ const Section = styled('section')`
     font-size: 1.25rem;
     font-weight: 300;
 
-    @media (min-width: ${props => props.theme.breakpoints.md}) {
+    @media (min-width: ${breakpoints.md}px) {
       font-size: 1.5rem;
     }
   }

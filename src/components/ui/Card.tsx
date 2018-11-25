@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'utils/styled';
-import { brandColors } from 'styles/variables';
+import { brandColors, fontSizes, lineHeights } from 'styles/variables';
 
 interface Props {
   image?: string;
@@ -39,9 +39,9 @@ const HomepageCard = css`
 const Wrapper = styled<Props, 'div'>('div')`
   padding: 30px 40px 40px 40px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: ${fontSizes.hecto};
   font-weight: 300;
-  line-height: 20px;
+  line-height: ${lineHeights.hecto};
   background-color: ${props => (props.grey ? brandColors.grey10 : brandColors.white)};
   box-shadow: ${props => (props.grey ? 'none' : '0 1px 2px 0 rgba(0, 0, 0, 0.25)')};
 

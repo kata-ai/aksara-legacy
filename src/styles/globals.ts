@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'utils/styled';
+import { fontSizes, lineHeights, fonts, colors } from './variables';
 
 // tslint:disable-next-line:no-unused-expression
 const GlobalStyles = createGlobalStyle`
@@ -20,24 +21,24 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: ${props => props.theme.dimensions.fontSize.medium}px;
-    line-height: ${props => props.theme.dimensions.lineHeight.medium};
+    font-size: ${fontSizes.hecto};
+    line-height: ${lineHeights.hecto};
   }
 
   body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: ${props => props.theme.fonts.sansSerif};
-    color: ${props => props.theme.colors.gray.copy};
-    background-color: ${props => props.theme.colors.white};
+    font-family: ${fonts.sansSerif};
+    color: ${colors.neutral08};
+    background-color: ${colors.neutral01};
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
 
   /* Set defaults for links */
   a {
-    color: ${props => props.theme.colors.brand};
+    color: ${colors.kata02};
     text-decoration: none;
 
     &:hover, &:focus {
@@ -64,13 +65,13 @@ const GlobalStyles = createGlobalStyle`
   kbd,
   pre,
   samp {
-    font-family: ${props => props.theme.fonts.monospace};
+    font-family: ${fonts.monospace};
   }
 
   table {
     width: 100%;
     margin-bottom: 1rem;
-    border: 1px solid ${props => props.theme.colors.gray.calm};
+    border: 1px solid ${colors.neutral06};
     font-size: 85%;
     border-collapse: collapse;
   }
@@ -78,7 +79,7 @@ const GlobalStyles = createGlobalStyle`
   td,
   th {
     padding: .25rem .5rem;
-    border: 1px solid ${props => props.theme.colors.gray.calm};
+    border: 1px solid ${colors.neutral06};
   }
 
   th {
@@ -89,10 +90,10 @@ const GlobalStyles = createGlobalStyle`
     tr {
       &:nth-child(odd) {
         td {
-          background-color: ${props => props.theme.colors.ui.whisper};
+          background-color: ${colors.neutral02};
         }
         tr {
-          background-color: ${props => props.theme.colors.ui.whisper};
+          background-color: ${colors.neutral02};
         }
       }
     }

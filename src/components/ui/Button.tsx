@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'utils/styled';
+import { colors, fontSizes, lineHeights } from 'styles/variables';
 
 interface Props {
   primary?: boolean;
@@ -37,9 +38,10 @@ const Primary = styled(Link)`
   padding: 18px 35px 18px 35px;
   border-radius: 4px;
   font-weight: 700;
-  font-size: ${props => props.theme.dimensions.fontSize.medium}px;
-  background-color: ${props => props.theme.colors.accentDark};
-  color: ${props => props.theme.colors.white};
+  font-size: ${fontSizes.hecto};
+  line-height: ${lineHeights.hecto};
+  background-color: ${colors.cobalt02};
+  color: ${colors.neutral01};
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -50,10 +52,10 @@ const Primary = styled(Link)`
     text-decoration: none;
   }
   &:hover {
-    background-color: ${props => props.theme.colors.cobalt01};
+    background-color: ${colors.cobalt02};
   }
   &:focus {
-    background-color: ${props => props.theme.colors.cobalt03};
+    background-color: ${colors.cobalt02};
   }
 `;
 
