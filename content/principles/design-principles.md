@@ -6,7 +6,7 @@ title: Design Principles
 <md-row class="principle">
 <md-col md="5" class="principle-image">
 
-![principles-1](../assets/images/principles-1.png)
+![principles-1](../assets/images/principles/principles-1.png)
 
 </md-col>
 <md-col class="principle-content">
@@ -21,7 +21,7 @@ One of our missions is to simplify chatbot development process. That’s why we 
 <md-row class="principle">
 <md-col md="5" class="principle-image">
 
-![principles-2](../assets/images/principles-2.png)
+![principles-2](../assets/images/principles/principles-2.png)
 
 </md-col>
 <md-col class="principle-content">
@@ -36,7 +36,7 @@ Our design must prioritize performance and purpose over looks and appearance. We
 <md-row class="principle">
 <md-col md="5" class="principle-image">
 
-![principles-3](../assets/images/principles-3.png)
+![principles-3](../assets/images/principles/principles-3.png)
 
 </md-col>
 <md-col class="principle-content">
@@ -51,7 +51,7 @@ Don't take this as a license to break the rules whenever you'd like. This simply
 <md-row class="principle">
 <md-col md="5" class="principle-image">
 
-![principles-4](../assets/images/principles-4.png)
+![principles-4](../assets/images/principles/principles-4.png)
 
 </md-col>
 <md-col class="principle-content">
@@ -66,7 +66,7 @@ We adopt the mindset that everything is a work in progress. We encourage ourselv
 <md-row class="principle">
 <md-col md="5" class="principle-image">
 
-![principles-5](../assets/images/principles-5.png)
+![principles-5](../assets/images/principles/principles-5.png)
 
 </md-col>
 <md-col class="principle-content">

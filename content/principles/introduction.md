@@ -3,7 +3,7 @@ id: principles-introduction
 title: Introduction
 ---
 
-![principles-intro](../assets/images/principles-intro.png)
+![principles-intro](../assets/images/principles/principles-intro.png)
 
 <div class="text-primary">
 
