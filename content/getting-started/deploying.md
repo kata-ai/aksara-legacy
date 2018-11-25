@@ -5,7 +5,11 @@ prev: development-server
 next: project-structure
 ---
 
+<div class="text-primary">
+
 The following page contains guides on how to deploy Grundgesetz to any host that you prefer.
+
+</div>
 
 ## Static Host
 

@@ -65,11 +65,16 @@ export const MarkdownWrapper = styled('section')`
 
   .text-primary {
     font-weight: 300;
-    font-size: ${fontSizes.tera};
-    line-height: ${lineHeights.tera};
+    font-size: ${fontSizes.giga};
+    line-height: ${lineHeights.giga};
 
     strong {
       font-weight: 500;
+    }
+
+    @media (min-width: ${breakpoints.md}px) {
+      font-size: ${fontSizes.tera};
+      line-height: ${lineHeights.tera};
     }
   }
 
@@ -121,7 +126,7 @@ export const MarkdownWrapper = styled('section')`
       }
     }
 
-    @media (min-width: ${breakpoints.md}) {
+    @media (min-width: ${breakpoints.md}px) {
       padding-right: 5rem;
       padding-left: 1.25rem;
     }
