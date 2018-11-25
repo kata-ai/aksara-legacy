@@ -7,7 +7,7 @@ interface SlideoutDrawerButtonProps {
 
 const Wrapper = styled<SlideoutDrawerButtonProps, 'div'>('div')`
   display: none;
-  position: absolute;
+  position: fixed;
   top: 80px;
   left: ${props => (props.drawerIsOpen ? `${props.theme.widths.drawer.sm}px` : 0)};
   width: 40px;
