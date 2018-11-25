@@ -45,6 +45,7 @@ module.exports = {
               maxWidth: 1140,
               quality: 90,
               linkImagesToOriginal: false,
+              wrapperStyle: 'margin-top: 48px; margin-bottom: 48px;',
               backgroundColor: 'transparent'
             }
           }

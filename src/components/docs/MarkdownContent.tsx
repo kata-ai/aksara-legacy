@@ -24,8 +24,8 @@ export const MarkdownWrapper = styled('section')`
   h4,
   h5,
   h6 {
-    margin-top: 1.414rem;
-    margin-bottom: 0.5rem;
+    margin-top: 48px;
+    margin-bottom: 16px;
     color: ${colors.neutral09};
     font-weight: 500;
     text-rendering: optimizeLegibility;
