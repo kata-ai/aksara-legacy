@@ -62,6 +62,20 @@ const Menu = styled(Link)`
   }
 `;
 
+const MenuLink = styled('a')`
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.3px;
+  color: ${props => props.theme.colors.gray.copy};
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+`;
+
 const LogoWrapper = styled('div')`
   width: 30%;
   color: ${props => props.theme.colors.gray.copy};
@@ -114,10 +128,18 @@ class Header extends React.Component<HeaderProps> {
         <MenuWrapper>
           <MenuList>
             <li>
-              <Menu to="#">Go to kata.ai</Menu>
+              <MenuLink href="https://kata.ai/" target="_blank" rel="noopener noreferrer">
+                Go to kata.ai
+              </MenuLink>
             </li>
             <li>
-              <Menu to="#">Wicara</Menu>
+              <MenuLink
+                href="https://wicara-storybook.netlify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Wicara
+              </MenuLink>
             </li>
             <li>
               <Menu to="/version-updates">What’s New</Menu>

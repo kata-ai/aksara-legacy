@@ -1,18 +1,45 @@
 /* tslint:disable:max-line-length */
+
+const neutral01 = '#fff';
+const neutral02 = '#f6f7f8';
+const neutral03 = '#edf1f2';
+const neutral04 = '#e2e6e8';
+const neutral05 = '#c2c7c8';
+const neutral06 = '#949a9d';
+const neutral07 = '#676b6d';
+const neutral08 = '#484c4f';
+const neutral09 = '#2b2f33';
+
+const cobalt01 = '#5597e0';
+const cobalt02 = '#2053af';
+const cobalt03 = '#102a59';
+
+const kata01 = '#4da3ff';
+const kata02 = '#006fe6';
+const kata03 = '#003e80';
+
+const green01 = '#00ea61';
+const green02 = '#59a444';
+const green03 = '#658f3d';
+
+const red01 = '#fc6627';
+const red02 = '#dc211c';
+const red03 = '#af1a16';
+
+const yellow01 = '#feef99';
+const yellow02 = '#fde034';
+const yellow03 = '#ebc902';
+
 export const brandColors = {
   katablue: '#006fe6',
   lightkatablue: '#7fbcff',
   softkatablue: '#d8ebff',
 
-  kata03: '#003e80',
   softblue: '#00cce9',
 
   semicobalt: '#2662cf',
   cobalt: '#2053af',
   darkcobalt: '#19428c',
-
-  cobalt01: '#5587e0',
-  cobalt03: '#102a59',
 
   iceblue: '#f8fcff',
   icebluetwo: '#f4faff',
@@ -36,13 +63,37 @@ export const brandColors = {
 };
 
 export const colors = {
-  kata03: brandColors.kata03,
+  // new KDS colors
+  neutral01,
+  neutral02,
+  neutral03,
+  neutral04,
+  neutral05,
+  neutral06,
+  neutral07,
+  neutral08,
+  neutral09,
+  cobalt01,
+  cobalt02,
+  cobalt03,
+  kata01,
+  kata02,
+  kata03,
+  green01,
+  green02,
+  green03,
+  red01,
+  red02,
+  red03,
+  yellow01,
+  yellow02,
+  yellow03,
+
+  // old KDS colors
   softblue: brandColors.softblue,
   brand: brandColors.katablue,
   accent: brandColors.katablue,
   accentDark: brandColors.cobalt,
-  cobalt01: brandColors.cobalt01,
-  cobalt03: brandColors.cobalt03,
   drawer: {
     background: brandColors.white,
     border: brandColors.grey30
@@ -67,6 +118,46 @@ export const colors = {
   ink: brandColors.black,
   white: brandColors.white,
   error: brandColors.red
+};
+
+export const spacing = {
+  spacing2Xs: '2px',
+  spacingXs: '4px',
+  spacingSm: '8px',
+  spacingSmMd: '12px',
+  spacingMd: '16px',
+  spacingLg: '24px',
+  spacingXl: '40px',
+  spacing2Xl: '64px',
+  spacing3Xl: '80px'
+};
+
+export const fontSizes = {
+  deka: '12px',
+  hecto: '14px',
+  kilo: '16px',
+  mega: '18px',
+  giga: '20px',
+  tera: '24px',
+  peta: '28px'
+};
+
+export const lineHeights = {
+  deka: '1.25',
+  hecto: '1.5',
+  kilo: '1.5',
+  mega: '1.25',
+  giga: '1.25',
+  tera: '1.125',
+  peta: '1.125'
+};
+
+export const elevationShadow = {
+  elevationZ100: '0 1px 2px 0 rgba(0, 0, 0, 0.25);',
+  elevationZ200: '0 2px 4px 0 rgba(0, 0, 0, 0.25);',
+  elevationZ300: '0 4px 8px 0 rgba(0, 0, 0, 0.25)',
+  elevationZ400: '0 8px 16px 0 rgba(0, 0, 0, 0.25)',
+  elevationZ500: '0 12px 24px 0 rgba(0, 0, 0, 0.25)'
 };
 
 export const fonts = {
