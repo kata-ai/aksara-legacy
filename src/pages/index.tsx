@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
 
@@ -47,21 +47,38 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row breakAt="lg">
               <Col lg={4}>
-                <Card isHomepage>
-                  These principles help us to make tough design decisions and refine many iterations
-                  into the best solution for creating Aksara.
+                <Card isHomepage title="Principles">
+                  <p>
+                    These principles help us to make tough design decisions and refine many
+                    iterations into the best solution for creating Aksara.
+                  </p>
+                  <p>
+                    <Link to="/principles/introduction/">View Design Principles</Link>
+                  </p>
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage>
-                  We build neat design guidelines with the best practice using for each component
-                  based on continuous research and exploration.
+                <Card isHomepage title="Design">
+                  <p>
+                    We build neat design guidelines with the best practice using for each component
+                    based on continuous research and exploration.
+                  </p>
+                  <p>
+                    <Link to="/design/foundation/color/">View Design Guidelines</Link>
+                  </p>
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage>
-                  The communication we use to influence how people think and feel about our product
-                  while using it.
+                <Card isHomepage title="Voice">
+                  <p>
+                    The communication we use to influence how people think and feel about our
+                    product while using it.
+                  </p>
+                  <p>
+                    <Link to="/communication/writing-principles/">
+                      View Voice &amp; Tone Guidelines
+                    </Link>
+                  </p>
                 </Card>
               </Col>
             </Row>
@@ -73,17 +90,31 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <SectionContainer extralarge>
             <Row breakAt="lg" centered>
               <Col lg={4}>
-                <Card isHomepage grey>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi
-                  ratione nisi sapiente. Voluptatibus accusamus est ut dignissimos nemo rerum
-                  pariatur quisquam! Minima cumque atque molestiae laborum laudantium amet!
+                <Card isHomepage grey title="Aksara v1.0" subtitle="What's New">
+                  <p>
+                    We excited to announce our first release of Kata Design Language System named
+                    Aksara. We release this on Interact 2018 event (December 5th, 2018).
+                  </p>
+                  <p>
+                    <Link to="/version-updates/">View All Updates</Link>
+                  </p>
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage grey>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi
-                  ratione nisi sapiente. Voluptatibus accusamus est ut dignissimos nemo rerum
-                  pariatur quisquam! Minima cumque atque molestiae laborum laudantium amet!
+                <Card isHomepage grey title="Wicara v0.5" subtitle="Component Library">
+                  <p>
+                    Wicara (previously kata-kit) is Kata’s official React component library based on
+                    our Design Language System (Aksara). Currently in beta and only used internally.
+                  </p>
+                  <p>
+                    <a
+                      href="https://github.com/kata-ai/wicara"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Repository
+                    </a>
+                  </p>
                 </Card>
               </Col>
             </Row>

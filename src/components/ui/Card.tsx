@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'utils/styled';
-import { brandColors, fontSizes, lineHeights } from 'styles/variables';
+import { brandColors, fontSizes, lineHeights, elevationShadow, colors } from 'styles/variables';
 
 interface Props {
   image?: string;
@@ -19,21 +19,57 @@ class Card extends React.Component<Props, State> {
   }
 
   render() {
-    const { isHomepage, grey } = this.props;
+    const { isHomepage, grey, title, subtitle, image, children } = this.props;
 
     return (
-      <Wrapper isHomepage={isHomepage} grey={grey}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, delectus! Ea officia
-        perspiciatis dolorem nesciunt eius eveniet nisi expedita deleniti, nemo blanditiis ad hic ab
-        autem incidunt ipsa aliquam cupiditate?
+      <Wrapper isHomepage={isHomepage} grey={grey} title={title} subtitle={subtitle} image={image}>
+        {(title || subtitle || image) && (
+          <CardHeader title={title} subtitle={subtitle} image={image}>
+            <CardHeaderSpacing>
+              {subtitle && <CardSubtitle>{subtitle}</CardSubtitle>}
+              <CardTitle>{title}</CardTitle>
+            </CardHeaderSpacing>
+          </CardHeader>
+        )}
+        {children}
       </Wrapper>
     );
   }
 }
 
-const HomepageCard = css`
-  height: 232px;
+const HomepageCard = (props: Props) => css`
+  height: ${props.subtitle ? '280px' : '232px'};
   z-index: 1;
+`;
+
+const CardHeader = styled<Props, 'div'>('div')`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: ${props => (props.subtitle ? '64px' : '40px')};
+`;
+
+const CardHeaderSpacing = styled('div')`
+  flex: 0 0 auto;
+
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+`;
+
+const CardTitle = styled('h2')`
+  margin: 0;
+  font-weight: 500;
+  font-size: ${fontSizes.tera};
+  line-height: ${lineHeights.tera};
+`;
+
+const CardSubtitle = styled('p')`
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: ${colors.neutral06};
 `;
 
 const Wrapper = styled<Props, 'div'>('div')`
@@ -43,9 +79,16 @@ const Wrapper = styled<Props, 'div'>('div')`
   font-weight: 300;
   line-height: ${lineHeights.hecto};
   background-color: ${props => (props.grey ? brandColors.grey10 : brandColors.white)};
-  box-shadow: ${props => (props.grey ? 'none' : '0 1px 2px 0 rgba(0, 0, 0, 0.25)')};
+  box-shadow: ${props => (props.grey ? 'none' : elevationShadow.elevationZ100)};
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  ${props => props.isHomepage && HomepageCard}
+  &:hover,
+  &:focus {
+    box-shadow: ${props => (props.grey ? 'none' : elevationShadow.elevationZ200)};
+    transform: translateY(-2px);
+  }
+
+  ${props => props.isHomepage && HomepageCard(props)}
 `;
 
 export default Card;
