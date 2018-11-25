@@ -76,6 +76,18 @@
         "type": "link",
         "slug": "/communication/writing-principles/",
         "title": "Writing Principles"
+      },
+      {
+        "id": "communication-persona",
+        "type": "link",
+        "slug": "/communication/persona/",
+        "title": "Persona"
+      },
+      {
+        "id": "communication-tone-of-voice",
+        "type": "link",
+        "slug": "/communication/tone-of-voice/",
+        "title": "Tone of Voice"
       }
     ]
   }
