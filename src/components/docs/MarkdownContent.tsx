@@ -135,6 +135,35 @@ export const MarkdownWrapper = styled('section')`
     margin-top: 0.25rem;
   }
 
+  .principle {
+    &:not(:last-child) {
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+  }
+
+  .principle-image {
+    > * {
+      margin: 0;
+    }
+
+    .gatsby-resp-image-wrapper {
+      margin: 0 !important;
+    }
+  }
+
+  .principle-content {
+    h2,
+    h3,
+    h4 {
+      margin-top: 32px;
+
+      @media (min-width: ${breakpoints.md}px) {
+        margin-top: 0;
+      }
+    }
+  }
+
   .gatsby-highlight {
     margin: 1rem 0;
     font-size: 90%;

@@ -15,13 +15,13 @@ This guideline is our approach to shape and maintain the way we communicate our 
 
 On **Kata Platform**, our content aims to:
 
-<md-row breakAt="md">
-<md-col md="3">
+<md-row class="principle">
+<md-col md="3" class="principle-image">
 
 ![educate](../assets/images/communication/educate.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 #### Educate
 
@@ -30,13 +30,13 @@ We want people to learn and apply new concepts and information quickly. Make sur
 </md-col>
 </md-row>
 
-<md-row breakAt="md">
-<md-col md="3">
+<md-row class="principle">
+<md-col md="3" class="principle-image">
 
 ![inclusive](../assets/images/communication/inclusive.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 #### Be Inclusive
 
@@ -45,13 +45,13 @@ Respect people regardless of their skill levels. If something went south, tell t
 </md-col>
 </md-row>
 
-<md-row breakAt="md">
-<md-col md="3">
+<md-row class="principle">
+<md-col md="3" class="principle-image">
 
 ![conversational](../assets/images/communication/conversational.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 #### Be Conversational
 

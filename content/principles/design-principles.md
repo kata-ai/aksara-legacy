@@ -3,13 +3,13 @@ id: principles-design-principles
 title: Design Principles
 ---
 
-<md-row breakAt="md">
-<md-col>
+<md-row class="principle">
+<md-col md="5" class="principle-image">
 
 ![principles-1](../assets/images/principles-1.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 ## Nail the Basics
 
@@ -18,13 +18,13 @@ One of our missions is to simplify chatbot development process. That’s why we 
 </md-col>
 </md-row>
 
-<md-row breakAt="md">
-<md-col>
+<md-row class="principle">
+<md-col md="5" class="principle-image">
 
 ![principles-2](../assets/images/principles-2.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 ## Clarity over Elegance
 
@@ -33,13 +33,13 @@ Our design must prioritize performance and purpose over looks and appearance. We
 </md-col>
 </md-row>
 
-<md-row breakAt="md">
-<md-col>
+<md-row class="principle">
+<md-col md="5" class="principle-image">
 
 ![principles-3](../assets/images/principles-3.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 ## Relevance over Consistency
 
@@ -48,13 +48,13 @@ Don't take this as a license to break the rules whenever you'd like. This simply
 </md-col>
 </md-row>
 
-<md-row breakAt="md">
-<md-col>
+<md-row class="principle">
+<md-col md="5" class="principle-image">
 
 ![principles-4](../assets/images/principles-4.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 ## Ever-Evolving
 
@@ -63,13 +63,13 @@ We adopt the mindset that everything is a work in progress. We encourage ourselv
 </md-col>
 </md-row>
 
-<md-row breakAt="md">
-<md-col>
+<md-row class="principle">
+<md-col md="5" class="principle-image">
 
 ![principles-5](../assets/images/principles-5.png)
 
 </md-col>
-<md-col>
+<md-col class="principle-content">
 
 ## Lasting Impression
 
