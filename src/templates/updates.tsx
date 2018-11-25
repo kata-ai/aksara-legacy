@@ -5,14 +5,15 @@ import { RouteComponentProps } from '@reach/router';
 
 import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
-import { SiteMetadata } from 'interfaces/gatsby';
-import MarkdownContent from 'components/docs/MarkdownContent';
+import { MarkdownWrapper } from 'components/docs/MarkdownContent';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import DocsHeader from 'components/docs/DocsHeader';
 import Footer from 'components/layout/Footer';
 import FooterWrapper from 'components/layout/FooterWrapper';
 
 import Layout from 'layouts';
+import { SiteMetadata } from 'interfaces/gatsby';
+import renderAst from 'utils/renderAst';
 
 interface UpdatesTemplateProps extends RouteComponentProps {
   data: {
@@ -20,7 +21,7 @@ interface UpdatesTemplateProps extends RouteComponentProps {
       siteMetadata: SiteMetadata;
     };
     markdownRemark: {
-      html: string;
+      htmlAst: object;
       excerpt: string;
       frontmatter: {
         title: string;
@@ -51,7 +52,7 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
             <DocsHeader>
               <h1>{markdownRemark.frontmatter.title}</h1>
             </DocsHeader>
-            <MarkdownContent html={markdownRemark.html} />
+            <MarkdownWrapper>{renderAst(markdownRemark.htmlAst)}</MarkdownWrapper>
           </Container>
         </DocsWrapper>
         <FooterWrapper>
@@ -82,7 +83,7 @@ export const query = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      htmlAst
       excerpt
       frontmatter {
         title

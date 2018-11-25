@@ -8,12 +8,12 @@ interface MarkdownContentProps {
 }
 
 const MarkdownContent: React.SFC<MarkdownContentProps> = ({ className, html }) => (
-  <Section className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  <MarkdownWrapper className={className} dangerouslySetInnerHTML={{ __html: html }} />
 );
 
 export default MarkdownContent;
 
-const Section = styled('section')`
+export const MarkdownWrapper = styled('section')`
   font-size: ${fontSizes.hecto};
   line-height: ${lineHeights.hecto};
   font-weight: 300;
@@ -69,6 +69,7 @@ const Section = styled('section')`
   }
 
   strong {
+    font-weight: 700;
     color: ${colors.neutral09};
   }
 

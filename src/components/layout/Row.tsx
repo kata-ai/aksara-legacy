@@ -15,7 +15,6 @@ const Row = styled<RowProps, 'div'>('div')`
 
   @media (min-width: ${props => (props.breakAt ? breakpoints[props.breakAt] : breakpoints.lg)}px) {
     flex-direction: row;
-    flex-wrap: wrap;
     ${props => props.centered && `justify-content: center;`}
     ${props => props.spaceBetween && `justify-content: space-between;`}
   }

@@ -10,6 +10,12 @@ interface ColProps {
 
 function buildColumns(breakpoint: keyof typeof breakpoints, size: number = 12) {
   return css`
+    &:not(:last-child) {
+      @media (max-width: ${breakpoints[breakpoint] - 1}px) {
+        margin-bottom: 24px;
+      }
+    }
+
     @media (min-width: ${breakpoints[breakpoint]}px) {
       flex: 0 0 calc(${(size / 12) * 100}% - 30px);
     }
@@ -22,10 +28,6 @@ const Col = styled<ColProps, 'div'>('div')`
   max-width: 100%;
   margin-left: 15px;
   margin-right: 15px;
-
-  &:not(:last-child) {
-    margin-bottom: 24px;
-  }
 
   ${props => props.sm && buildColumns('sm', props.sm)}
   ${props => props.md && buildColumns('md', props.md)}
