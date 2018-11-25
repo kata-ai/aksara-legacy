@@ -17,14 +17,27 @@ const SectionHero = styled('section')`
   @media (min-width: ${breakpoints.lg}px) {
     padding: 160px ${props => props.theme.dimensions.containerPadding.tablet} 162px;
   }
+
+  @media (max-width: ${breakpoints.lg - 1}px) {
+    text-align: center;
+  }
 `;
 
 const LogoWrapper = styled('div')`
   text-align: left;
+
+  @media (max-width: ${breakpoints.lg - 1}px) {
+    text-align: center;
+  }
 `;
 
 const BanerWrapper = styled('div')`
   text-align: right;
+
+  @media (max-width: ${breakpoints.lg - 1}px) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 `;
 
 const InnerWrapper = styled('div')`
@@ -89,7 +102,7 @@ const Banner: React.SFC = () => (
               improve quality, timeliness, and consistency to our product.
             </Description>
           </InnerWrapper>
-          <Button primary text="Learn More" to="/getting-started/deploying/" />
+          <Button primary text="Learn More" to="/principles/introduction/" />
         </BannerCol>
       </BannerRow>
     </Container>
