@@ -46,19 +46,19 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <SectionContainer extralarge>
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row>
-              <Col>
+              <Col lg={4}>
                 <Card isHomepage>
                   These principles help us to make tough design decisions and refine many iterations
                   into the best solution for creating Aksara.
                 </Card>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <Card isHomepage>
                   We build neat design guidelines with the best practice using for each component
                   based on continuous research and exploration.
                 </Card>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <Card isHomepage>
                   The communication we use to influence how people think and feel about our product
                   while using it.
@@ -72,14 +72,14 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
         <SectionUpdates>
           <SectionContainer extralarge>
             <Row centered>
-              <Col>
+              <Col lg={4}>
                 <Card isHomepage grey>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi
                   ratione nisi sapiente. Voluptatibus accusamus est ut dignissimos nemo rerum
                   pariatur quisquam! Minima cumque atque molestiae laborum laudantium amet!
                 </Card>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <Card isHomepage grey>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde eligendi
                   ratione nisi sapiente. Voluptatibus accusamus est ut dignissimos nemo rerum

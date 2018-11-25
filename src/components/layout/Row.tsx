@@ -3,6 +3,8 @@ import { breakpoints } from 'styles/variables';
 
 interface RowProps {
   centered?: boolean;
+  spaceBetween?: boolean;
+  breakAt?: keyof typeof breakpoints;
 }
 
 const Row = styled<RowProps, 'div'>('div')`
@@ -11,9 +13,11 @@ const Row = styled<RowProps, 'div'>('div')`
   margin-left: -15px;
   margin-right: -15px;
 
-  @media (min-width: ${breakpoints.lg}px) {
+  @media (min-width: ${props => (props.breakAt ? breakpoints[props.breakAt] : breakpoints.lg)}px) {
     flex-direction: row;
+    flex-wrap: wrap;
     ${props => props.centered && `justify-content: center;`}
+    ${props => props.spaceBetween && `justify-content: space-between;`}
   }
 `;
 

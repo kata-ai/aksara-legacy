@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'utils/styled';
 import Container from './Container';
 import { breakpoints } from 'styles/variables';
+import Row from './Row';
+import Col from './Col';
 
 const Wrapper = styled('footer')`
   margin-top: ${props => props.theme.dimensions.containerPadding.desktop};
@@ -18,23 +20,27 @@ const Wrapper = styled('footer')`
 `;
 
 const Footer: React.SFC = () => (
-  <Wrapper>
-    <Container>
-      <p>
-        <small>
-          Created with{' '}
-          <a
-            href="https://github.com/kata-ai/grundgesetz-skeleton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Grundgesetz
-          </a>
-          .
-        </small>
-      </p>
-    </Container>
-  </Wrapper>
+  <Container extralarge>
+    <Wrapper>
+      <Row>
+        <Col>
+          <p>
+            <small>
+              Created with{' '}
+              <a
+                href="https://github.com/kata-ai/grundgesetz-skeleton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Grundgesetz
+              </a>
+              .
+            </small>
+          </p>
+        </Col>
+      </Row>
+    </Wrapper>
+  </Container>
 );
 
 export default Footer;
