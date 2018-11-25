@@ -8,7 +8,7 @@ import Container from 'components/layout/Container';
 import getPageById from 'utils/getPageById';
 import { MenuNode, GatsbyNode } from 'interfaces/nodes';
 import { SiteMetadata } from 'interfaces/gatsby';
-import MarkdownContent from 'components/docs/MarkdownContent';
+import { MarkdownWrapper } from 'components/docs/MarkdownContent';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import DocsHeader from 'components/docs/DocsHeader';
 import Pagination from 'components/docs/Pagination';
@@ -16,6 +16,7 @@ import Footer from 'components/layout/Footer';
 import FooterWrapper from 'components/layout/FooterWrapper';
 
 import Layout from 'layouts';
+import renderAst from 'utils/renderAst';
 
 interface PageTemplateProps extends RouteComponentProps {
   data: {
@@ -26,7 +27,7 @@ interface PageTemplateProps extends RouteComponentProps {
       edges: GatsbyNode<MenuNode>[];
     };
     markdownRemark: {
-      html: string;
+      htmlAst: object;
       excerpt: string;
       frontmatter: {
         id: string;
@@ -60,7 +61,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
             <DocsHeader>
               <h1>{markdownRemark.frontmatter.title}</h1>
             </DocsHeader>
-            <MarkdownContent html={markdownRemark.html} />
+            <MarkdownWrapper>{renderAst(markdownRemark.htmlAst)}</MarkdownWrapper>
           </Container>
         </DocsWrapper>
         <FooterWrapper>
@@ -104,7 +105,7 @@ export const query = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      htmlAst
       excerpt
       frontmatter {
         id

@@ -64,8 +64,13 @@ export const MarkdownWrapper = styled('section')`
   }
 
   .text-primary {
+    font-weight: 300;
     font-size: ${fontSizes.tera};
     line-height: ${lineHeights.tera};
+
+    strong {
+      font-weight: 500;
+    }
   }
 
   strong {
