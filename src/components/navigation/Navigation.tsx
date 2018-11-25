@@ -1,8 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 import styled from 'utils/styled';
-import Container from '../layout/Container';
 import { MenuNode, GatsbyNode } from 'interfaces/nodes';
 import DocumentationNavMenus from './DocumentationNavMenus';
 
@@ -43,6 +41,8 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
 `;
 
 const WrapperInner = styled('div')`
+  padding: 16px 0;
+
   @media (min-width: ${props => props.theme.breakpoints.lg}px) {
     position: fixed;
     width: ${props => props.theme.widths.drawer.lg - 1}px;
@@ -50,30 +50,6 @@ const WrapperInner = styled('div')`
     z-index: 2;
     height: 100vh;
     overflow-y: auto;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
-    margin-top: ${props => props.theme.heights.header}px;
-  }
-`;
-
-const TitleInner = styled('div')`
-  padding: 1rem ${props => props.theme.dimensions.containerPadding.mobile};
-  color: ${props => props.theme.colors.gray.copy};
-
-  @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
-    padding-top: 0;
-  }
-`;
-
-const HomepageLink = styled(Link)`
-  color: ${props => props.theme.colors.black};
-  font-size: 1.5rem;
-  font-weight: 500;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
   }
 `;
 
@@ -97,18 +73,11 @@ class Navigation extends React.Component<HeaderProps> {
   }
 
   render() {
-    const { title, navigation, open, onCloseNavMenu } = this.props;
+    const { navigation, open, onCloseNavMenu } = this.props;
 
     return (
       <Wrapper isOpen={open}>
         <WrapperInner>
-          <TitleInner>
-            <Container>
-              <HomepageLink to="/" onClick={onCloseNavMenu}>
-                {title}
-              </HomepageLink>
-            </Container>
-          </TitleInner>
           <DocumentationNav>
             <DocumentationNavMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
           </DocumentationNav>

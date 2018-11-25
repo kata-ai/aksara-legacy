@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { MenuNode } from 'interfaces/nodes';
 import styled from 'utils/styled';
+import { colors, fontSizes, lineHeights } from 'styles/variables';
 
 interface NavigationMenuProps {
   node: MenuNode;
@@ -24,17 +25,15 @@ const ToggleButton = styled<ToggleableProps, 'button'>('button')`
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0.75rem;
+  padding: 8px 0;
   border: none;
   background: none;
   outline: none;
-  font-size: 85%;
+  font-size: ${fontSizes.giga};
+  line-height: ${lineHeights.giga};
   text-align: left;
-  border: 1px solid #d3e3ef;
-  border-radius: 2px;
+  color: ${colors.neutral08};
   background-color: ${props => props.theme.colors.white};
-  opacity: ${props => (props.isOpen ? 1 : 0.5)};
-  box-shadow: ${props => (props.isOpen ? '0 2px 4px 0 rgba(0, 0, 0, 0.15)' : 'none')};
   transition: all 0.3s ease;
 `;
 
@@ -59,22 +58,31 @@ const ToggleMenu = styled<ToggleableProps, 'ul'>('ul')`
   display: ${props => (props.isOpen ? 'block' : 'none')};
   max-height: ${props => !props.isOpen && 0};
   list-style-type: none;
-  margin: 0;
+  margin: 8px 0;
   padding: 0;
   transition: all 0.3s ease;
 `;
 
 const ToggleMenuList = styled('li')`
-  margin: 0.5rem 0;
+  margin: 0;
   font-size: 85%;
-  color: ${props => props.theme.colors.gray.calm};
+  color: ${colors.neutral06};
+`;
+
+const ToggleMenuListCategory = styled('span')`
+  display: block;
+  padding: 12px 0 8px;
+  color: ${colors.neutral06};
+  font-weight: 700;
+  text-transform: uppercase;
 `;
 
 const ToggleMenuListLink = styled(Link)`
   display: block;
-  padding: 0.25rem 0.5rem;
+  padding: 8px;
   border-radius: 4px;
-  color: ${props => props.theme.colors.gray.calm};
+  font-weight: 300;
+  color: ${colors.neutral08};
 
   &:hover,
   &:focus {
@@ -82,8 +90,7 @@ const ToggleMenuListLink = styled(Link)`
   }
 
   &.active {
-    color: ${props => props.theme.colors.white};
-    background-color: ${props => props.theme.colors.brand};
+    color: ${colors.kata02};
   }
 `;
 
@@ -125,13 +132,27 @@ class NavigationMenu extends React.PureComponent<NavigationMenuProps, Toggleable
           </ToggleButtonInner>
         </ToggleButton>
         <ToggleMenu isOpen={isOpen}>
-          {node.items.map(item => (
-            <ToggleMenuList key={item.id}>
-              <ToggleMenuListLink to={item.slug} activeClassName="active" onClick={onCloseNavMenu}>
-                {item.title}
-              </ToggleMenuListLink>
-            </ToggleMenuList>
-          ))}
+          {node.items.map(item => {
+            if (item.type === 'category') {
+              return (
+                <ToggleMenuList key={item.title}>
+                  <ToggleMenuListCategory>{item.title}</ToggleMenuListCategory>
+                </ToggleMenuList>
+              );
+            }
+
+            return (
+              <ToggleMenuList key={item.id}>
+                <ToggleMenuListLink
+                  to={item.slug}
+                  activeClassName="active"
+                  onClick={onCloseNavMenu}
+                >
+                  {item.title}
+                </ToggleMenuListLink>
+              </ToggleMenuList>
+            );
+          })}
         </ToggleMenu>
       </Root>
     );

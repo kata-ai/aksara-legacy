@@ -139,6 +139,7 @@ const query = graphql`
           items {
             id
             slug
+            type
             title
           }
         }

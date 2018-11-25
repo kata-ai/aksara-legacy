@@ -4,13 +4,67 @@
     "items": [
       {
         "id": "principles-introduction",
+        "type": "link",
         "slug": "/principles/introduction/",
         "title": "Introduction"
       },
       {
         "id": "principles-design-principles",
+        "type": "link",
         "slug": "/principles/design-principles/",
         "title": "Design Principles"
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "items": [
+      {
+        "id": "foundation",
+        "type": "category",
+        "title": "Foundation"
+      },
+      {
+        "id": "foundation-color",
+        "type": "link",
+        "slug": "/design/foundation/color/",
+        "title": "Color"
+      },
+      {
+        "id": "foundation-elevation",
+        "type": "link",
+        "slug": "/design/foundation/elevation/",
+        "title": "Elevation"
+      },
+      {
+        "id": "foundation-iconography",
+        "type": "link",
+        "slug": "/design/foundation/iconography/",
+        "title": "Iconography"
+      },
+      {
+        "id": "foundation-illustration",
+        "type": "link",
+        "slug": "/design/foundation/illustration/",
+        "title": "Illustration"
+      },
+      {
+        "id": "foundation-layout",
+        "type": "link",
+        "slug": "/design/foundation/layout/",
+        "title": "Layout"
+      },
+      {
+        "id": "foundation-spacing",
+        "type": "link",
+        "slug": "/design/foundation/spacing/",
+        "title": "Spacing"
+      },
+      {
+        "id": "foundation-typography",
+        "type": "link",
+        "slug": "/design/foundation/typography/",
+        "title": "Typography"
       }
     ]
   },
@@ -19,6 +73,7 @@
     "items": [
       {
         "id": "communication-writing-principles",
+        "type": "link",
         "slug": "/communication/writing-principles/",
         "title": "Writing Principles"
       }

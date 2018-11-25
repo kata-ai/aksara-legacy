@@ -5,6 +5,7 @@ export interface GatsbyNode<T> {
 export interface MenuItem {
   id: string;
   slug: string;
+  type: 'link' | 'category';
   title: string;
 }
 
