@@ -5,6 +5,9 @@ import styled from 'utils/styled';
 import NavButton from '../navigation/NavButton';
 
 import Logo from 'assets/images/aksara-logo.svg';
+import { MediaMatchers } from 'utils/mediaQueries';
+import HeaderDesktopMenu from './HeaderDesktopMenu';
+import HeaderMobileMenu from './HeaderMobileMenu';
 
 interface ToggleableProps {
   isOpen?: boolean;
@@ -14,6 +17,7 @@ const Wrapper = styled<ToggleableProps, 'header'>('header')`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,50 +38,7 @@ const Wrapper = styled<ToggleableProps, 'header'>('header')`
   }
 `;
 
-const MenuWrapper = styled('div')`
-  width: 70%;
-`;
-
-const MenuList = styled('ul')`
-  padding: 0px;
-  margin: 0px;
-  text-align: right;
-  & > li {
-    padding: 8px 21px;
-    display: inline-block;
-  }
-`;
-
-const Menu = styled(Link)`
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.3px;
-  color: ${props => props.theme.colors.gray.copy};
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-`;
-
-const MenuLink = styled('a')`
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.3px;
-  color: ${props => props.theme.colors.gray.copy};
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-`;
-
 const LogoWrapper = styled('div')`
-  width: 30%;
   color: ${props => props.theme.colors.gray.copy};
 
   @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
@@ -125,27 +86,13 @@ class Header extends React.Component<HeaderProps> {
         {/* TODO: move this to navigation */}
         {!disableNav && <NavButton onClick={toggleDrawer} drawerIsOpen={open} />}
         {/* TODO: conditionally render mobile menu w/ `react-media-match` */}
-        <MenuWrapper>
-          <MenuList>
-            <li>
-              <MenuLink href="https://kata.ai/" target="_blank" rel="noopener noreferrer">
-                Go to kata.ai
-              </MenuLink>
-            </li>
-            <li>
-              <MenuLink
-                href="https://wicara-storybook.netlify.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Wicara
-              </MenuLink>
-            </li>
-            <li>
-              <Menu to="/version-updates">What’s New</Menu>
-            </li>
-          </MenuList>
-        </MenuWrapper>
+        <MediaMatchers.ServerRender predicted="desktop" hydrated>
+          <MediaMatchers.Matcher
+            mobile={<HeaderMobileMenu />}
+            tablet={<HeaderDesktopMenu />}
+            desktop={<HeaderDesktopMenu />}
+          />
+        </MediaMatchers.ServerRender>
       </Wrapper>
     );
   }

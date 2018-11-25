@@ -1,3 +1,4 @@
+import { createMediaMatcher } from 'react-media-match';
 import { breakpoints } from 'styles/variables';
 
 export const mediaQueries = {
@@ -9,3 +10,9 @@ export const mediaQueries = {
   },
   desktop: `(min-width: ${breakpoints.xl}px)`
 };
+
+export const MediaMatchers = createMediaMatcher({
+  mobile: mediaQueries.mobile,
+  tablet: mediaQueries.tablet.base,
+  desktop: mediaQueries.desktop
+});
