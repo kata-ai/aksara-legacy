@@ -91,7 +91,7 @@ const Wrapper = styled<Props, 'div'>('div')`
   &:hover,
   &:focus {
     box-shadow: ${props => (props.grey ? 'none' : elevationShadow.elevationZ200)};
-    transform: translateY(-2px);
+    transform: ${props => (props.grey ? 'none' : 'translateY(-2px)')};
   }
 
   ${props => props.isHomepage && HomepageCard(props)}
