@@ -101,7 +101,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
         <SectionUpdates>
           <SectionContainer extralarge>
             <Row breakAt="lg" centered>
-              <Col lg={4}>
+              <Col lg={5}>
                 <Card isHomepage grey cardTitle="Aksara v1.0" cardSubtitle="What's New">
                   <p>
                     We excited to announce our first release of Kata Design Language System named
@@ -112,7 +112,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                   </p>
                 </Card>
               </Col>
-              <Col lg={4}>
+              <Col lg={5}>
                 <Card isHomepage grey cardTitle="Wicara v0.5" cardSubtitle="Component Library">
                   <p>
                     Wicara (previously kata-kit) is Kata’s official React component library based on
