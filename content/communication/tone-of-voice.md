@@ -3,7 +3,7 @@ id: communication-tone-of-voice
 title: Tone of Voice
 ---
 
-<div class="text-primary">
+<text-primary>
 
 Our tone of voice must reflect who we are and the product we built. When we write this section, we look around and think about our colleagues; the people who brought you this platform.
 
@@ -11,7 +11,7 @@ How do they express themselves? What positive qualities do they have? What kind 
 
 We infer those traits into our tone of voice. That’s why when we write copy, we try to:
 
-</div>
+</text-primary>
 
 <md-row class="principle">
 <md-col md="4" class="principle-image">

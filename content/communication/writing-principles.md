@@ -5,11 +5,11 @@ title: Introduction
 
 ![writing-principles](../assets/images/communication/writing-principles.png)
 
-<div class="text-primary">
+<text-primary>
 
 This guideline is our approach to shape and maintain the way we communicate our product. Considering we have a few business units within the company, this particular guideline was made as a reference for **Kata Platform**.
 
-</div>
+</text-primary>
 
 ## Writing Goals
 

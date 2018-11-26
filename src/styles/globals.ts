@@ -67,37 +67,6 @@ const GlobalStyles = createGlobalStyle`
   samp {
     font-family: ${fonts.monospace};
   }
-
-  table {
-    width: 100%;
-    margin-bottom: 1rem;
-    border: 1px solid ${colors.neutral06};
-    font-size: 85%;
-    border-collapse: collapse;
-  }
-
-  td,
-  th {
-    padding: .25rem .5rem;
-    border: 1px solid ${colors.neutral06};
-  }
-
-  th {
-    text-align: left;
-  }
-
-  tbody {
-    tr {
-      &:nth-child(odd) {
-        td {
-          background-color: ${colors.neutral02};
-        }
-        tr {
-          background-color: ${colors.neutral02};
-        }
-      }
-    }
-  }
 `;
 
 export default GlobalStyles;

@@ -18,51 +18,6 @@ export const MarkdownWrapper = styled('section')`
   line-height: ${lineHeights.hecto};
   font-weight: 300;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 48px;
-    margin-bottom: 16px;
-    color: ${colors.neutral09};
-    font-weight: 500;
-    text-rendering: optimizeLegibility;
-  }
-
-  h1 {
-    margin-top: 0;
-    font-size: ${fontSizes.peta};
-    line-height: ${lineHeights.peta};
-  }
-
-  h2 {
-    font-size: ${fontSizes.tera};
-    line-height: ${lineHeights.tera};
-  }
-
-  h3 {
-    font-size: ${fontSizes.giga};
-    line-height: ${lineHeights.giga};
-  }
-
-  h4 {
-    font-size: ${fontSizes.mega};
-    line-height: ${lineHeights.mega};
-  }
-
-  h5,
-  h6 {
-    font-size: ${fontSizes.kilo};
-    line-height: ${lineHeights.kilo};
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
   .text-primary {
     font-weight: 300;
     font-size: ${fontSizes.giga};
