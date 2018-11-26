@@ -52,10 +52,10 @@ const Primary = styled(Link)`
     text-decoration: none;
   }
   &:hover {
-    background-color: ${colors.cobalt02};
+    background-color: ${colors.cobalt01};
   }
   &:focus {
-    background-color: ${colors.cobalt02};
+    background-color: ${colors.cobalt03};
   }
 `;
 
