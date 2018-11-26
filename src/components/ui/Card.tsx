@@ -4,8 +4,8 @@ import { brandColors, fontSizes, lineHeights, elevationShadow, colors } from 'st
 
 interface Props {
   image?: string;
-  title?: string;
-  subtitle?: string;
+  cardTitle?: string;
+  cardSubtitle?: string;
   white?: boolean;
   grey?: boolean;
   isHomepage?: boolean;
@@ -19,15 +19,21 @@ class Card extends React.Component<Props, State> {
   }
 
   render() {
-    const { isHomepage, grey, title, subtitle, image, children } = this.props;
+    const { isHomepage, grey, cardTitle, cardSubtitle, image, children } = this.props;
 
     return (
-      <Wrapper isHomepage={isHomepage} grey={grey} title={title} subtitle={subtitle} image={image}>
-        {(title || subtitle || image) && (
-          <CardHeader title={title} subtitle={subtitle} image={image}>
+      <Wrapper
+        isHomepage={isHomepage}
+        grey={grey}
+        cardTitle={cardTitle}
+        cardSubtitle={cardSubtitle}
+        image={image}
+      >
+        {(cardTitle || cardSubtitle || image) && (
+          <CardHeader cardTitle={cardTitle} cardSubtitle={cardSubtitle} image={image}>
             <CardHeaderSpacing>
-              {subtitle && <CardSubtitle>{subtitle}</CardSubtitle>}
-              <CardTitle>{title}</CardTitle>
+              {cardSubtitle && <CardSubtitle>{cardSubtitle}</CardSubtitle>}
+              <CardTitle>{cardTitle}</CardTitle>
             </CardHeaderSpacing>
           </CardHeader>
         )}
@@ -38,7 +44,7 @@ class Card extends React.Component<Props, State> {
 }
 
 const HomepageCard = (props: Props) => css`
-  height: ${props.subtitle ? '280px' : '232px'};
+  height: ${props.cardSubtitle ? '280px' : '232px'};
   z-index: 1;
 `;
 
@@ -46,7 +52,7 @@ const CardHeader = styled<Props, 'div'>('div')`
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: ${props => (props.subtitle ? '64px' : '40px')};
+  height: ${props => (props.cardSubtitle ? '64px' : '40px')};
 `;
 
 const CardHeaderSpacing = styled('div')`

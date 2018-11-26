@@ -47,7 +47,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row breakAt="lg">
               <Col lg={4}>
-                <Card isHomepage title="Principles">
+                <Card isHomepage cardTitle="Principles">
                   <p>
                     These principles help us to make tough design decisions and refine many
                     iterations into the best solution for creating Aksara.
@@ -58,7 +58,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage title="Design">
+                <Card isHomepage cardTitle="Design">
                   <p>
                     We build neat design guidelines with the best practice using for each component
                     based on continuous research and exploration.
@@ -69,7 +69,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage title="Voice">
+                <Card isHomepage cardTitle="Voice">
                   <p>
                     The communication we use to influence how people think and feel about our
                     product while using it.
@@ -90,7 +90,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <SectionContainer extralarge>
             <Row breakAt="lg" centered>
               <Col lg={4}>
-                <Card isHomepage grey title="Aksara v1.0" subtitle="What's New">
+                <Card isHomepage grey cardTitle="Aksara v1.0" cardSubtitle="What's New">
                   <p>
                     We excited to announce our first release of Kata Design Language System named
                     Aksara. We release this on Interact 2018 event (December 5th, 2018).
@@ -101,7 +101,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage grey title="Wicara v0.5" subtitle="Component Library">
+                <Card isHomepage grey cardTitle="Wicara v0.5" cardSubtitle="Component Library">
                   <p>
                     Wicara (previously kata-kit) is Kata’s official React component library based on
                     our Design Language System (Aksara). Currently in beta and only used internally.
