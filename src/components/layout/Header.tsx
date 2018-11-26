@@ -86,7 +86,7 @@ class Header extends React.Component<HeaderProps> {
         {/* TODO: move this to navigation */}
         {!disableNav && <NavButton onClick={toggleDrawer} drawerIsOpen={open} />}
         {/* TODO: conditionally render mobile menu w/ `react-media-match` */}
-        <MediaMatchers.ServerRender predicted="desktop" hydrated>
+        <MediaMatchers.ServerRender predicted="mobile" hydrated>
           <MediaMatchers.Matcher
             mobile={<HeaderMobileMenu />}
             tablet={<HeaderDesktopMenu />}
