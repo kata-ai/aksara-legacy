@@ -47,7 +47,11 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
             <TitleSectionFor>Created for Designers and Built for Developers</TitleSectionFor>
             <Row breakAt="lg">
               <Col lg={4}>
-                <Card isHomepage cardTitle="Principles">
+                <Card
+                  isHomepage
+                  cardTitle="Principles"
+                  avatar={require('assets/images/guides-icn.png')}
+                >
                   <p>
                     These principles help us to make tough design decisions and refine many
                     iterations into the best solution for creating Aksara.
@@ -58,7 +62,11 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage cardTitle="Design">
+                <Card
+                  isHomepage
+                  cardTitle="Design"
+                  avatar={require('assets/images/design-icn.png')}
+                >
                   <p>
                     We build neat design guidelines with the best practice using for each component
                     based on continuous research and exploration.
@@ -69,7 +77,11 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
               <Col lg={4}>
-                <Card isHomepage cardTitle="Voice">
+                <Card
+                  isHomepage
+                  cardTitle="Voice"
+                  avatar={require('assets/images/voice-tone-icn.png')}
+                >
                   <p>
                     The communication we use to influence how people think and feel about our
                     product while using it.

@@ -3,7 +3,7 @@ import styled, { css } from 'utils/styled';
 import { brandColors, fontSizes, lineHeights, elevationShadow, colors } from 'styles/variables';
 
 interface Props {
-  image?: string;
+  avatar?: string;
   cardTitle?: string;
   cardSubtitle?: string;
   white?: boolean;
@@ -19,7 +19,7 @@ class Card extends React.Component<Props, State> {
   }
 
   render() {
-    const { isHomepage, grey, cardTitle, cardSubtitle, image, children } = this.props;
+    const { isHomepage, grey, cardTitle, cardSubtitle, avatar, children } = this.props;
 
     return (
       <Wrapper
@@ -27,10 +27,15 @@ class Card extends React.Component<Props, State> {
         grey={grey}
         cardTitle={cardTitle}
         cardSubtitle={cardSubtitle}
-        image={image}
+        avatar={avatar}
       >
-        {(cardTitle || cardSubtitle || image) && (
-          <CardHeader cardTitle={cardTitle} cardSubtitle={cardSubtitle} image={image}>
+        {(cardTitle || cardSubtitle || avatar) && (
+          <CardHeader cardTitle={cardTitle} cardSubtitle={cardSubtitle} avatar={avatar}>
+            {avatar && (
+              <CardIconWrapper cardTitle={cardTitle} cardSubtitle={cardSubtitle} avatar={avatar}>
+                <img src={avatar} />
+              </CardIconWrapper>
+            )}
             <CardHeaderSpacing>
               {cardSubtitle && <CardSubtitle>{cardSubtitle}</CardSubtitle>}
               <CardTitle>{cardTitle}</CardTitle>
@@ -60,6 +65,26 @@ const CardHeaderSpacing = styled('div')`
 
   &:not(:first-child) {
     margin-left: 16px;
+  }
+`;
+
+const CardIconWrapper = styled<Props, 'div'>('div')`
+  display: inline-block;
+  position: relative;
+  width: ${props => (props.cardSubtitle ? '64px' : '40px')};
+  height: ${props => (props.cardSubtitle ? '64px' : '40px')};
+  font-size: 1rem;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: ${colors.neutral02};
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
