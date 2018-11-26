@@ -68,6 +68,24 @@ export const TextPrimary = styled('div')`
   }
 `;
 
+export const Blockquote = styled('blockquote')`
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 0.25rem solid ${colors.neutral02};
+  color: ${colors.neutral06};
+
+  ${P} {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: ${breakpoints.md}px) {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+`;
+
 export const Table = styled('table')`
   width: 100%;
   border-collapse: collapse;

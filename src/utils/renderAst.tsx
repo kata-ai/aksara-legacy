@@ -2,7 +2,7 @@ import React from 'react';
 import rehypeReact from 'rehype-react';
 
 import * as MarkdownComponents from 'components/docs/MarkdownComponents';
-import Row from 'components/layout/Row';
+import MarkdownRow from 'components/docs/MarkdownRow';
 import Col from 'components/layout/Col';
 
 const renderAst = new rehypeReact({
@@ -17,7 +17,7 @@ const renderAst = new rehypeReact({
     p: (props: any) => <MarkdownComponents.P {...props} />,
     table: (props: any) => <MarkdownComponents.Table {...props} />,
     'text-primary': MarkdownComponents.TextPrimary,
-    'md-row': Row,
+    'md-row': MarkdownRow,
     'md-col': Col
   }
 }).Compiler;

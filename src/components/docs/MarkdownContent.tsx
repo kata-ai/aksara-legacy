@@ -86,6 +86,7 @@ export const MarkdownWrapper = styled('section')`
       padding-left: 1.25rem;
     }
   }
+
   li + li {
     margin-top: 0.25rem;
   }
@@ -164,15 +165,6 @@ export const MarkdownWrapper = styled('section')`
         /* Remark for some reason puts the footnote reflink *after* the 'p' tag. */
         display: inline;
       }
-    }
-  }
-
-  .lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-
-    @media (min-width: ${breakpoints.md}px) {
-      font-size: 1.5rem;
     }
   }
 `;
