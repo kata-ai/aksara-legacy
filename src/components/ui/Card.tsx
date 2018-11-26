@@ -80,7 +80,7 @@ const Wrapper = styled<Props, 'div'>('div')`
   line-height: ${lineHeights.hecto};
   background-color: ${props => (props.grey ? brandColors.grey10 : brandColors.white)};
   box-shadow: ${props => (props.grey ? 'none' : elevationShadow.elevationZ100)};
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: ${props => (props.grey ? 'none' : 'transform 0.3s ease, box-shadow 0.3s ease')};
 
   &:hover,
   &:focus {

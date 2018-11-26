@@ -42,18 +42,18 @@ const Primary = styled(Link)`
   line-height: ${lineHeights.hecto};
   background-color: ${colors.cobalt02};
   color: ${colors.neutral01};
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
+
   &:hover,
   &:focus {
     outline: none;
     text-decoration: none;
   }
+
   &:hover {
     background-color: ${colors.cobalt01};
   }
+
   &:focus {
     background-color: ${colors.cobalt03};
   }
