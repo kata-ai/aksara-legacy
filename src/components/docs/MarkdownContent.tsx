@@ -68,6 +68,11 @@ export const MarkdownWrapper = styled('section')`
     border-top: 1px solid ${colors.neutral02};
   }
 
+  small {
+    font-size: ${fontSizes.deka};
+    line-height: ${lineHeights.deka};
+  }
+
   blockquote {
     margin: 0.8rem 0;
     padding: 0.5rem 1rem;

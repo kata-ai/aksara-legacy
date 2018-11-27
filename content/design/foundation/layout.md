@@ -18,3 +18,41 @@ Kata Platform start the layout from desktop screen 1280px. To create the best us
 ![base-1280-px-2-x](../../assets/images/design/foundation/base-1280-px-2-x.png)
 
 **1280px (enable to 1439px)**
+
+## Breakpoints
+
+![breakpoints-1600-px-2-x](../../assets/images/design/foundation/breakpoints-1600-px-2-x.png)
+
+**1600px (and more)**
+
+![breakpoints-1440-px-2-x](../../assets/images/design/foundation/breakpoints-1440-px-2-x.png)
+
+**1440px (enable to 1599px)**
+
+![breakpoints-1024-px-2-x](../../assets/images/design/foundation/breakpoints-1024-px-2-x.png)
+
+**1024px (enable to 1279px)**
+
+## Hierarchy
+
+Kata Platform is known well as a sophisticated AI Platform. Every component that arranges is bold and robust. Every component harmoniously set in the clear hierarchy from top bar, nav bar, sidebar into the work area. It will create the best experience for users to use it.
+
+![hierarchy-layout-2-x](../../assets/images/design/foundation/hierarchy-layout-2-x.png)
+
+## Levels
+
+### Level 1 (top bar)
+
+In the top bar, users can access the Project and Account features.
+
+### Level 2 (nav bar)
+
+In the nav bar, users can access all feature menu inside the Project.
+
+### Level 3 (side bar)
+
+In the nav bar, users can access all sub menu feature inside the menu from Project.
+
+### Level 4 and more (work area)
+
+In the work area, users can work and perform the actions on the submenu feature. The work area has a depth level that is pointed by using breadcrumbs.

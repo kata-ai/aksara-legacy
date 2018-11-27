@@ -87,7 +87,11 @@ export const Blockquote = styled('blockquote')`
 `;
 
 export const Table = styled('table')`
+  display: block;
   width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   border-collapse: collapse;
 
   thead {
