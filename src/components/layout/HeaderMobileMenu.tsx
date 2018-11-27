@@ -121,7 +121,7 @@ class HeaderMobileMenu extends React.Component<{}, HeaderMobileMenuState> {
 
     return (
       <MenuWrapper>
-        <MenuButton onClick={this.toggleMenu}>
+        <MenuButton onClick={this.toggleMenu} aria-label="Toggle Menu">
           <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24">
             <g fill="none" fillRule="evenodd">
               <rect width="24" height="3" rx="1.5" />

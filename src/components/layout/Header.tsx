@@ -80,7 +80,7 @@ class Header extends React.Component<HeaderProps> {
       <Wrapper isOpen={open}>
         <LogoWrapper>
           <LogoLink to="/" onClick={onCloseNavMenu}>
-            <img src={Logo} />
+            <img src={Logo} alt="Aksara Logo" />
           </LogoLink>
         </LogoWrapper>
         {/* TODO: move this to navigation */}
