@@ -14,7 +14,7 @@ import { SiteMetadata } from 'interfaces/gatsby';
 
 import '@kata-kit/fonts/museo-sans-rounded.css';
 import '@kata-kit/fonts/kata-icons.css';
-import 'prism-themes/themes/prism-atom-dark.css';
+import 'prism-themes/themes/prism-base16-ateliersulphurpool.light.css';
 
 import Overlay from 'components/layout/Overlay';
 import NavButton from 'components/navigation/NavButton';

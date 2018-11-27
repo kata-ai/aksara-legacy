@@ -41,8 +41,9 @@ const Time = styled('time')`
 `;
 
 const HeaderLine = styled('div')`
+  flex: 1 1 auto;
   width: 4px;
-  height: 34px;
+  min-height: 34px;
   margin-left: 18px;
   border-radius: 2px;
   background-color: ${colors.neutral04};
