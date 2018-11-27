@@ -110,6 +110,10 @@ export const MarkdownWrapper = styled('section')`
     .gatsby-resp-image-wrapper {
       margin: 0 !important;
     }
+
+    @media (min-width: ${breakpoints.md}px) {
+      margin-right: 0;
+    }
   }
 
   .principle-content {
@@ -120,6 +124,16 @@ export const MarkdownWrapper = styled('section')`
 
       @media (min-width: ${breakpoints.md}px) {
         margin-top: 0;
+      }
+    }
+
+    &.pallette-sample {
+      .gatsby-resp-image-wrapper {
+        margin: 0 !important;
+      }
+
+      @media (min-width: ${breakpoints.md}px) {
+        margin-left: 80px;
       }
     }
   }
