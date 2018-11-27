@@ -46,8 +46,8 @@ export const H5 = styled('h5')`
 export const P = styled('p')`
   margin-top: 0;
   margin-bottom: 24px;
-  font-size: ${fontSizes.hecto};
-  line-height: ${lineHeights.hecto};
+  font-size: ${fontSizes.kilo};
+  line-height: ${lineHeights.kilo};
   font-weight: 300;
 `;
 

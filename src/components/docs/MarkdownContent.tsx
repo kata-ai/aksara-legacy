@@ -14,8 +14,8 @@ const MarkdownContent: React.SFC<MarkdownContentProps> = ({ className, html }) =
 export default MarkdownContent;
 
 export const MarkdownWrapper = styled('section')`
-  font-size: ${fontSizes.hecto};
-  line-height: ${lineHeights.hecto};
+  font-size: ${fontSizes.kilo};
+  line-height: ${lineHeights.kilo};
   font-weight: 300;
 
   .text-primary {

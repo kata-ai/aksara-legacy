@@ -143,7 +143,7 @@ export const fontSizes = {
 };
 
 export const lineHeights = {
-  deka: '1.25',
+  deka: '1.375',
   hecto: '1.5',
   kilo: '1.5',
   mega: '1.25',
