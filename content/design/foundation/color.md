@@ -1,6 +1,7 @@
 ---
-id: design-foundation-color
+id: foundation-color
 title: Color
+next: foundation-elevation
 ---
 
 <text-primary>

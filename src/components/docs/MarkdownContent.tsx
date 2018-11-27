@@ -50,7 +50,6 @@ export const MarkdownWrapper = styled('section')`
 
     li {
       padding-left: 0;
-      margin-bottom: 0.5rem;
     }
   }
 
