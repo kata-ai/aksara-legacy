@@ -102,7 +102,13 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
           <SectionContainer extralarge>
             <Row breakAt="lg" centered>
               <Col lg={5}>
-                <Card isHomepage grey cardTitle="Aksara v1.0" cardSubtitle="What's New">
+                <Card
+                  isHomepage
+                  grey
+                  cardTitle="Aksara v1.0"
+                  cardSubtitle="What's New"
+                  avatar={require('assets/images/aksara.png')}
+                >
                   <p>
                     We excited to announce our first release of Kata Design Language System named
                     Aksara. We release this on Interact 2018 event (December 5th, 2018).
@@ -113,7 +119,13 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 </Card>
               </Col>
               <Col lg={5}>
-                <Card isHomepage grey cardTitle="Wicara v0.5" cardSubtitle="Component Library">
+                <Card
+                  isHomepage
+                  grey
+                  cardTitle="Wicara v0.5"
+                  cardSubtitle="Component Library"
+                  avatar={require('assets/images/wicara.png')}
+                >
                   <p>
                     Wicara (previously kata-kit) is Kata’s official React component library based on
                     our Design Language System (Aksara). Currently in beta and only used internally.
