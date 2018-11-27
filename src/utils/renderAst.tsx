@@ -4,6 +4,9 @@ import rehypeReact from 'rehype-react';
 import * as MarkdownComponents from 'components/docs/MarkdownComponents';
 import MarkdownRow from 'components/docs/MarkdownRow';
 import Col from 'components/layout/Col';
+import ColorSwatchGrid from 'components/foundations/ColorSwatchGrid';
+import ColorSwatch from 'components/foundations/ColorSwatch';
+import FontStack from 'components/foundations/FontStack';
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -18,7 +21,10 @@ const renderAst = new rehypeReact({
     table: (props: any) => <MarkdownComponents.Table {...props} />,
     'text-primary': MarkdownComponents.TextPrimary,
     'md-row': MarkdownRow,
-    'md-col': Col
+    'md-col': Col,
+    'foundation-color-swatch-grid': ColorSwatchGrid,
+    'foundation-color-swatch': ColorSwatch,
+    'foundation-font-stack': FontStack
   }
 }).Compiler;
 
