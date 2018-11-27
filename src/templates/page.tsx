@@ -50,7 +50,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
       <Page docsPage>
         <Helmet>
           <title>
-            {markdownRemark.frontmatter.title} &middot; {site.siteMetadata.title}
+            {markdownRemark.frontmatter.title} | {site.siteMetadata.title}
           </title>
           <meta name="description" content={markdownRemark.excerpt} />
           <meta property="og:title" content={markdownRemark.frontmatter.title} />

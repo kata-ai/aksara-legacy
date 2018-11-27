@@ -23,7 +23,7 @@ const NotFoundPage: React.SFC<Props> = ({ data }) => (
   <Layout>
     <Page>
       <Helmet>
-        <title>404: Page not found. &middot; {data.site.siteMetadata.title}</title>
+        <title>404: Page not found. | {data.site.siteMetadata.title}</title>
       </Helmet>
       <NotFoundWrapper>
         <Inner>

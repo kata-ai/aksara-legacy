@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Aksara',
     sidebarTitle: 'Aksara',
-    description: 'Aksara Design System Language',
+    description: 'Kata Design Language System',
     siteUrl: 'https://aksara.kata.ai',
     keywords: 'dls, design, design system, design system language',
     author: {

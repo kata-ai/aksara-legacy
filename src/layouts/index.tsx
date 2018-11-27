@@ -60,7 +60,9 @@ class Layout extends React.Component<WrapperProps, WrapperState> {
             return (
               <LayoutRoot>
                 <Helmet>
-                  <title>{siteMetadata.title}</title>
+                  <title>
+                    {siteMetadata.title} | {siteMetadata.description}
+                  </title>
                   <meta name="description" content={siteMetadata.description} />
                   <meta name="keywords" content={siteMetadata.keywords} />
                   <meta property="og:type" content="website" />

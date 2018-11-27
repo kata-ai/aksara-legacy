@@ -30,7 +30,7 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
       <Page updatesPage>
         <Helmet>
           <title>
-            {markdownRemark.frontmatter.title} &middot; {site.siteMetadata.title}
+            {markdownRemark.frontmatter.title} | What's New | {site.siteMetadata.title}
           </title>
           <meta name="description" content={markdownRemark.excerpt} />
           <meta property="og:title" content={markdownRemark.frontmatter.title} />

@@ -34,7 +34,7 @@ const VersionUpdatesPage: React.SFC<Props> = ({ data }) => (
   <Layout>
     <Page updatesPage>
       <Helmet>
-        <title>What's New &middot; {data.site.siteMetadata.title}</title>
+        <title>What's New | {data.site.siteMetadata.title}</title>
       </Helmet>
       <DocsWrapper>
         <Container large>
