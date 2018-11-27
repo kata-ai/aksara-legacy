@@ -4,15 +4,15 @@ import { colors } from 'styles/variables';
 
 interface ColorSwatchProps {
   className?: string;
-  hex: string;
+  hexcode: string;
   name?: string;
 }
 
-const ColorSwatch: React.SFC<ColorSwatchProps> = ({ hex, name, className }) => (
-  <Root hex={hex} className={className}>
-    <Swatch hex={hex}>
-      <Color hex={hex} />
-      <Span>{hex}</Span>
+const ColorSwatch: React.SFC<ColorSwatchProps> = ({ hexcode, name, className }) => (
+  <Root hexcode={hexcode} className={className}>
+    <Swatch hexcode={hexcode}>
+      <Color hexcode={hexcode} />
+      <Span>{hexcode}</Span>
     </Swatch>
     <Name>{name}</Name>
   </Root>
@@ -40,7 +40,7 @@ const Span = styled('span')`
 const Color = styled<ColorSwatchProps, 'div'>('div')`
   width: 100%;
   height: 110px;
-  background-color: ${props => props.hex};
+  background-color: ${props => props.hexcode};
   border-radius: 2px;
 
   ${Span} {
