@@ -78,13 +78,13 @@ TODO
 
 Regular palette partition is used to color kata.ai default illustrations. With strong accent colors and gradations construct the illustrations look and feel as unified with the brand.
 
-<md-row class="principle">
-<md-col md="5" class="principle-image pallette">
+<md-row breakpoint="sm" class="principle">
+<md-col sm="8" md="5" class="principle-image pallette">
 
 ![pp-1](../../assets/images/design/foundation/pp-1.png)
 
 </md-col>
-<md-col md="3" class="principle-content pallette-sample">
+<md-col sm="4" md="3" class="principle-content pallette-sample">
 
 **Example:**
 
@@ -97,13 +97,13 @@ Regular palette partition is used to color kata.ai default illustrations. With s
 
 Positive palette partition is used to pronounce a positive information or action. By adding secondary colors (green) as an accent color of a positive state.
 
-<md-row class="principle">
-<md-col md="5" class="principle-image pallette">
+<md-row breakpoint="sm" class="principle">
+<md-col sm="8" md="5" class="principle-image pallette">
 
 ![pp-2](../../assets/images/design/foundation/pp-2.png)
 
 </md-col>
-<md-col md="3" class="principle-content pallette-sample">
+<md-col sm="4" md="3" class="principle-content pallette-sample">
 
 **Example:**
 
@@ -116,13 +116,13 @@ Positive palette partition is used to pronounce a positive information or action
 
 Negative palette partition is used to pronounce a negative information or action. By adding secondary colors (re) as an accent color of a negative state.
 
-<md-row class="principle">
-<md-col md="5" class="principle-image pallette">
+<md-row breakpoint="sm" class="principle">
+<md-col sm="8" md="5" class="principle-image pallette">
 
 ![pp-3](../../assets/images/design/foundation/pp-3.png)
 
 </md-col>
-<md-col md="3" class="principle-content pallette-sample">
+<md-col sm="4" md="3" class="principle-content pallette-sample">
 
 **Example:**
 
