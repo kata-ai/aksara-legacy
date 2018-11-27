@@ -1,20 +1,26 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { colors } from 'styles/variables';
+import { colors, fontSizes, lineHeights } from 'styles/variables';
 
 interface ColorSwatchProps {
   className?: string;
   hexcode: string;
   name?: string;
+  subtitle?: string;
 }
 
-const ColorSwatch: React.SFC<ColorSwatchProps> = ({ hexcode, name, className }) => (
+const ColorSwatch: React.SFC<ColorSwatchProps> = ({ hexcode, name, subtitle, className }) => (
   <Root hexcode={hexcode} className={className}>
     <Swatch hexcode={hexcode}>
       <Color hexcode={hexcode} />
       <Span>{hexcode}</Span>
     </Swatch>
-    <Name>{name}</Name>
+    {(name || subtitle) && (
+      <BottomText>
+        {name && <Name>{name}</Name>}
+        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+      </BottomText>
+    )}
   </Root>
 );
 
@@ -41,6 +47,7 @@ const Color = styled<ColorSwatchProps, 'div'>('div')`
   width: 100%;
   height: 110px;
   background-color: ${props => props.hexcode};
+  border: 1px solid ${props => (props.hexcode === '#ffffff' ? colors.neutral04 : 'transparent')};
   border-radius: 2px;
 
   ${Span} {
@@ -48,10 +55,26 @@ const Color = styled<ColorSwatchProps, 'div'>('div')`
   }
 `;
 
-const Name = styled('p')`
+const BottomText = styled('div')`
   display: block;
   margin-top: 11px;
   margin-bottom: 0;
+`;
+
+const Name = styled('p')`
+  margin: 0;
+  font-size: ${fontSizes.deka};
+  line-height: ${lineHeights.deka};
+  color: ${colors.neutral08};
+`;
+
+const Subtitle = styled('p')`
+  margin: 0;
+  font-size: ${fontSizes.hecto};
+  line-height: ${lineHeights.hecto};
+  color: ${colors.neutral06};
+  font-weight: 700;
+  text-transform: uppercase;
 `;
 
 const Root = styled<ColorSwatchProps, 'div'>('div')`

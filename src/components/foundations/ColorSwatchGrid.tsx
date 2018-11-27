@@ -13,7 +13,7 @@ export default ColorSwatchGrid;
 
 const Root = styled('div')`
   display: flex;
-  flex-direction: row;
+  flex-flow: wrap;
   margin: 0 -15px;
   width: 100%;
   max-width: 480px;
