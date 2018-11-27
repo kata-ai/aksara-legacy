@@ -5,31 +5,20 @@ import { RouteComponentProps } from '@reach/router';
 
 import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
-import { MarkdownWrapper } from 'components/docs/MarkdownContent';
 import DocsWrapper from 'components/docs/DocsWrapper';
-import DocsHeader from 'components/docs/DocsHeader';
 import Footer from 'components/layout/Footer';
 import FooterWrapper from 'components/layout/FooterWrapper';
 
 import Layout from 'layouts';
-import { SiteMetadata } from 'interfaces/gatsby';
-import renderAst from 'utils/renderAst';
+import { SiteMetadata, UpdatePost } from 'interfaces/gatsby';
+import VersionUpdate from 'components/updates/VersionUpdate';
 
 interface UpdatesTemplateProps extends RouteComponentProps {
   data: {
     site: {
       siteMetadata: SiteMetadata;
     };
-    markdownRemark: {
-      htmlAst: object;
-      excerpt: string;
-      frontmatter: {
-        title: string;
-        version: string;
-        category: string;
-        date: string;
-      };
-    };
+    markdownRemark: UpdatePost;
   };
 }
 
@@ -49,10 +38,7 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
         </Helmet>
         <DocsWrapper>
           <Container medium>
-            <DocsHeader>
-              <h1>{markdownRemark.frontmatter.title}</h1>
-            </DocsHeader>
-            <MarkdownWrapper>{renderAst(markdownRemark.htmlAst)}</MarkdownWrapper>
+            <VersionUpdate post={markdownRemark} />
           </Container>
         </DocsWrapper>
         <FooterWrapper>
@@ -83,14 +69,29 @@ export const query = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      htmlAst
-      excerpt
+      id
+      fields {
+        slug
+        layout
+      }
       frontmatter {
         title
         version
         category
-        date(formatString: "MMMM DD, YYYY")
+        header_image {
+          ... on File {
+            childImageSharp {
+              fluid(maxWidth: 752) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        date
+        date_formatted: date(formatString: "MMMM DD, YYYY")
       }
+      excerpt
+      htmlAst
     }
   }
 `;

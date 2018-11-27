@@ -18,12 +18,21 @@ export interface UpdatePost {
   fields: {
     slug: string;
     layout: string;
-    date: string;
   };
   frontmatter: {
     title: string;
     category: string;
     version: string;
+    header_image: {
+      childImageSharp: {
+        fluid: {
+          [key: string]: any;
+        };
+      };
+    };
+    date: string;
+    date_formatted: string;
   };
-  html: string;
+  excerpt: string;
+  htmlAst: object;
 }

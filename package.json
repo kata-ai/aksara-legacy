@@ -26,6 +26,7 @@
     "babel-plugin-styled-components": "^1.8.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.55",
+    "gatsby-image": "^2.0.20",
     "gatsby-link": "^2.0.6",
     "gatsby-plugin-canonical-urls": "^2.0.7",
     "gatsby-plugin-layout": "^1.0.9",

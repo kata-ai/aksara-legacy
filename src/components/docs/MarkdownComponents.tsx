@@ -43,11 +43,11 @@ export const H5 = styled('h5')`
   line-height: ${lineHeights.kilo};
 `;
 
-export const P = styled('p')`
+export const P = styled<{ isDocs?: boolean }, 'p'>('p')`
   margin-top: 0;
   margin-bottom: 24px;
-  font-size: ${fontSizes.kilo};
-  line-height: ${lineHeights.kilo};
+  font-size: ${props => (props.isDocs ? fontSizes.kilo : fontSizes.hecto)};
+  line-height: ${props => (props.isDocs ? lineHeights.kilo : lineHeights.hecto)};
   font-weight: 300;
 `;
 

@@ -61,7 +61,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
             <DocsHeader>
               <h1>{markdownRemark.frontmatter.title}</h1>
             </DocsHeader>
-            <MarkdownWrapper>{renderAst(markdownRemark.htmlAst)}</MarkdownWrapper>
+            <MarkdownWrapper>{renderAst(true)(markdownRemark.htmlAst)}</MarkdownWrapper>
           </Container>
         </DocsWrapper>
         <FooterWrapper>
