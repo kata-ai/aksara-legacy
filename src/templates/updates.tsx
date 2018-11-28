@@ -6,6 +6,7 @@ import { RouteComponentProps } from '@reach/router';
 import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
 import Row from 'components/layout/Row';
+import Col from 'components/layout/Col';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import Footer from 'components/layout/Footer';
 import FooterWrapper from 'components/layout/FooterWrapper';
@@ -66,7 +67,7 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
   );
 };
 
-const LeftColumn = styled('div')`
+const LeftColumn = styled(Col)`
   display: none;
 
   @media (min-width: ${breakpoints.lg}px) {
@@ -75,7 +76,7 @@ const LeftColumn = styled('div')`
   }
 `;
 
-const RightColumn = styled('div')`
+const RightColumn = styled(Col)`
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;

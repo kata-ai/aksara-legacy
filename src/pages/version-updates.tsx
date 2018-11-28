@@ -91,7 +91,7 @@ const LeadText = styled('p')`
   font-weight: 300;
 `;
 
-const LeftColumn = styled('div')`
+const LeftColumn = styled(Col)`
   display: none;
 
   @media (min-width: ${breakpoints.lg}px) {
@@ -100,7 +100,7 @@ const LeftColumn = styled('div')`
   }
 `;
 
-const RightColumn = styled('div')`
+const RightColumn = styled(Col)`
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
