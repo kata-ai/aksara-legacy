@@ -21,6 +21,7 @@ export interface UpdatePost {
   };
   frontmatter: {
     title: string;
+    subtitle: string;
     category: string;
     version: string;
     header_image: {

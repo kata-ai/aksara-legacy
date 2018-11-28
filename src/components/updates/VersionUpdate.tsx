@@ -105,7 +105,7 @@ const VersionUpdate: React.FC<VersionUpdateProps> = ({ post }) => (
         <HeaderLine />
       </PostHeaderIcon>
       <PostHeaderRight>
-        <Title>Version {post.frontmatter.version}</Title>
+        <Title>{post.frontmatter.title}</Title>
         <Time dateTime={post.frontmatter.date}>{post.frontmatter.date_formatted}</Time>
       </PostHeaderRight>
     </PostHeader>
@@ -115,7 +115,7 @@ const VersionUpdate: React.FC<VersionUpdateProps> = ({ post }) => (
         style={{ maxHeight: '240px' }}
       />
       <PostBody>
-        <PostTitle>{post.frontmatter.title}</PostTitle>
+        <PostTitle>{post.frontmatter.subtitle}</PostTitle>
         <MarkdownWrapper>{renderAst()(post.htmlAst)}</MarkdownWrapper>
       </PostBody>
     </PostContent>

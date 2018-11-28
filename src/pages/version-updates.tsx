@@ -168,6 +168,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            subtitle
             version
             category
             header_image {
