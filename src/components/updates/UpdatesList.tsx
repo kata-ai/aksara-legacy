@@ -48,7 +48,9 @@ const UpdatesList: React.FC<UpdatesListProps> = ({ postsList }) => (
     <SectionHeading>Updates</SectionHeading>
     {postsList &&
       postsList.map(({ node }) => (
-        <ToggleMenuListLink to={node.fields.slug}>{node.frontmatter.title}</ToggleMenuListLink>
+        <ToggleMenuListLink activeClassName="active" to={node.fields.slug}>
+          {node.frontmatter.title}
+        </ToggleMenuListLink>
       ))}
   </div>
 );

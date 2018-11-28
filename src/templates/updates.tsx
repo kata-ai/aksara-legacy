@@ -5,18 +5,26 @@ import { RouteComponentProps } from '@reach/router';
 
 import Page from 'components/docs/Page';
 import Container from 'components/layout/Container';
+import Row from 'components/layout/Row';
 import DocsWrapper from 'components/docs/DocsWrapper';
 import Footer from 'components/layout/Footer';
 import FooterWrapper from 'components/layout/FooterWrapper';
+import UpdatesList from 'components/updates/UpdatesList';
+import VersionUpdate from 'components/updates/VersionUpdate';
 
 import Layout from 'layouts';
 import { SiteMetadata, UpdatePost } from 'interfaces/gatsby';
-import VersionUpdate from 'components/updates/VersionUpdate';
+import styled from 'utils/styled';
+import { breakpoints } from 'styles/variables';
+import { GatsbyNode } from 'interfaces/nodes';
 
 interface UpdatesTemplateProps extends RouteComponentProps {
   data: {
     site: {
       siteMetadata: SiteMetadata;
+    };
+    latestPosts: {
+      edges: GatsbyNode<UpdatePost>[];
     };
     markdownRemark: UpdatePost;
   };
@@ -37,8 +45,15 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
           <meta property="og:description" content={markdownRemark.excerpt} />
         </Helmet>
         <DocsWrapper>
-          <Container medium>
-            <VersionUpdate post={markdownRemark} />
+          <Container large>
+            <Row breakAt="lg">
+              <LeftColumn>
+                <UpdatesList postsList={data.latestPosts.edges} />
+              </LeftColumn>
+              <RightColumn>
+                <VersionUpdate post={markdownRemark} />
+              </RightColumn>
+            </Row>
           </Container>
         </DocsWrapper>
         <FooterWrapper>
@@ -50,6 +65,25 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
     </Layout>
   );
 };
+
+const LeftColumn = styled('div')`
+  display: none;
+
+  @media (min-width: ${breakpoints.lg}px) {
+    display: block;
+    flex: 0 0 208px;
+  }
+`;
+
+const RightColumn = styled('div')`
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
+  @media (min-width: ${breakpoints.lg}px) {
+    margin-left: 40px;
+  }
+`;
 
 export default UpdatesTemplate;
 
@@ -65,6 +99,26 @@ export const query = graphql`
           name
           url
           email
+        }
+      }
+    }
+    latestPosts: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/version-updates/" } }
+      sort: { fields: [fields___date], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+            layout
+          }
+          frontmatter {
+            title
+            subtitle
+            version
+            category
+          }
         }
       }
     }
