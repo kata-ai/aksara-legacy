@@ -59,6 +59,7 @@ const PostContent = styled('section')`
   border-radius: 6px;
   box-shadow: ${elevationShadow.elevationZ100};
   overflow: hidden;
+  z-index: 1;
 `;
 
 const PostBody = styled('div')`
