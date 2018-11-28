@@ -7,7 +7,8 @@ import Col from 'components/layout/Col';
 import ColorSwatchGrid from 'components/foundations/ColorSwatchGrid';
 import ColorSwatch from 'components/foundations/ColorSwatch';
 import FontStack from 'components/foundations/FontStack';
-import TypographyTable from 'components/docs/foundation/TypographyTable';
+import TypographyTable from 'components/foundations/TypographyTable';
+import SpacingDemo from 'components/foundations/SpacingDemo';
 
 const renderAst = (isDocs?: boolean) =>
   new rehypeReact({
@@ -28,7 +29,8 @@ const renderAst = (isDocs?: boolean) =>
       'foundation-color-swatch-grid': ColorSwatchGrid,
       'foundation-color-swatch': ColorSwatch,
       'foundation-font-stack': FontStack,
-      'foundation-typography-table': TypographyTable
+      'foundation-typography-table': TypographyTable,
+      'foundation-spacing-demo': SpacingDemo
     }
   }).Compiler;
 

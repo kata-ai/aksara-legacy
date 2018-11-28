@@ -15,18 +15,18 @@ Space is a principle to unify the padding, margins, and heights within layout an
 
 Use the Spacing Scale when building individual elements. It includes minute increments needed to create appropriate spatial relationships for detail-level designs. This scale is applied and used within all Kata DLS components.
 
-| Code           | Name        | rem   | Pixels | Preview |
-| -------------- | ----------- | ----- | ------ | ------- |
-| `$spacing-2xs` | spacing-2xs | 0.125 | 2      | nanti   |
-| `$spacing-xs`  | spacing-xs  | 0.25  | 4      | nanti   |
-| `$spacing-s`   | spacing-s   | 0.5   | 8      | nanti   |
-| `$spacing-sm`  | spacing-sm  | 0.75  | 12     | nanti   |
-| `$spacing-m`   | spacing-m   | 1     | 16     | nanti   |
-| `$spacing-l`   | spacing-l   | 1.5   | 24     | nanti   |
-| `$spacing-xl`  | spacing-xl  | 2     | 32     | nanti   |
-| `$spacing-2xl` | spacing-2xl | 2.5   | 40     | nanti   |
-| `$spacing-3xl` | spacing-3xl | 4     | 64     | nanti   |
-| `$spacing-4xl` | spacing-4xl | 5     | 80     | nanti   |
+| Code           | Name        | rem   | Pixels | Preview                                                       |
+| -------------- | ----------- | ----- | ------ | ------------------------------------------------------------- |
+| `$spacing-2xs` | spacing-2xs | 0.125 | 2      | <foundation-spacing-demo size="2"></foundation-spacing-demo>  |
+| `$spacing-xs`  | spacing-xs  | 0.25  | 4      | <foundation-spacing-demo size="4"></foundation-spacing-demo>  |
+| `$spacing-s`   | spacing-s   | 0.5   | 8      | <foundation-spacing-demo size="8"></foundation-spacing-demo>  |
+| `$spacing-sm`  | spacing-sm  | 0.75  | 12     | <foundation-spacing-demo size="12"></foundation-spacing-demo> |
+| `$spacing-m`   | spacing-m   | 1     | 16     | <foundation-spacing-demo size="16"></foundation-spacing-demo> |
+| `$spacing-l`   | spacing-l   | 1.5   | 24     | <foundation-spacing-demo size="24"></foundation-spacing-demo> |
+| `$spacing-xl`  | spacing-xl  | 2     | 32     | <foundation-spacing-demo size="32"></foundation-spacing-demo> |
+| `$spacing-2xl` | spacing-2xl | 2.5   | 40     | <foundation-spacing-demo size="40"></foundation-spacing-demo> |
+| `$spacing-3xl` | spacing-3xl | 4     | 64     | <foundation-spacing-demo size="64"></foundation-spacing-demo> |
+| `$spacing-4xl` | spacing-4xl | 5     | 80     | <foundation-spacing-demo size="80"></foundation-spacing-demo> |
 
 ## Applying Spacing
 

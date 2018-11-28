@@ -87,7 +87,7 @@ const Root = styled('article')`
   flex-direction: column;
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
 
   &:last-child {

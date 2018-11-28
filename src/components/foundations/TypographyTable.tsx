@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'utils/styled';
-import { Table, ResponsiveTableWrapper, P, H1, H2, H3, H4, H5 } from '../MarkdownComponents';
+import { Table, ResponsiveTableWrapper, P, H1, H2, H3, H4, H5 } from '../docs/MarkdownComponents';
 import { fontSizes, lineHeights, colors } from 'styles/variables';
 
 const removeMargins = css`
