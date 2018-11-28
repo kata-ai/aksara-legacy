@@ -76,6 +76,30 @@
         "type": "link",
         "slug": "/design/components/avatar/",
         "title": "Avatar"
+      },
+      {
+        "id": "components-badge",
+        "type": "link",
+        "slug": "/design/components/badge/",
+        "title": "Badge"
+      },
+      {
+        "id": "components-bar",
+        "type": "link",
+        "slug": "/design/components/bar/",
+        "title": "Bar"
+      },
+      {
+        "id": "components-bricks",
+        "type": "link",
+        "slug": "/design/components/bricks/",
+        "title": "Bricks"
+      },
+      {
+        "id": "components-button",
+        "type": "link",
+        "slug": "/design/components/button/",
+        "title": "Button"
       }
     ]
   },
