@@ -65,6 +65,17 @@
         "type": "link",
         "slug": "/design/foundation/typography/",
         "title": "Typography"
+      },
+      {
+        "id": "components",
+        "type": "category",
+        "title": "Components"
+      },
+      {
+        "id": "components-avatar",
+        "type": "link",
+        "slug": "/design/components/avatar/",
+        "title": "Avatar"
       }
     ]
   },
