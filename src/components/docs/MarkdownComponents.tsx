@@ -87,18 +87,17 @@ export const Blockquote = styled('blockquote')`
 `;
 
 export const Table = styled('table')`
-  display: block;
   width: 100%;
-  overflow-x: auto;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin-bottom: 24px;
+  font-size: ${fontSizes.hecto};
+  line-height: ${lineHeights.hecto};
   border-collapse: collapse;
 
   thead {
     border-bottom: 2px solid ${colors.neutral04};
 
     th {
-      padding: 8px 24px;
+      padding: 8px 16px;
       font-style: normal;
       font-stretch: normal;
       font-weight: 700;
@@ -112,7 +111,7 @@ export const Table = styled('table')`
   tfoot {
     tr {
       td {
-        padding: 16px 24px 8px;
+        padding: 16px 16px 8px;
         vertical-align: top;
         font-style: normal;
         font-stretch: normal;
@@ -126,7 +125,7 @@ export const Table = styled('table')`
   tbody {
     tr {
       td {
-        padding: 16px 24px 8px;
+        padding: 16px 16px 8px;
         vertical-align: top;
         font-weight: 300;
         font-size: 14px;
@@ -135,4 +134,12 @@ export const Table = styled('table')`
       }
     }
   }
+`;
+
+export const ResponsiveTableWrapper = styled('div')`
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 `;

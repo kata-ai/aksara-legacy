@@ -54,16 +54,7 @@ if the font-size for paragraph is 14px, then the line-height is 1.5em x 14px = 2
 
 ## Type Style
 
-<!--
-[TODO: complete this (in a better way too).]
-
-### Usage
-
-| Element       | Basic Properties                                                                                                                        | Best Used For                                                               |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **Heading 1** | <pre>**font-size:** 28px / 1.75rem<br />**font-weight:** 500<br />**letter-spacing:** -0.01em<br />**color:** neutral09 / #2B2F33</pre> | For oversized screen titles. Use to explain what kind of screen you are on. |
-| **Heading 2** | <pre>**font-size:** 28px / 1.75rem<br />**font-weight:** 500<br />**letter-spacing:** -0.01em<br />**color:** neutral09 / #2B2F33</pre> | For oversized screen titles. Use to explain what kind of screen you are on. |
--->
+<foundation-typography-table></foundation-typography-table>
 
 ### Formatting
 

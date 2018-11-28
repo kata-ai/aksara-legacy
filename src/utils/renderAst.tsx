@@ -7,6 +7,7 @@ import Col from 'components/layout/Col';
 import ColorSwatchGrid from 'components/foundations/ColorSwatchGrid';
 import ColorSwatch from 'components/foundations/ColorSwatch';
 import FontStack from 'components/foundations/FontStack';
+import TypographyTable from 'components/docs/foundation/TypographyTable';
 
 const renderAst = (isDocs?: boolean) =>
   new rehypeReact({
@@ -23,9 +24,11 @@ const renderAst = (isDocs?: boolean) =>
       'text-primary': MarkdownComponents.TextPrimary,
       'md-row': MarkdownRow,
       'md-col': Col,
+      'md-responsive-table': MarkdownComponents.ResponsiveTableWrapper,
       'foundation-color-swatch-grid': ColorSwatchGrid,
       'foundation-color-swatch': ColorSwatch,
-      'foundation-font-stack': FontStack
+      'foundation-font-stack': FontStack,
+      'foundation-typography-table': TypographyTable
     }
   }).Compiler;
 
