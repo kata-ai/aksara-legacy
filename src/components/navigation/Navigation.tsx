@@ -41,23 +41,17 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
 `;
 
 const WrapperInner = styled('div')`
-  padding: 16px 0;
+  padding: 16px ${props => props.theme.dimensions.containerPadding.mobile};
 
   @media (min-width: ${props => props.theme.breakpoints.lg}px) {
     position: fixed;
     width: ${props => props.theme.widths.drawer.lg - 1}px;
     flex: 1 1 auto;
     z-index: 2;
-    height: 100vh;
+    height: calc(100vh - ${props => props.theme.heights.header}px);
     overflow-y: auto;
   }
 `;
-
-const DocumentationNav = styled('nav')`
-  display: flex;
-  flex-direction: column;
-`;
-
 interface HeaderProps {
   title: string;
   navigation?: GatsbyNode<MenuNode>[];
@@ -78,9 +72,7 @@ class Navigation extends React.Component<HeaderProps> {
     return (
       <Wrapper isOpen={open}>
         <WrapperInner>
-          <DocumentationNav>
-            <DocumentationNavMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
-          </DocumentationNav>
+          <DocumentationNavMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
         </WrapperInner>
       </Wrapper>
     );

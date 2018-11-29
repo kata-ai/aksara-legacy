@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'utils/styled';
+import React, { Fragment } from 'react';
 import { GatsbyNode, MenuNode } from 'interfaces/nodes';
 import NavigationMenu from './NavigationMenu';
 
@@ -37,7 +36,7 @@ class DocumentationNavMenus extends React.Component<Props, State> {
     const { navigation, onCloseNavMenu } = this.props;
 
     return (
-      <Wrapper>
+      <Fragment>
         {navigation &&
           navigation.map(({ node }) => (
             <NavigationMenu
@@ -49,16 +48,9 @@ class DocumentationNavMenus extends React.Component<Props, State> {
               onCloseNavMenu={onCloseNavMenu}
             />
           ))}
-      </Wrapper>
+      </Fragment>
     );
   }
 }
 
 export default DocumentationNavMenus;
-
-const Wrapper = styled('div')`
-  padding: 0 ${props => props.theme.dimensions.containerPadding.mobile};
-  font-size: ${props => props.theme.dimensions.fontSize.regular}px;
-  line-height: ${props => props.theme.dimensions.lineHeight.regular};
-  transition: all 0.3s ease;
-`;
