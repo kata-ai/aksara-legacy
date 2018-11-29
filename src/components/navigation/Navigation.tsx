@@ -62,6 +62,7 @@ const WrapperInner = styled('div')`
 `;
 
 const DesktopSidenav = styled('div')`
+  position: fixed;
   flex: 0 0 64px;
   padding: 24px 8px;
   color: ${colors.neutral06};
