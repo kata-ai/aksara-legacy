@@ -68,6 +68,7 @@ const DesktopSidenav = styled('div')`
   padding: 24px 8px;
   color: ${colors.neutral06};
   background-color: ${colors.neutral09};
+  text-align: center;
   z-index: 10;
 `;
 
@@ -76,8 +77,8 @@ const DesktopSidenavMenu = styled<{ active?: boolean }, 'button'>('button')`
   align-items: center;
   justify-content: center;
   padding: 0;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: none;
   background-color: ${props => (props.active ? colors.kata02 : 'transparent')};
   color: ${props => (props.active ? colors.neutral01 : colors.neutral06)};
