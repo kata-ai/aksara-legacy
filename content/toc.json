@@ -100,6 +100,102 @@
         "type": "link",
         "slug": "/design/components/button/",
         "title": "Button"
+      },
+      {
+        "id": "components-card",
+        "type": "link",
+        "slug": "/design/components/card/",
+        "title": "Card"
+      },
+      {
+        "id": "components-date",
+        "type": "link",
+        "slug": "/design/components/date/",
+        "title": "Date"
+      },
+      {
+        "id": "components-drawer",
+        "type": "link",
+        "slug": "/design/components/drawer/",
+        "title": "Drawer"
+      },
+      {
+        "id": "components-dropdown",
+        "type": "link",
+        "slug": "/design/components/dropdown/",
+        "title": "Dropdown"
+      },
+      {
+        "id": "components-input-field",
+        "type": "link",
+        "slug": "/design/components/input-field/",
+        "title": "Input Field"
+      },
+      {
+        "id": "components-loader",
+        "type": "link",
+        "slug": "/design/components/loader/",
+        "title": "Loader"
+      },
+      {
+        "id": "components-meter",
+        "type": "link",
+        "slug": "/design/components/meter/",
+        "title": "Meter"
+      },
+      {
+        "id": "components-modal",
+        "type": "link",
+        "slug": "/design/components/modal/",
+        "title": "Modal"
+      },
+      {
+        "id": "components-notifications",
+        "type": "link",
+        "slug": "/design/components/notifications/",
+        "title": "Notifications"
+      },
+      {
+        "id": "components-paginations",
+        "type": "link",
+        "slug": "/design/components/paginations/",
+        "title": "Paginations"
+      },
+      {
+        "id": "components-select",
+        "type": "link",
+        "slug": "/design/components/select/",
+        "title": "Select"
+      },
+      {
+        "id": "components-table",
+        "type": "link",
+        "slug": "/design/components/table/",
+        "title": "Table"
+      },
+      {
+        "id": "components-tabs",
+        "type": "link",
+        "slug": "/design/components/tabs/",
+        "title": "Tabs"
+      },
+      {
+        "id": "components-tags",
+        "type": "link",
+        "slug": "/design/components/tags/",
+        "title": "Tags"
+      },
+      {
+        "id": "components-toggle",
+        "type": "link",
+        "slug": "/design/components/toggle/",
+        "title": "Toggle"
+      },
+      {
+        "id": "components-tooltips",
+        "type": "link",
+        "slug": "/design/components/tooltips/",
+        "title": "Tooltips"
       }
     ]
   },
