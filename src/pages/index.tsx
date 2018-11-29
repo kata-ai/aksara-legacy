@@ -105,7 +105,7 @@ const IndexPage: React.SFC<PageTemplateProps> = () => {
                 <Card
                   isHomepage
                   grey
-                  cardTitle="Aksara v1.0"
+                  cardTitle="Aksara v0.18.1"
                   cardSubtitle="What's New"
                   avatar={require('assets/images/aksara.png')}
                 >
