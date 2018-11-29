@@ -1,8 +1,14 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import { MenuNode } from 'interfaces/nodes';
 import styled from 'utils/styled';
 import { colors, fontSizes, lineHeights } from 'styles/variables';
+import {
+  ToggleableProps,
+  ToggleMenu,
+  ToggleMenuList,
+  ToggleMenuListCategory,
+  ToggleMenuListLink
+} from './ToggleMenu';
 
 interface NavigationMenuProps {
   node: MenuNode;
@@ -10,10 +16,6 @@ interface NavigationMenuProps {
   isOpen?: boolean;
   onClick?: (e: React.MouseEvent<any>) => void;
   onCloseNavMenu?: (e: React.MouseEvent<any>) => void;
-}
-
-interface ToggleableProps {
-  isOpen?: boolean;
 }
 
 const Root = styled('div')`
@@ -53,52 +55,6 @@ const ToggleButtonInner = styled<ToggleableProps, 'div'>('div')`
 const ToggleButtonSpan = styled('span')`
   flex: 1 1 auto;
   font-weight: 500;
-`;
-
-const ToggleMenu = styled<ToggleableProps, 'ul'>('ul')`
-  display: ${props => (props.isOpen ? 'block' : 'none')};
-  max-height: ${props => !props.isOpen && 0};
-  list-style-type: none;
-  margin: 8px 0;
-  padding: 0;
-  transition: all 0.3s ease;
-`;
-
-const ToggleMenuList = styled('li')`
-  margin: 0;
-  font-size: 85%;
-  color: ${colors.neutral06};
-`;
-
-const ToggleMenuListCategory = styled('span')`
-  display: block;
-  padding: 12px 0 8px;
-  color: ${colors.neutral06};
-  font-weight: 700;
-  text-transform: uppercase;
-`;
-
-const ToggleMenuListLink = styled(Link)`
-  display: block;
-  padding: 8px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-weight: 300;
-  color: ${colors.neutral08};
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    background-color: ${colors.neutral02};
-  }
-
-  &:focus {
-    border-color: ${colors.kata02};
-  }
-
-  &.active {
-    color: ${colors.kata02};
-  }
 `;
 
 class NavigationMenu extends React.PureComponent<NavigationMenuProps, ToggleableProps> {

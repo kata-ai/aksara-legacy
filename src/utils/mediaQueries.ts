@@ -13,6 +13,7 @@ export const mediaQueries = {
 
 export const MediaMatchers = createMediaMatcher({
   mobile: mediaQueries.mobile,
-  tablet: mediaQueries.tablet.base,
+  tabletPortrait: mediaQueries.tablet.portrait,
+  tabletLandscape: mediaQueries.tablet.landscape,
   desktop: mediaQueries.desktop
 });

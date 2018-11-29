@@ -12,7 +12,7 @@ interface State {
   activeMenuKey?: string;
 }
 
-class DocumentationNavMenus extends React.Component<Props, State> {
+class DesktopDocumentationMenus extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
 
@@ -56,4 +56,4 @@ class DocumentationNavMenus extends React.Component<Props, State> {
 
 const Root = styled('div')``;
 
-export default DocumentationNavMenus;
+export default DesktopDocumentationMenus;

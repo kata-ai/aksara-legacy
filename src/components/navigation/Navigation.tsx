@@ -1,8 +1,13 @@
 import React from 'react';
+import { WindowLocation } from '@reach/router';
 
 import styled from 'utils/styled';
+import { MediaMatchers } from 'utils/mediaQueries';
 import { MenuNode, GatsbyNode } from 'interfaces/nodes';
+import { colors, breakpoints } from 'styles/variables';
+
 import DocumentationNavMenus from './DocumentationNavMenus';
+import DesktopDocumentationMenus from './DesktopDocumentationMenus';
 
 interface ToggleableProps {
   isOpen?: boolean;
@@ -17,7 +22,7 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   z-index: ${props => props.theme.zIndex.drawer};
 
-  @media (max-width: ${props => props.theme.breakpoints.lg - 1}px) {
+  @media (max-width: ${breakpoints.lg - 1}px) {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -32,8 +37,9 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
     transition: transform 0.3s ease;
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.lg}px) {
+  @media (min-width: ${breakpoints.lg}px) {
     flex: 0 0 ${props => props.theme.widths.drawer.lg}px;
+    flex-direction: row;
     box-shadow: none;
     border-bottom: none;
     border-right: 1px solid ${props => props.theme.colors.drawer.border};
@@ -41,21 +47,32 @@ const Wrapper = styled<ToggleableProps, 'nav'>('nav')`
 `;
 
 const WrapperInner = styled('div')`
-  padding: 16px ${props => props.theme.dimensions.containerPadding.mobile};
+  padding: 16px;
 
-  @media (min-width: ${props => props.theme.breakpoints.lg}px) {
+  @media (min-width: ${breakpoints.lg}px) {
     position: fixed;
-    width: ${props => props.theme.widths.drawer.lg - 1}px;
+    margin-left: 64px;
+    width: calc(${props => props.theme.widths.drawer.lg - 1}px - 64px);
     flex: 1 1 auto;
     z-index: 2;
     height: calc(100vh - ${props => props.theme.heights.header}px);
     overflow-y: auto;
   }
 `;
+
+const DesktopSidenav = styled('div')`
+  flex: 0 0 64px;
+  padding: 24px 8px;
+  color: ${colors.neutral06};
+  background-color: ${colors.neutral09};
+  z-index: 10;
+`;
+
 interface HeaderProps {
   title: string;
   navigation?: GatsbyNode<MenuNode>[];
   open?: boolean;
+  location?: WindowLocation;
   onOpenNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
   onCloseNavMenu?: (e: React.MouseEvent<HTMLElement>) => void;
   toggleDrawer?: () => void;
@@ -71,8 +88,20 @@ class Navigation extends React.Component<HeaderProps> {
 
     return (
       <Wrapper isOpen={open}>
+        <MediaMatchers.ServerRender predicted="mobile" hydrated>
+          <MediaMatchers.Above tabletPortrait>
+            <DesktopSidenav>a</DesktopSidenav>
+          </MediaMatchers.Above>
+        </MediaMatchers.ServerRender>
         <WrapperInner>
-          <DocumentationNavMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
+          <MediaMatchers.ServerRender predicted="mobile" hydrated>
+            <MediaMatchers.Below tabletLandscape>
+              <DocumentationNavMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
+            </MediaMatchers.Below>
+            <MediaMatchers.Above tabletPortrait>
+              <DesktopDocumentationMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
+            </MediaMatchers.Above>
+          </MediaMatchers.ServerRender>
         </WrapperInner>
       </Wrapper>
     );

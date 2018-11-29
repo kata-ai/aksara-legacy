@@ -84,6 +84,7 @@ class Layout extends React.Component<WrapperProps, WrapperState> {
                     <Navigation
                       title={siteMetadata.sidebarTitle || siteMetadata.title}
                       navigation={data.navigationMenus.edges}
+                      location={location}
                       open={drawerIsOpen}
                       onCloseNavMenu={this.closeDrawer}
                       toggleDrawer={this.toggleDrawer}

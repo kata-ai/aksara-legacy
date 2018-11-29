@@ -85,13 +85,13 @@ class Header extends React.Component<HeaderProps> {
         </LogoWrapper>
         {/* TODO: move this to navigation */}
         {!disableNav && <NavButton onClick={toggleDrawer} drawerIsOpen={open} />}
-        {/* TODO: conditionally render mobile menu w/ `react-media-match` */}
         <MediaMatchers.ServerRender predicted="mobile" hydrated>
-          <MediaMatchers.Matcher
-            mobile={<HeaderMobileMenu />}
-            tablet={<HeaderDesktopMenu />}
-            desktop={<HeaderDesktopMenu />}
-          />
+          <MediaMatchers.Below tabletPortrait>
+            <HeaderMobileMenu />
+          </MediaMatchers.Below>
+          <MediaMatchers.Above mobile>
+            <HeaderDesktopMenu />
+          </MediaMatchers.Above>
         </MediaMatchers.ServerRender>
       </Wrapper>
     );
