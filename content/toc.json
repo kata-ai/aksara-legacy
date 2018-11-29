@@ -1,6 +1,7 @@
 [
   {
     "title": "Principles",
+    "tag": "principles",
     "items": [
       {
         "id": "principles-introduction",
@@ -18,6 +19,7 @@
   },
   {
     "title": "Design",
+    "tag": "design",
     "items": [
       {
         "id": "foundation",
@@ -201,6 +203,7 @@
   },
   {
     "title": "Communication",
+    "tag": "communication",
     "items": [
       {
         "id": "communication-writing-principles",

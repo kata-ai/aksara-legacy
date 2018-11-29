@@ -11,5 +11,6 @@ export interface MenuItem {
 
 export interface MenuNode {
   title: string;
+  tag: string;
   items: MenuItem[];
 }

@@ -32,9 +32,9 @@ interface PageTemplateProps extends RouteComponentProps {
 }
 
 // TODO: convert the hardcoded styles in geometrics to styled-components
-const IndexPage: React.SFC<PageTemplateProps> = () => {
+const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Page>
         <Helmet>
           <meta property="og:title" content="Home" />

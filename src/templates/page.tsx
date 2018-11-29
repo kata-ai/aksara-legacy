@@ -39,14 +39,14 @@ interface PageTemplateProps extends RouteComponentProps {
   };
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
+const PageTemplate: React.SFC<PageTemplateProps> = ({ data, location }) => {
   const { markdownRemark, sectionList, site } = data;
   const { prev, next } = markdownRemark.frontmatter;
   const prevPage = getPageById(sectionList.edges, prev);
   const nextPage = getPageById(sectionList.edges, next);
 
   return (
-    <Layout isDocsLayout>
+    <Layout isDocsLayout location={location}>
       <Page docsPage>
         <Helmet>
           <title>

@@ -31,11 +31,11 @@ interface UpdatesTemplateProps extends RouteComponentProps {
   };
 }
 
-const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data }) => {
+const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data, location }) => {
   const { markdownRemark, site } = data;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Page updatesPage>
         <Helmet>
           <title>

@@ -30,8 +30,8 @@ interface Props extends RouteComponentProps {
   };
 }
 
-const VersionUpdatesPage: React.SFC<Props> = ({ data }) => (
-  <Layout>
+const VersionUpdatesPage: React.SFC<Props> = ({ data, location }) => (
+  <Layout location={location}>
     <Page updatesPage>
       <Helmet>
         <title>What's New | {data.site.siteMetadata.title}</title>

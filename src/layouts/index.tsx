@@ -139,6 +139,7 @@ const query = graphql`
       edges {
         node {
           title
+          tag
           items {
             id
             slug
