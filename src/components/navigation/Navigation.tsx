@@ -155,7 +155,7 @@ class Navigation extends React.Component<HeaderProps, HeaderState> {
     // TODO: omg someone please refactor this.
     return (
       <Wrapper isOpen={open}>
-        <MediaMatchers.ServerRender predicted="mobile" hydrated>
+        <MediaMatchers.ServerRender predicted="desktop" hydrated>
           <MediaMatchers.Above tabletPortrait>
             <DesktopSidenav>
               <DesktopSidenavMenu
@@ -231,7 +231,7 @@ class Navigation extends React.Component<HeaderProps, HeaderState> {
           </MediaMatchers.Above>
         </MediaMatchers.ServerRender>
         <WrapperInner>
-          <MediaMatchers.ServerRender predicted="mobile" hydrated>
+          <MediaMatchers.ServerRender predicted="desktop" hydrated>
             <MediaMatchers.Below tabletLandscape>
               <DocumentationNavMenus navigation={navigation} onCloseNavMenu={onCloseNavMenu} />
             </MediaMatchers.Below>
