@@ -51,6 +51,16 @@ export const P = styled<{ isDocs?: boolean }, 'p'>('p')`
   font-weight: 300;
 `;
 
+export const UnorderedList = styled<{ isDocs?: boolean }, 'ul'>('ul')`
+  font-size: ${props => (props.isDocs ? fontSizes.kilo : fontSizes.hecto)};
+  line-height: ${props => (props.isDocs ? lineHeights.kilo : lineHeights.hecto)};
+`;
+
+export const OrderedList = styled<{ isDocs?: boolean }, 'ol'>('ol')`
+  font-size: ${props => (props.isDocs ? fontSizes.kilo : fontSizes.hecto)};
+  line-height: ${props => (props.isDocs ? lineHeights.kilo : lineHeights.hecto)};
+`;
+
 export const TextPrimary = styled('div')`
   ${P} {
     font-weight: 300;

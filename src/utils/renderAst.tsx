@@ -21,6 +21,8 @@ const renderAst = (isDocs?: boolean) =>
       h5: (props: any) => <MarkdownComponents.H5 {...props} />,
       h6: (props: any) => <MarkdownComponents.H5 as="h6" {...props} />,
       p: (props: any) => <MarkdownComponents.P isDocs={isDocs} {...props} />,
+      ul: (props: any) => <MarkdownComponents.UnorderedList isDocs={isDocs} {...props} />,
+      ol: (props: any) => <MarkdownComponents.OrderedList isDocs={isDocs} {...props} />,
       table: (props: any) => <MarkdownComponents.Table {...props} />,
       'text-primary': MarkdownComponents.TextPrimary,
       'md-row': MarkdownRow,
