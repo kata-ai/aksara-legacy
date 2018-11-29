@@ -110,10 +110,6 @@ export const MarkdownWrapper = styled('section')`
     .gatsby-resp-image-wrapper {
       margin: 0 !important;
     }
-
-    @media (min-width: ${breakpoints.md}px) {
-      margin-right: 0;
-    }
   }
 
   .principle-content {
