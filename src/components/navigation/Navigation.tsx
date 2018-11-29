@@ -51,12 +51,12 @@ const WrapperInner = styled('div')`
 
   @media (min-width: ${breakpoints.lg}px) {
     position: fixed;
+    flex: 1 1 auto;
+    width: calc(${props => props.theme.widths.drawer.lg - 1}px - 64px);
+    height: calc(100vh - ${props => props.theme.heights.header}px);
     margin-left: 64px;
     padding: 24px 16px;
-    width: calc(${props => props.theme.widths.drawer.lg - 1}px - 64px);
-    flex: 1 1 auto;
     z-index: 2;
-    height: calc(100vh - ${props => props.theme.heights.header}px);
     overflow-y: auto;
   }
 `;
@@ -64,6 +64,7 @@ const WrapperInner = styled('div')`
 const DesktopSidenav = styled('div')`
   position: fixed;
   flex: 0 0 64px;
+  height: calc(100vh - ${props => props.theme.heights.header}px);
   padding: 24px 8px;
   color: ${colors.neutral06};
   background-color: ${colors.neutral09};
