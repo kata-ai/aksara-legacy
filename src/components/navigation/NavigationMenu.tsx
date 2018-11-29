@@ -35,6 +35,7 @@ const ToggleButton = styled<ToggleableProps, 'button'>('button')`
   color: ${colors.neutral08};
   background-color: ${props => props.theme.colors.white};
   transition: all 0.3s ease;
+  cursor: pointer;
 `;
 
 const ToggleButtonInner = styled<ToggleableProps, 'div'>('div')`
@@ -80,6 +81,7 @@ const ToggleMenuListCategory = styled('span')`
 const ToggleMenuListLink = styled(Link)`
   display: block;
   padding: 8px;
+  border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 300;
   color: ${colors.neutral08};
@@ -87,6 +89,11 @@ const ToggleMenuListLink = styled(Link)`
   &:hover,
   &:focus {
     text-decoration: none;
+    background-color: ${colors.neutral02};
+  }
+
+  &:focus {
+    border-color: ${colors.kata02};
   }
 
   &.active {
