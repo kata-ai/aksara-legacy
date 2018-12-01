@@ -10,3 +10,5 @@ next: components-paginations
 Notifications provide short, timely, and relevant information about user activity while using the platform.
 
 </text-primary>
+
+![notifications/img-1](../../assets/images/design/components/notifications/img-1.png)

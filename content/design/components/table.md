@@ -10,3 +10,5 @@ next: components-tabs
 Table displays similarly organized data in rows and columns.
 
 </text-primary>
+
+![table/table-img](../../assets/images/design/components/table/table-img.png)
