@@ -203,6 +203,16 @@ export const MarkdownWrapper = styled('section')`
     background-color: transparent;
   }
 
+  code[class*='language-'] {
+    background-color: ${colors.neutral01} !important;
+  }
+
+  pre[class*='language-'] {
+    border: 1px solid ${colors.neutral05} !important;
+    background-color: ${colors.neutral01} !important;
+    border-radius: 4px;
+  }
+
   a[href^='#fn-'],
   a[href^='#fnref-'] {
     display: inline-block;
