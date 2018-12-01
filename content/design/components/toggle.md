@@ -10,3 +10,5 @@ next: components-tooltips
 Use toggle to allow users to instantly switch between two states. Typically, it is used for an “on/off” situation.
 
 </text-primary>
+
+![toggle/toggle-img](../../assets/images/design/components/toggle/toggle-img.png)

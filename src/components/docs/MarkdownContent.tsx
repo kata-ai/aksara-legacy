@@ -134,6 +134,46 @@ export const MarkdownWrapper = styled('section')`
     }
   }
 
+  .component-guide {
+    &:not(:last-child) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .component-guide-image {
+    > * {
+      margin: 0;
+    }
+
+    .gatsby-resp-image-wrapper {
+      margin: 0 !important;
+    }
+  }
+
+  .component-guide-content {
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top: 32px;
+
+      @media (min-width: ${breakpoints.md}px) {
+        margin-top: 0;
+      }
+    }
+
+    &.pallette-sample {
+      .gatsby-resp-image-wrapper {
+        margin: 0 !important;
+      }
+
+      @media (min-width: ${breakpoints.md}px) {
+        margin-left: 80px;
+      }
+    }
+  }
+
   .gatsby-highlight {
     margin: 1rem 0;
     font-size: 90%;

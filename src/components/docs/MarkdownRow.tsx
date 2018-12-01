@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'utils/styled';
 import { breakpoints } from 'styles/variables';
 import Row from 'components/layout/Row';
 
@@ -16,7 +17,7 @@ const MarkdownRow: React.FC<MarkdownRowProps> = ({
   breakpoint,
   ...rest
 }) => (
-  <Row
+  <StyledRow
     className={className}
     style={style}
     centered={justify === 'centered'}
@@ -25,5 +26,9 @@ const MarkdownRow: React.FC<MarkdownRowProps> = ({
     {...rest}
   />
 );
+
+const StyledRow = styled(Row)`
+  margin-bottom: 24px;
+`;
 
 export default MarkdownRow;
