@@ -54,7 +54,14 @@ The color palette used in the illustration consists of primary (brand) colors, a
 
 ### Primary linear gradients
 
-TODO
+<div>
+  <gradient-g01></gradient-g01>
+  <gradient-g02></gradient-g02>
+  <gradient-g03></gradient-g03>
+  <gradient-g04></gradient-g04>
+  <gradient-g05></gradient-g05>
+  <gradient-g06></gradient-g06>
+</div>
 
 ### Additional brand colors
 
@@ -66,11 +73,16 @@ TODO
 
 ### Additional brand gradients
 
-[TODO: patterns]
+<div>
+  <gradient-g07></gradient-g07>
+  <gradient-g08></gradient-g08>
+</div>
 
 ### Neutral gradients
 
-[TODO: patterns]
+<div>
+  <gradient-g09></gradient-g09>
+</div>
 
 ## Palette Partition
 

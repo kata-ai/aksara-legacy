@@ -9,6 +9,15 @@ import ColorSwatch from 'components/foundations/ColorSwatch';
 import FontStack from 'components/foundations/FontStack';
 import TypographyTable from 'components/foundations/TypographyTable';
 import SpacingDemo from 'components/foundations/SpacingDemo';
+import Gradient01 from 'components/foundations/gradients/Gradient01';
+import Gradient02 from 'components/foundations/gradients/Gradient02';
+import Gradient03 from 'components/foundations/gradients/Gradient03';
+import Gradient04 from 'components/foundations/gradients/Gradient04';
+import Gradient05 from 'components/foundations/gradients/Gradient05';
+import Gradient06 from 'components/foundations/gradients/Gradient06';
+import Gradient07 from 'components/foundations/gradients/Gradient07';
+import Gradient08 from 'components/foundations/gradients/Gradient08';
+import Gradient09 from 'components/foundations/gradients/Gradient09';
 
 const renderAst = (isDocs?: boolean) =>
   new rehypeReact({
@@ -28,6 +37,15 @@ const renderAst = (isDocs?: boolean) =>
       'md-row': MarkdownRow,
       'md-col': Col,
       'md-responsive-table': MarkdownComponents.ResponsiveTableWrapper,
+      'gradient-g01': Gradient01,
+      'gradient-g02': Gradient02,
+      'gradient-g03': Gradient03,
+      'gradient-g04': Gradient04,
+      'gradient-g05': Gradient05,
+      'gradient-g06': Gradient06,
+      'gradient-g07': Gradient07,
+      'gradient-g08': Gradient08,
+      'gradient-g09': Gradient09,
       'foundation-color-swatch-grid': ColorSwatchGrid,
       'foundation-color-swatch': ColorSwatch,
       'foundation-font-stack': FontStack,
