@@ -38,19 +38,9 @@ export const MarkdownWrapper = styled('section')`
     color: ${colors.neutral09};
   }
 
-  ul,
-  ol,
   dl {
     margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    padding-left: 1.45rem;
-
-    li {
-      padding-left: 0;
-    }
+    margin-bottom: 24px;
   }
 
   dt {
@@ -89,10 +79,6 @@ export const MarkdownWrapper = styled('section')`
       padding-right: 5rem;
       padding-left: 1.25rem;
     }
-  }
-
-  li + li {
-    margin-top: 0.25rem;
   }
 
   .principle {
@@ -134,13 +120,6 @@ export const MarkdownWrapper = styled('section')`
     }
   }
 
-  .component-guide {
-    &:not(:last-child) {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-  }
-
   .component-guide-image {
     > * {
       margin: 0;
@@ -152,6 +131,8 @@ export const MarkdownWrapper = styled('section')`
   }
 
   .component-guide-content {
+    margin-top: 24px;
+
     h2,
     h3,
     h4,
@@ -171,6 +152,10 @@ export const MarkdownWrapper = styled('section')`
       @media (min-width: ${breakpoints.md}px) {
         margin-left: 80px;
       }
+    }
+
+    @media (min-width: ${breakpoints.md}px) {
+      margin-top: 0;
     }
   }
 

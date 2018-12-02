@@ -51,12 +51,21 @@ export const P = styled<{ isDocs?: boolean }, 'p'>('p')`
   font-weight: 300;
 `;
 
+export const ListItem = styled('li')`
+  padding-left: 0;
+`;
+
 export const UnorderedList = styled<{ isDocs?: boolean }, 'ul'>('ul')`
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 1.45rem;
   font-size: ${props => (props.isDocs ? fontSizes.kilo : fontSizes.hecto)};
   line-height: ${props => (props.isDocs ? lineHeights.kilo : lineHeights.hecto)};
 `;
 
 export const OrderedList = styled<{ isDocs?: boolean }, 'ol'>('ol')`
+  margin-top: 0;
+  margin-bottom: 24px;
   font-size: ${props => (props.isDocs ? fontSizes.kilo : fontSizes.hecto)};
   line-height: ${props => (props.isDocs ? lineHeights.kilo : lineHeights.hecto)};
 `;

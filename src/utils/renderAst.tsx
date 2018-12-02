@@ -18,6 +18,11 @@ import Gradient06 from 'components/foundations/gradients/Gradient06';
 import Gradient07 from 'components/foundations/gradients/Gradient07';
 import Gradient08 from 'components/foundations/gradients/Gradient08';
 import Gradient09 from 'components/foundations/gradients/Gradient09';
+import GuidelineTable from 'components/guidelines/GuidelineTable';
+import {
+  GuidelineTableList,
+  GuidelineTableListItem
+} from 'components/guidelines/GuidelineTableList';
 
 const renderAst = (isDocs?: boolean) =>
   new rehypeReact({
@@ -32,6 +37,7 @@ const renderAst = (isDocs?: boolean) =>
       p: (props: any) => <MarkdownComponents.P isDocs={isDocs} {...props} />,
       ul: (props: any) => <MarkdownComponents.UnorderedList isDocs={isDocs} {...props} />,
       ol: (props: any) => <MarkdownComponents.OrderedList isDocs={isDocs} {...props} />,
+      li: (props: any) => <MarkdownComponents.ListItem {...props} />,
       table: (props: any) => <MarkdownComponents.Table {...props} />,
       'text-primary': MarkdownComponents.TextPrimary,
       'md-row': MarkdownRow,
@@ -46,6 +52,9 @@ const renderAst = (isDocs?: boolean) =>
       'gradient-g07': Gradient07,
       'gradient-g08': Gradient08,
       'gradient-g09': Gradient09,
+      'guideline-table': GuidelineTable,
+      'guideline-ul': GuidelineTableList,
+      'guideline-li': GuidelineTableListItem,
       'foundation-color-swatch-grid': ColorSwatchGrid,
       'foundation-color-swatch': ColorSwatch,
       'foundation-font-stack': FontStack,

@@ -45,7 +45,7 @@ module.exports = {
               maxWidth: 702,
               quality: 90,
               linkImagesToOriginal: false,
-              wrapperStyle: 'margin-top: 48px; margin-bottom: 48px;',
+              wrapperStyle: 'margin-top: 40px; margin-bottom: 40px;',
               backgroundColor: 'transparent'
             }
           }

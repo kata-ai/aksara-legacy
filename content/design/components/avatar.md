@@ -45,4 +45,130 @@ When avatars indicate a group of users (or called a team), avatars will show ran
 
 ## Best Practices
 
-[TODO: best practices component?]
+### On Project Card
+
+<md-row class="component-guide">
+<md-col class="component-guide-image">
+
+![avatar/do-don-t-image-1](../../assets/images/design/components/avatar/do-don-t-image-1.png)
+
+</md-col>
+<md-col class="component-guide-content">
+
+<guideline-table title="Do">
+  <guideline-ul>
+    <guideline-li guide="do">Use Robot avatar type on every project card</guideline-li>
+    <guideline-li guide="do">Use size 40x40</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+<guideline-table title="Don't">
+  <guideline-ul>
+    <guideline-li guide="dont">Don't use a static robot, make it dynamically change</guideline-li>
+    <guideline-li guide="dont">Don't use user or group of user avatar type</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+</md-col>
+</md-row>
+
+### On Account Select
+
+<md-row class="component-guide">
+<md-col class="component-guide-image">
+
+![avatar/do-don-t-image-2](../../assets/images/design/components/avatar/do-don-t-image-2.png)
+
+</md-col>
+<md-col class="component-guide-content">
+
+<guideline-table title="Do">
+  <guideline-ul>
+    <guideline-li guide="do">Use user or group of user avatar type</guideline-li>
+    <guideline-li guide="do">Use size 24x24</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+<guideline-table title="Don't">
+  <guideline-ul>
+    <guideline-li guide="dont">Don't use robot avatar</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+</md-col>
+</md-row>
+
+### On Account Select (List Item)
+
+<md-row class="component-guide">
+<md-col class="component-guide-image">
+
+![avatar/do-don-t-image-3](../../assets/images/design/components/avatar/do-don-t-image-3.png)
+
+</md-col>
+<md-col class="component-guide-content">
+
+<guideline-table title="Do">
+  <guideline-ul>
+    <guideline-li guide="do">Put avatar on item list right next to the account name so as to distinguish from one another</guideline-li>
+    <guideline-li guide="do">Use size 24x24</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+<guideline-table title="Don't">
+  <guideline-ul>
+    <guideline-li guide="dont">Don't use robot avatar</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+</md-col>
+</md-row>
+
+### As UI Object
+
+<md-row class="component-guide">
+<md-col class="component-guide-image">
+
+![avatar/do-don-t-image-4](../../assets/images/design/components/avatar/do-don-t-image-4.png)
+
+</md-col>
+<md-col class="component-guide-content">
+
+<guideline-table title="Do">
+  <guideline-ul>
+    <guideline-li guide="do">Use round avatars to quickly identify</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+<guideline-table title="Don't">
+  <guideline-ul>
+    <guideline-li guide="dont">Don't use round square</guideline-li>
+    <guideline-li guide="dont">Don't add shadow or border into the avatar (or both, that's worse)</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+</md-col>
+</md-row>
+
+<md-row class="component-guide">
+<md-col class="component-guide-image">
+
+![avatar/do-don-t-image-5](../../assets/images/design/components/avatar/do-don-t-image-5.png)
+
+</md-col>
+<md-col class="component-guide-content">
+
+<guideline-table title="Do">
+  <guideline-ul>
+    <guideline-li guide="do">Inline with another element</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+<guideline-table title="Don't">
+  <guideline-ul>
+    <guideline-li guide="dont">Don't put at top of the other element</guideline-li>
+  </guideline-ul>
+</guideline-table>
+
+</md-col>
+</md-row>
