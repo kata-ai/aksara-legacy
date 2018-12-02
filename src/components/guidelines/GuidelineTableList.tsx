@@ -25,8 +25,8 @@ const Li = styled<GuidelineTableListItemProps, 'li'>('li')`
 
 const Span = styled('span')`
   display: inline-block;
-  font-size: ${fontSizes.kilo};
-  line-height: ${lineHeights.kilo};
+  font-size: ${fontSizes.hecto};
+  line-height: ${lineHeights.hecto};
   margin-left: 16px;
 `;
 
@@ -47,7 +47,7 @@ export const GuidelineTableListItem: React.FC<GuidelineTableListItemProps> = ({
   <Li guide={guide}>
     <Logo>
       {guide === 'do' ? (
-        <svg width="24" height="24" viewBox="0 0 24 24">
+        <svg width="20" height="20" viewBox="0 0 24 24">
           <defs>
             <path
               id="ic-filled-check"
@@ -65,7 +65,7 @@ export const GuidelineTableListItem: React.FC<GuidelineTableListItemProps> = ({
           </g>
         </svg>
       ) : (
-        <svg width="24" height="24" viewBox="0 0 24 24">
+        <svg width="20" height="20" viewBox="0 0 24 24">
           <defs>
             <path
               id="ic-filled-x"

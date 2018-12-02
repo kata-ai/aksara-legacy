@@ -17,28 +17,32 @@ Use brick to display content and options about one subject in an individual cont
 
 Different styles of button serves different purposes.
 
-[TODO]
+![button/style-btn-1](../../assets/images/design/components/button/style-btn-1.png)
+
+![button/style-btn-2](../../assets/images/design/components/button/style-btn-2.png)
 
 ### Button Size
 
-Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales.
-
-[TODO]
+![button/button-size](../../assets/images/design/components/button/button-size.png)
 
 ### Button Shape
 
-Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales.
-
-[TODO]
+![button/button-shape](../../assets/images/design/components/button/button-shape.png)
 
 ### Button State
 
-Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales.
+![button/primary-btn](../../assets/images/design/components/button/primary-btn.png)
 
-[TODO]
+![button/secondary-btn](../../assets/images/design/components/button/secondary-btn.png)
+
+![button/danger-btn](../../assets/images/design/components/button/danger-btn.png)
+
+![button/ghost-btn](../../assets/images/design/components/button/ghost-btn.png)
+
+![button/btn-link](../../assets/images/design/components/button/btn-link.png)
 
 ### Button Type
 
 Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales.
 
-[TODO]
+![button/btn-type](../../assets/images/design/components/button/btn-type.png)
