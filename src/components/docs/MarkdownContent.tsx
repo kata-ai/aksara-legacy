@@ -121,10 +121,6 @@ export const MarkdownWrapper = styled('section')`
   }
 
   .component-guide-image {
-    > * {
-      margin: 0;
-    }
-
     .gatsby-resp-image-wrapper {
       margin: 0 !important;
     }

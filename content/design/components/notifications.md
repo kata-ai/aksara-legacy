@@ -33,7 +33,13 @@ Toaster has a relative min-height and fixed width depending on the content. A to
 
 Convey general information or actions that aren’t critical. Include lower priority information and automatically dissapear after specific second.
 
-[TODO: flag]
+<md-row class="component-guide">
+<md-col class="component-guide-content" md="7">
+
+![notifications/img-4](../../assets/images/design/components/notifications/img-4.png)
+
+</md-col>
+</md-row>
 
 ## Best practices
 
