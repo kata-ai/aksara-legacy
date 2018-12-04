@@ -59,6 +59,29 @@ module.exports = {
         siteUrl: 'https://aksara.kata.ai'
       }
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Aksara',
+        short_name: 'Aksara',
+        icons: [
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ],
+        start_url: '/',
+        display: 'standalone',
+        theme_color: '#f8fcff',
+        background_color: '#f6f7f8'
+      }
+    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-resolve-src',

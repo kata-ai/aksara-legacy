@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, withPrefix } from 'gatsby';
 import { WindowLocation } from '@reach/router';
 
 import Header from 'components/layout/Header';
@@ -66,12 +66,20 @@ class Layout extends React.Component<WrapperProps, WrapperState> {
                   <meta name="description" content={siteMetadata.description} />
                   <meta name="keywords" content={siteMetadata.keywords} />
                   <meta property="og:type" content="website" />
-                  <meta property="og:site_name" content={siteMetadata.title} />
-                  <meta property="og:description" content={siteMetadata.description} />
+                  <meta property="og:site_name" name="og:site_name" content={siteMetadata.title} />
+                  <meta
+                    property="og:description"
+                    name="og:description"
+                    content={siteMetadata.description}
+                  />
                   <meta
                     property="og:url"
                     content={`${siteMetadata.siteUrl}${location ? location.pathname : '/'}`}
                   />
+                  <meta property="og:image" name="og:image" content={withPrefix('/og-image.png')} />
+                  <meta property="og:image:width" content="1200" />
+                  <meta property="og:image:height" content="675" />
+                  <meta property="og:image:type" name="og:image:type" content="image/png" />
                 </Helmet>
                 <Header
                   open={drawerIsOpen}
