@@ -32,8 +32,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             ? new Date(date)
             : new Date(Number.parseInt(year), Number.parseInt(month) - 1, Number.parseInt(day));
 
-          console.log(year, month, day, date);
-
           // Blog posts are sorted by date and display the date in their header.
           createNodeField({
             node,
