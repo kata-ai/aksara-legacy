@@ -70,7 +70,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: 'https://aksara.netlify.com/*',
+    redirectInBrowser: true,
+    isPermanent: true,
+    toPath: 'https://aksara.kata.ai/:splat'
+  });
 
   const allMarkdown = await graphql(`
     {
