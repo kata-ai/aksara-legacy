@@ -109,7 +109,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                   avatar={require('assets/images/aksara.png')}
                 >
                   <p>
-                    We excited to announce our first release of Kata Design Language System named
+                    We're excited to announce our first release of Kata Design Language System named
                     Aksara. We release this on Interact 2018 event (December 5th, 2018).
                   </p>
                   <p>
