@@ -148,7 +148,7 @@ export const lineHeights = {
   kilo: '1.5',
   mega: '1.25',
   giga: '1.25',
-  tera: '1.125',
+  tera: '1.25',
   peta: '1.125'
 };
 
