@@ -59,11 +59,19 @@ module.exports = {
         siteUrl: 'https://aksara.kata.ai'
       }
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cache',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        allPageHeaders: ['X-Clacks-Overhead: GNU Natalie Nguyen']
+      }
+    }
   ]
 };
