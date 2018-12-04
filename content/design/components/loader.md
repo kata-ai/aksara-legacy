@@ -19,7 +19,7 @@ Different styles of Loader serves different purposes.
 
 ### Page Loader
 
-For a type of loading that affects the whole page, use bot animation.
+Use blue spinner on white background, such as form. Place it on the side of a button.
 
 ![loader/loader-robot](../../assets/images/design/components/loader/loader-robot.png)
 
@@ -31,6 +31,6 @@ Use blue spinner on white background, such as form. Place it on the side of a bu
 
 ### Light Spinner
 
-Lorem ipsum dolor sit amet.
+Use light spinner for areas with minimal space. When the user clicks the button, replace the text with the light spinner and place it in the center.
 
 ![loader/loader-white](../../assets/images/design/components/loader/loader-white.png)

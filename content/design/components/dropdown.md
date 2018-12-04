@@ -21,6 +21,6 @@ Different styles of dropdown serves different purposes.
 
 ### Type
 
-Lorem ipsum dolor sit amet, consectetur adipiscing.
+Dropdowns are available in 3 types.
 
 ![dropdown/dropdown-type](../../assets/images/design/components/dropdown/dropdown-type.png)

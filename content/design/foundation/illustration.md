@@ -9,11 +9,11 @@ next: foundation-layout
 
 The illustration is used in our Design Language System to tell the information of what/where users are and all the direction they could possibly go. It has to be meaningful and convey the ideas, while being considerate of the tasks that are accomplished, the context and sentiment.
 
-To keep our brand look and feel as unified as possible, we attempt to embrace our illustrator’s personal touches and blend them into the Kata Illustration style. Some of the guidelines are very precise while some will leave it up to you as the illustrator to use your best decision to create a good illustration that supports our product.
-
 </text-primary>
 
 ![hero-1](../../assets/images/design/foundation/hero-1.png)
+
+To keep our brand look and feel as unified as possible, we attempt to embrace our illustrator’s personal touches and blend them into the Kata Illustration style. Some of the guidelines are very precise while some will leave it up to you as the illustrator to use your best decision to create a good illustration that supports our product.
 
 ## When to Use
 
@@ -161,7 +161,13 @@ Section illustrations are slightly simplified versions of heroes, visually and m
 
 Spot illustrations are the convenient and most precise expression of a concept. Because they are often used in the product as an empty state, or in a composition with other spot illustrations, they are small and simple. Occasionally include some atmospheric background elements depending on the design.
 
+<md-row class="principle" justify="centered">
+<md-col md="10" class="principle-image">
+
 ![spot-illustration](../../assets/images/design/foundation/spot-illustration.png)
+
+</md-col>
+</md-row>
 
 ## Best Practices
 

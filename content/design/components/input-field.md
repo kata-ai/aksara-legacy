@@ -15,6 +15,8 @@ Input fields allow users to enter or edit text. Their usage, style, and behavior
 
 ## Style
 
+Different styles of input field serves different purposes.
+
 ![input-field/field-style](../../assets/images/design/components/input-field/field-style.png)
 
 ### Time field
@@ -29,6 +31,6 @@ Input fields allow users to enter or edit text. Their usage, style, and behavior
 
 ## State
 
-Lorem ipsum dolor sit amet, consectetur adipiscing.
+Input field has 6 types of states.
 
 ![input-field/input-field-state](../../assets/images/design/components/input-field/input-field-state.png)

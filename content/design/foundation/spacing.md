@@ -34,15 +34,4 @@ Use the Spacing Scale when building individual elements. It includes minute incr
 
 ## Applying Spacing
 
-The spacing scale can be applied to margin or padding properties. Likewise, these spacing sizes can be applied to both vertical and horizontal edges. The code takes the place of the values normally assigned to margin and padding. The following are all approved ways to syntactically apply Kata DLS spacing codes:
-
-```
-margin: $spacing-xs;
-margin: $layout-sm $layout-2xs;
-margin: $spacing-xl 0 $spacing-sm 0;
-margin-right: $layout-l;
-padding: $spacing-sm;
-padding: $layout-l $layout-sm;
-padding: $spacing-xl $spacing-sm 0 $spacing-sm;
-padding-left: $spacing-auto;
-```
+The spacing scale can be applied to margin or padding properties. Likewise, these spacing sizes can be applied to both vertical and horizontal edges. The code takes the place of the values normally assigned to margin and padding.

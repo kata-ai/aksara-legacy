@@ -207,7 +207,7 @@ const TypographyTable: React.FC = () => (
               <br />
               <strong>font-weight:</strong> 300;
               <br />
-              <strong>letter-spacing:</strong> 0.25em;
+              <strong>letter-spacing:</strong> 0em;
               <br />
               <strong>color:</strong> neutral08 / #484C4F;
             </Pre>
@@ -279,7 +279,7 @@ const TextSmall = styled('span')`
   font-size: ${fontSizes.deka};
   line-height: ${lineHeights.deka};
   font-weight: 300;
-  letter-spacing: 0.25em;
+  letter-spacing: 0;
   color: ${colors.neutral08};
 `;
 

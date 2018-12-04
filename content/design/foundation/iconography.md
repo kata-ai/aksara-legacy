@@ -43,27 +43,63 @@ Icons are auto-scaled to provide four additional sizes: small (16px), medium (24
 
 #### 2. NL Studio
 
+<md-row class="principle">
+<md-col md="10" class="principle-image">
+
 ![nl-studio-icons](../../assets/images/design/foundation/nl-studio-icons.png)
+
+</md-col>
+</md-row>
 
 #### 3. CMS
 
+<md-row class="principle">
+<md-col md="8" class="principle-image">
+
 ![cms-icons](../../assets/images/design/foundation/cms-icons.png)
+
+</md-col>
+</md-row>
 
 #### 4. Module
 
+<md-row class="principle">
+<md-col md="4" class="principle-image">
+
 ![module-icons](../../assets/images/design/foundation/module-icons.png)
+
+</md-col>
+</md-row>
 
 #### 5. Deploy
 
+<md-row class="principle">
+<md-col md="4" class="principle-image">
+
 ![deploy-icons](../../assets/images/design/foundation/deploy-icons.png)
+
+</md-col>
+</md-row>
 
 #### 6. Analytics
 
+<md-row class="principle">
+<md-col md="6" class="principle-image">
+
 ![analytics-icons](../../assets/images/design/foundation/analytics-icons.png)
+
+</md-col>
+</md-row>
 
 #### 7. Usage
 
+<md-row class="principle">
+<md-col md="4" class="principle-image">
+
 ![usage-icons](../../assets/images/design/foundation/usage-icons.png)
+
+</md-col>
+</md-row>
 
 ### Core Icons
 

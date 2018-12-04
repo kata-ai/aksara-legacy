@@ -44,11 +44,11 @@ if the font-size for paragraph is 14px, then the line-height is 1.5em x 14px = 2
 
 | Name  | rem          | px   | line-height        |
 | ----- | ------------ | ---- | ------------------ |
-| deka  | **0.75rem**  | 12px | **16px / 1.325em** |
-| hecto | **0.875rem** | 14px | **20px / 1.425em** |
-| kilo  | **1rem**     | 16px | **24px / 1.7em**   |
-| mega  | **1.125rem** | 18px | **22px / 1.2em**   |
-| giga  | **1.25rem**  | 20px | **24px / 1.2em**   |
+| deka  | **0.75rem**  | 12px | **16px / 1.375em** |
+| hecto | **0.875rem** | 14px | **20px / 1.5em**   |
+| kilo  | **1rem**     | 16px | **24px / 1.5em**   |
+| mega  | **1.125rem** | 18px | **22px / 1.25em**  |
+| giga  | **1.25rem**  | 20px | **24px / 1.25em**  |
 | tera  | **1.5rem**   | 24px | **30px / 1.25em**  |
 | peta  | **1.75rem**  | 28px | **32px / 1.125em** |
 
