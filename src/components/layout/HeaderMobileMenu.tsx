@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled from 'utils/styled';
+import styled, { css } from 'utils/styled';
 import { colors, elevationShadow } from 'styles/variables';
 
 const MenuWrapper = styled('div')`
@@ -64,7 +64,7 @@ const MenuList = styled('ul')`
 `;
 
 const Menu = styled(Link)`
-  display: block;
+  display: flex;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.33;
@@ -78,10 +78,23 @@ const Menu = styled(Link)`
     background-color: ${colors.neutral02};
     text-decoration: none;
   }
+
+  ${(props: { newContents?: boolean }) =>
+    props.newContents &&
+    css`
+      &:after {
+        display: inline-block;
+        background-color: ${colors.green01};
+        width: 4px;
+        height: 4px;
+        margin-left: 4px;
+      }
+    `}
 `;
 
 const MenuLink = styled('a')`
-  display: block;
+  display: flex;
+  justify-content: center;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.33;
@@ -95,6 +108,11 @@ const MenuLink = styled('a')`
     background-color: ${colors.neutral02};
     text-decoration: none;
   }
+`;
+
+const BetaBadge = styled('img')`
+  margin-left: 8px;
+  max-height: 14px;
 `;
 
 interface HeaderMobileMenuState {
@@ -143,11 +161,13 @@ class HeaderMobileMenu extends React.Component<{}, HeaderMobileMenuState> {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Wicara
+                Wicara <BetaBadge src={require('assets/images/beta-tag.png')} />
               </MenuLink>
             </li>
             <li>
-              <Menu to="/version-updates">What’s New</Menu>
+              <Menu to="/version-updates" newContents>
+                What’s New
+              </Menu>
             </li>
           </MenuList>
         </MenuInner>

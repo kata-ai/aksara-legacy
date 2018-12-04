@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'utils/styled';
+import { colors } from 'styles/variables';
 
 const MenuWrapper = styled('div')`
   text-align: right;
@@ -16,6 +17,7 @@ const MenuList = styled('ul')`
 `;
 
 const Menu = styled(Link)`
+  display: flex;
   cursor: pointer;
   font-weight: 700;
   font-size: 12px;
@@ -30,6 +32,7 @@ const Menu = styled(Link)`
 `;
 
 const MenuLink = styled('a')`
+  display: flex;
   cursor: pointer;
   font-weight: 700;
   font-size: 12px;
@@ -41,6 +44,20 @@ const MenuLink = styled('a')`
   &:focus {
     text-decoration: none;
   }
+`;
+
+const BetaBadge = styled('img')`
+  margin-left: 8px;
+  max-height: 14px;
+`;
+
+const NewBadge = styled('div')`
+  display: inline-block;
+  background-color: ${colors.green01};
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin-left: 4px;
 `;
 
 const HeaderDesktopMenu: React.FC = () => (
@@ -57,11 +74,13 @@ const HeaderDesktopMenu: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          Wicara
+          Wicara <BetaBadge src={require('assets/images/beta-tag.png')} />
         </MenuLink>
       </li>
       <li>
-        <Menu to="/version-updates">What’s New</Menu>
+        <Menu to="/version-updates">
+          What’s New <NewBadge />
+        </Menu>
       </li>
     </MenuList>
   </MenuWrapper>

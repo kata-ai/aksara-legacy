@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { RouteComponentProps } from '@reach/router';
@@ -121,13 +121,18 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                 <Card
                   isHomepage
                   grey
-                  cardTitle="Wicara v0.5"
+                  cardTitle={
+                    <Fragment>
+                      <span>Wicara v0.5</span>
+                      <BetaBadge src={require('assets/images/beta-tag.png')} />
+                    </Fragment>
+                  }
                   cardSubtitle="Component Library"
                   avatar={require('assets/images/wicara.png')}
                 >
                   <p>
                     Wicara (previously kata-kit) is Kata’s official React component library based on
-                    our Design Language System (Aksara). Currently in beta and only used internally.
+                    our Design Language System . Currently in beta and only used internally.
                   </p>
                   <p>
                     <a
@@ -153,6 +158,11 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
   );
 };
 
+const BetaBadge = styled('img')`
+  margin-left: 8px;
+  max-height: 14px;
+`;
+
 const SectionContainer = styled(Container)`
   position: relative;
   z-index: 5;
@@ -167,8 +177,6 @@ const SectionFor = styled('section')`
     ${props => props.theme.colors.kata03},
     ${props => props.theme.colors.accentDark} 32%,
     ${props => props.theme.colors.brand} 60%,
-    ${props => props.theme.colors.softblue} 99%,
-    ${props => props.theme.colors.softblue},
     ${props => props.theme.colors.softblue}
   );
 

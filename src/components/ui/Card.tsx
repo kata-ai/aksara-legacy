@@ -4,7 +4,7 @@ import { brandColors, fontSizes, lineHeights, elevationShadow, colors } from 'st
 
 interface Props {
   avatar?: string;
-  cardTitle?: string;
+  cardTitle?: string | React.ReactNode;
   cardSubtitle?: string;
   white?: boolean;
   grey?: boolean;
