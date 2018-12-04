@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://grundgesetz-skeleton.netlify.com'
+        siteUrl: 'https://aksara.kata.ai'
       }
     },
     'gatsby-plugin-styled-components',
