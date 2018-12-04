@@ -8,7 +8,7 @@ import ColorGradientSwatch from '../ColorGradientSwatch';
 const Gradient09: React.FC = () => (
   <ColorSwatchGrid>
     <ColorGradientSwatch
-      name="Lighter Mint"
+      name="Bliss Ashes"
       colorkey="G08 - gradient08"
       gradient={`linear-gradient(262deg, ${colors.neutral02}, ${colors.neutral03})`}
       gradientColors={[colors.neutral03, colors.neutral02]}
