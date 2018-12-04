@@ -15,6 +15,8 @@ Space is a principle to unify the padding, margins, and heights within layout an
 
 Use the Spacing Scale when building individual elements. It includes minute increments needed to create appropriate spatial relationships for detail-level designs. This scale is applied and used within all Kata DLS components.
 
+<md-responsive-table>
+
 | Code           | Name        | rem   | Pixels | Preview                                                       |
 | -------------- | ----------- | ----- | ------ | ------------------------------------------------------------- |
 | `$spacing-2xs` | spacing-2xs | 0.125 | 2      | <foundation-spacing-demo size="2"></foundation-spacing-demo>  |
@@ -27,6 +29,8 @@ Use the Spacing Scale when building individual elements. It includes minute incr
 | `$spacing-2xl` | spacing-2xl | 2.5   | 40     | <foundation-spacing-demo size="40"></foundation-spacing-demo> |
 | `$spacing-3xl` | spacing-3xl | 4     | 64     | <foundation-spacing-demo size="64"></foundation-spacing-demo> |
 | `$spacing-4xl` | spacing-4xl | 5     | 80     | <foundation-spacing-demo size="80"></foundation-spacing-demo> |
+
+</md-responsive-table>
 
 ## Applying Spacing
 
