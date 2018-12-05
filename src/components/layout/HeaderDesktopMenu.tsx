@@ -18,6 +18,8 @@ const MenuList = styled('ul')`
 
 const Menu = styled(Link)`
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   cursor: pointer;
   font-weight: 700;
   font-size: 12px;
