@@ -123,7 +123,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                   grey
                   cardTitle={
                     <Fragment>
-                      <span>Wicara v0.5</span>
+                      <span>Wicara v0.6.0</span>
                       <BetaBadge src={require('assets/images/beta-tag.png')} />
                     </Fragment>
                   }
@@ -132,7 +132,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                 >
                   <p>
                     Wicara (previously kata-kit) is Kata’s official React component library based on
-                    our Design Language System . Currently in beta and only used internally.
+                    our Design Language System. Currently in beta and only used internally.
                   </p>
                   <p>
                     <a
