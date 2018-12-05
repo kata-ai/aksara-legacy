@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'Aksara',
@@ -89,6 +91,12 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GATSBY_GA_TRACKING_ID
+      }
+    },
     'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-netlify',
