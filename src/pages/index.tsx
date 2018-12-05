@@ -51,10 +51,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                   cardTitle="Principles"
                   avatar={require('assets/images/guides-icn.png')}
                 >
-                  <p>
-                    These principles help us to make tough design decisions and refine many
-                    iterations into the best solution for creating Aksara.
-                  </p>
+                  <p>Discover the principles we use to design our product.</p>
                   <p>
                     <Link to="/principles/introduction/">View Design Principles</Link>
                   </p>
@@ -66,10 +63,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                   cardTitle="Design"
                   avatar={require('assets/images/design-icn.png')}
                 >
-                  <p>
-                    We build neat design guidelines with the best practice using for each component
-                    based on continuous research and exploration.
-                  </p>
+                  <p>Explore the design foundation and components behind Kata.ai's product.</p>
                   <p>
                     <Link to="/design/foundation/color/">View Design Guidelines</Link>
                   </p>
@@ -81,10 +75,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                   cardTitle="Voice"
                   avatar={require('assets/images/voice-tone-icn.png')}
                 >
-                  <p>
-                    The communication we use to influence how people think and feel about our
-                    product while using it.
-                  </p>
+                  <p>Find out how we shape and maintain the way we communicate our product.</p>
                   <p>
                     <Link to="/communication/writing-principles/">
                       View Voice &amp; Tone Guidelines
@@ -132,7 +123,7 @@ const IndexPage: React.SFC<PageTemplateProps> = ({ location }) => {
                 >
                   <p>
                     Wicara (previously kata-kit) is Kata’s official React component library based on
-                    our Design Language System. Currently in beta and only used internally.
+                    our design language system.
                   </p>
                   <p>
                     <a
