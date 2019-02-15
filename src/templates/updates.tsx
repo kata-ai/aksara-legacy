@@ -42,7 +42,7 @@ const UpdatesTemplate: React.SFC<UpdatesTemplateProps> = ({ data, location }) =>
             {markdownRemark.frontmatter.title} | What's New | {site.siteMetadata.title}
           </title>
           <meta name="description" content={markdownRemark.excerpt} />
-          <meta property="og:title" content={markdownRemark.frontmatter.title} />
+          <meta property="og:title" content={`${markdownRemark.frontmatter.title} | What's New`} />
           <meta property="og:description" content={markdownRemark.excerpt} />
         </Helmet>
         <DocsWrapper>
